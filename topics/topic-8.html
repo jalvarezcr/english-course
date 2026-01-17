@@ -1,77 +1,449 @@
 <!DOCTYPE html>
-<html lang="es-MX">
+<html lang="es-MX" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temas 3-18 - Curso de Inglés</title>
+    <title>Tema 8: There is / There are - English Course A1-B2</title>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../styles.css">
+    
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#4da6ff',
+                            DEFAULT: '#0066cc',
+                            dark: '#004d99',
+                        },
+                        grammar: {
+                            singular: '#0ea5e9', // Sky blue for Singular
+                            plural: '#8b5cf6',   // Violet for Plural
+                            negative: '#ef4444'  // Red for Negative/Any
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .correct-answer { background-color: #d1fae5; border-color: #10b981; color: #065f46; }
+        .wrong-answer { background-color: #fee2e2; border-color: #ef4444; color: #991b1b; }
+        .fridge-item:hover { transform: scale(1.05); transition: transform 0.2s; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <header class="bg-blue-600 text-white py-4 px-6 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold" id="page-title">Tema - Curso de Inglés</h1>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="../index.html" class="hover:underline">← Volver al inicio</a></li>
-                </ul>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Header Sticky -->
+    <header class="sticky top-0 z-50 bg-brand-DEFAULT text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                <div>
+                    <h1 class="text-lg font-bold leading-tight">Tema 8: There is / There are</h1>
+                    <p class="text-xs text-blue-200">Curso A2</p>
+                </div>
+            </div>
+            <nav class="flex gap-4 text-sm font-medium">
+                <a href="topic-7.html" class="flex items-center space-x-2 hover:bg-white/10 px-3 py-2 rounded transition">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span class="hidden sm:inline">Anterior</span>
+                </a>
+                <a href="../index.html" class="flex items-center space-x-2 hover:bg-white/10 px-3 py-2 rounded transition">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="hidden sm:inline">Inicio</span>
+                </a>
             </nav>
+        </div>
+        <!-- Progress Bar (24% completado) -->
+        <div class="h-1 bg-blue-800 w-full">
+            <div class="h-full bg-yellow-400 w-[24%]" title="Progreso del curso"></div>
         </div>
     </header>
 
-    <main class="container mx-auto my-8 px-4">
-        <article class="bg-white p-8 rounded-lg shadow-md max-w-5xl mx-auto">
-            <section class="mb-8">
-                <h2 class="text-3xl font-bold mb-4" id="content-title">Tema en Desarrollo</h2>
-                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
-                    <p class="font-semibold">🚧 Contenido en desarrollo</p>
-                    <p>Este tema está siendo desarrollado. Pronto estará disponible con contenido completo, ejemplos, ejercicios y exámenes interactivos.</p>
+    <!-- Main Content -->
+    <main class="container mx-auto my-8 px-4 max-w-5xl">
+        
+        <!-- Hero Section -->
+        <article class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-8">
+            <div class="relative h-64 md:h-80">
+                <img src="https://images.unsplash.com/photo-1710947949965-8150d227d337?w=1200&h=600&fit=crop" alt="Cocina moderna con ingredientes" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent flex items-end">
+                    <div class="p-8 text-white w-full">
+                        <span class="bg-indigo-500 text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wide mb-2 inline-block">Existence & Quantity</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-2">¿Qué hay en el refri?</h2>
+                        <p class="text-lg text-gray-300">Aprende a expresar existencia y cantidad en inglés.</p>
+                    </div>
                 </div>
-            </section>
+            </div>
 
-            <section class="flex justify-between mt-12 pt-6 border-t-2 border-gray-200">
-                <a href="../index.html" class="btn-primary">Volver al temario</a>
-            </section>
+            <!-- Content Body -->
+            <div class="p-6 md:p-10 space-y-12">
+
+                <!-- Section: Intro Concept -->
+                <section class="grid md:grid-cols-3 gap-8">
+                    <div class="md:col-span-2 prose max-w-none">
+                        <h3 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                            <i class="fa-solid fa-eye text-brand"></i> El concepto de "Haber"
+                        </h3>
+                        <p class="text-lg leading-relaxed">
+                            En español usamos una sola palabra mágica: <strong>"Hay"</strong>. Decimos "Hay un coche" y "Hay dos coches".
+                        </p>
+                        <p>
+                            En inglés, esto <strong>NO</strong> funciona así. Tienes que elegir entre Singular o Plural:
+                        </p>
+                        <ul class="list-none mt-4 space-y-2">
+                            <li class="flex items-center gap-3">
+                                <span class="bg-grammar-singular text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">1</span>
+                                <span><strong>There IS:</strong> Para uno solo (o cosas incontables como agua).</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="bg-grammar-plural text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">2+</span>
+                                <span><strong>There ARE:</strong> Para dos o más cosas.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Visual Rule Card -->
+                    <div class="bg-blue-50 p-6 rounded-lg border border-blue-100 flex flex-col justify-center text-center">
+                        <h4 class="font-bold text-blue-900 mb-4">La Regla de Oro</h4>
+                        <div class="space-y-3">
+                            <div class="bg-white p-3 rounded shadow-sm border-l-4 border-grammar-singular">
+                                <p class="text-xs text-gray-400">Singular</p>
+                                <p class="font-bold text-lg">There <span class="text-grammar-singular">IS</span> a car.</p>
+                            </div>
+                            <div class="bg-white p-3 rounded shadow-sm border-l-4 border-grammar-plural">
+                                <p class="text-xs text-gray-400">Plural</p>
+                                <p class="font-bold text-lg">There <span class="text-grammar-plural">ARE</span> two cars.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="border-slate-200">
+
+                <!-- Section: The Visual Fridge (Interactive Context) -->
+                <section class="bg-slate-800 p-8 rounded-2xl text-white relative overflow-hidden">
+                    <div class="absolute top-0 right-0 opacity-10">
+                        <i class="fa-solid fa-kitchen-set text-9xl"></i>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold mb-6 relative z-10 text-center">Open the Fridge!</h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 relative z-10">
+                        <!-- The Fridge Display -->
+                        <div class="bg-white/10 rounded-xl p-6 border border-white/20 grid grid-cols-2 gap-4">
+                            <!-- Item 1: Singular -->
+                            <div class="fridge-item bg-white p-3 rounded-lg text-slate-800 text-center">
+                                <i class="fa-solid fa-apple-whole text-red-500 text-4xl mb-2"></i>
+                                <p class="font-bold">1 Apple</p>
+                                <div class="mt-2 text-xs bg-grammar-singular text-white rounded px-2 py-1">There is an apple</div>
+                            </div>
+                            <!-- Item 2: Plural -->
+                            <div class="fridge-item bg-white p-3 rounded-lg text-slate-800 text-center">
+                                <div class="flex justify-center gap-1 text-yellow-400 text-4xl mb-2">
+                                    <i class="fa-solid fa-lemon"></i>
+                                    <i class="fa-solid fa-lemon"></i>
+                                    <i class="fa-solid fa-lemon"></i>
+                                </div>
+                                <p class="font-bold">3 Lemons</p>
+                                <div class="mt-2 text-xs bg-grammar-plural text-white rounded px-2 py-1">There are three lemons</div>
+                            </div>
+                            <!-- Item 3: Uncountable -->
+                            <div class="fridge-item bg-white p-3 rounded-lg text-slate-800 text-center">
+                                <i class="fa-solid fa-bottle-water text-blue-400 text-4xl mb-2"></i>
+                                <p class="font-bold">Water</p>
+                                <div class="mt-2 text-xs bg-grammar-singular text-white rounded px-2 py-1">There is some water</div>
+                            </div>
+                            <!-- Item 4: Empty -->
+                            <div class="fridge-item bg-white/50 p-3 rounded-lg text-slate-800 text-center opacity-70">
+                                <i class="fa-solid fa-cookie-bite text-gray-400 text-4xl mb-2"></i>
+                                <p class="font-bold text-gray-500">No cookies</p>
+                                <div class="mt-2 text-xs bg-grammar-negative text-white rounded px-2 py-1">There aren't any cookies</div>
+                            </div>
+                        </div>
+
+                        <!-- Explanation Panel -->
+                        <div class="flex flex-col justify-center space-y-4">
+                            <h4 class="font-bold text-xl text-yellow-400">¿Contable o Incontable?</h4>
+                            <p class="text-sm text-gray-300">
+                                <strong>Liquidos y masas (Agua, Leche, Arroz):</strong> Siempre son singulares.
+                                <br>
+                                <span class="italic text-white">"There is water", "There is milk".</span>
+                            </p>
+                            <h4 class="font-bold text-xl text-yellow-400 mt-4">Negativos</h4>
+                            <p class="text-sm text-gray-300">
+                                Solo agrega "not" o usa la contracción.
+                                <br>
+                                <span class="italic text-white">"There isn't an apple", "There aren't any lemons".</span>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Quantifiers (Some / Any / A / An) -->
+                <section>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-purple-500 pl-4">
+                        Cuantificadores Básicos
+                    </h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- A / An -->
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="bg-blue-100 text-blue-600 font-bold px-2 py-1 rounded">A / An</span>
+                                <span class="text-sm text-gray-500">Singular</span>
+                            </div>
+                            <p class="text-sm mb-2">Para una sola cosa.</p>
+                            <ul class="text-sm font-medium text-slate-700">
+                                <li>• There is <strong>a</strong> dog.</li>
+                                <li>• There is <strong>an</strong> apple.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Some -->
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="bg-green-100 text-green-600 font-bold px-2 py-1 rounded">Some</span>
+                                <span class="text-sm text-gray-500">Afirmativo (Plural)</span>
+                            </div>
+                            <p class="text-sm mb-2">"Algunos" o "Algo de".</p>
+                            <ul class="text-sm font-medium text-slate-700">
+                                <li>• There are <strong>some</strong> books.</li>
+                                <li>• There is <strong>some</strong> milk.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Any -->
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="bg-red-100 text-red-600 font-bold px-2 py-1 rounded">Any</span>
+                                <span class="text-sm text-gray-500">Negativo / Pregunta</span>
+                            </div>
+                            <p class="text-sm mb-2">"Ningún" o "Nada de".</p>
+                            <ul class="text-sm font-medium text-slate-700">
+                                <li>• There aren't <strong>any</strong> cars.</li>
+                                <li>• Is there <strong>any</strong> water?</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: External Resources (BBC) -->
+                <section class="bg-gray-900 text-white p-8 rounded-xl shadow-lg relative overflow-hidden mt-8 mb-8">
+                    <div class="absolute top-0 right-0 opacity-10 transform translate-x-10 -translate-y-10">
+                        <i class="fa-brands fa-bbc text-9xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 z-10 relative flex items-center gap-2">
+                        <i class="fa-solid fa-book-bookmark text-yellow-400"></i> Recursos Recomendados
+                    </h3>
+                    <p class="mb-6 text-gray-300 z-10 relative max-w-2xl">
+                        Asegura tu conocimiento con estos ejercicios y videos oficiales.
+                    </p>
+                    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 z-10 relative">
+                        <a href="https://www.bbc.co.uk/learningenglish/course/lower-intermediate/unit-11/session-2" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-solid fa-graduation-cap text-yellow-400 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">BBC Grammar</span>
+                                <span class="text-xs text-gray-400">There is / There are explained</span>
+                            </div>
+                        </a>
+                        <a href="https://learnenglishkids.britishcouncil.org/grammar-practice/there-is-there-are" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-solid fa-pen-fancy text-green-400 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">British Council</span>
+                                <span class="text-xs text-gray-400">Ejercicios interactivos</span>
+                            </div>
+                        </a>
+                         <a href="https://www.youtube.com/watch?v=sJ27993YfOU" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-brands fa-youtube text-red-500 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">Video Explicativo</span>
+                                <span class="text-xs text-gray-400">Ejemplos visuales</span>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Section: Interactive Exercises -->
+                <section id="exercises-section" class="scroll-mt-24">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                            <i class="fa-solid fa-pencil text-brand"></i> Quiz de Existencia
+                        </h3>
+                        <span class="text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full">4 Preguntas</span>
+                    </div>
+
+                    <form id="quiz-form" class="space-y-6">
+                        <!-- Q1 -->
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                            <p class="font-semibold text-lg mb-4">1. _______ two cats in the garden.</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q1" value="option1" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">There is</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q1" value="option2" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">There are</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q1" value="option3" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">There have</span>
+                                </label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option1">
+                            <p class="font-semibold text-lg mb-4">2. _______ a book on the table.</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q2" value="option1" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">There is</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q2" value="option2" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">There are</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q2" value="option3" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">Is there</span>
+                                </label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                         <!-- Q3 -->
+                         <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option3">
+                            <p class="font-semibold text-lg mb-4">3. There aren't _______ students in the class.</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q3" value="option1" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">some</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q3" value="option2" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">a</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q3" value="option3" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">any</span>
+                                </label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                         <!-- Q4 -->
+                         <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                            <p class="font-semibold text-lg mb-4">4. There is _______ milk in the fridge.</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q4" value="option1" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">any</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q4" value="option2" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">some</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q4" value="option3" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">a</span>
+                                </label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <div class="flex justify-end">
+                            <button type="button" onclick="evaluateQuiz()" class="bg-brand-DEFAULT hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-lg shadow-md transition transform hover:scale-105">
+                                <i class="fa-solid fa-check-circle mr-2"></i> Verificar
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Result Modal -->
+                    <div id="result-message" class="hidden mt-6 p-4 bg-gray-800 text-white rounded-lg text-center animate-pulse"></div>
+                </section>
+                
+                <!-- Next Lesson CTA -->
+                <section class="mt-12 pt-8 border-t-2 border-dashed border-gray-300 flex justify-center">
+                    <a href="topic-9.html" class="inline-flex items-center bg-slate-800 hover:bg-slate-900 text-white font-bold py-4 px-10 rounded-full shadow-lg transition transform hover:-translate-y-1">
+                        Siguiente: Can / Can't (Habilidades) <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </section>
+
+            </div>
         </article>
     </main>
 
-    <footer class="bg-gray-800 text-white py-6 mt-12">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2026 Curso de Inglés en 30 Días. Todos los derechos reservados.</p>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-10 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2026 Curso de Inglés Open Source. GitHub Pages Ready.</p>
         </div>
     </footer>
 
+    <!-- Script de Lógica -->
     <script>
-        // Auto-populate title from URL
-        const topicMap = {
-            3: 'Present Simple',
-            4: 'Vocabulario Básico',
-            5: 'Pronombres Personales',
-            6: 'Verbo TO BE',
-            7: 'Present Continuous',
-            8: 'There is / There are',
-            9: 'Pasado Simple',
-            10: 'Comparativos y Superlativos',
-            11: 'Futuro con Will y Going to',
-            12: 'Condicional Simple',
-            13: 'Passive Voice',
-            14: 'Reported Speech',
-            15: 'Phrasal Verbs',
-            16: 'Modal Perfect',
-            17: 'Advanced Grammar Review',
-            18: 'Speaking Tips'
-        };
-        
-        const filename = window.location.pathname.split('/').pop();
-        const topicNum = parseInt(filename.replace('topic-', '').replace('.html', ''));
-        
-        if (topicMap[topicNum]) {
-            document.getElementById('page-title').textContent = `Tema ${topicNum}: ${topicMap[topicNum]}`;
-            document.getElementById('content-title').textContent = topicMap[topicNum];
-            document.title = `Tema ${topicNum}: ${topicMap[topicNum]} - Curso de Inglés`;
+        function evaluateQuiz() {
+            const questions = document.querySelectorAll('.question-card');
+            let score = 0;
+            let total = questions.length;
+
+            questions.forEach((card, index) => {
+                const correctAnswer = card.getAttribute('data-correct');
+                const selectedOption = card.querySelector('input[type="radio"]:checked');
+                const feedbackDiv = card.querySelector('.feedback');
+                
+                feedbackDiv.className = 'feedback mt-3 text-sm p-2 rounded hidden';
+                card.classList.remove('border-green-500', 'border-red-500', 'border-2');
+
+                if (selectedOption) {
+                    if (selectedOption.value === correctAnswer) {
+                        score++;
+                        feedbackDiv.textContent = "¡Correcto! 😎";
+                        feedbackDiv.classList.remove('hidden');
+                        feedbackDiv.classList.add('bg-green-100', 'text-green-800');
+                        card.classList.add('border-green-500', 'border-2');
+                    } else {
+                        feedbackDiv.textContent = "Incorrecto.";
+                        feedbackDiv.classList.remove('hidden');
+                        feedbackDiv.classList.add('bg-red-100', 'text-red-800');
+                        card.classList.add('border-red-500', 'border-2');
+                    }
+                } else {
+                    feedbackDiv.textContent = "Selecciona una opción.";
+                    feedbackDiv.classList.remove('hidden');
+                    feedbackDiv.classList.add('bg-yellow-100', 'text-yellow-800');
+                }
+            });
+
+            const resultMsg = document.getElementById('result-message');
+            resultMsg.classList.remove('hidden', 'animate-pulse');
+            
+            if (score === total) {
+                resultMsg.className = "mt-6 p-4 bg-green-600 text-white rounded-lg text-center shadow-lg transition";
+                resultMsg.innerHTML = `<i class="fa-solid fa-star text-yellow-300 mr-2"></i> ¡Excelente! Ya sabes describir tu entorno.`;
+            } else {
+                resultMsg.className = "mt-6 p-4 bg-blue-600 text-white rounded-lg text-center shadow-lg";
+                resultMsg.innerHTML = `Resultado: ${score}/${total}. Revisa el uso de Some y Any.`;
+            }
         }
     </script>
 </body>

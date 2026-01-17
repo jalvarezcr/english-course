@@ -1,77 +1,467 @@
 <!DOCTYPE html>
-<html lang="es-MX">
+<html lang="es-MX" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temas 3-18 - Curso de Inglés</title>
+    <title>Tema 7: Present Continuous - English Course A1-B2</title>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../styles.css">
+
+    
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#4da6ff',
+                            DEFAULT: '#0066cc',
+                            dark: '#004d99',
+                        },
+                        grammar: {
+                            ing: '#f43f5e',     // Pink for -ING suffix
+                            helper: '#8b5cf6',  // Violet for verb TO BE
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .correct-answer { background-color: #d1fae5; border-color: #10b981; color: #065f46; }
+        .wrong-answer { background-color: #fee2e2; border-color: #ef4444; color: #991b1b; }
+        .action-card:hover { transform: scale(1.02); transition: transform 0.2s; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <header class="bg-blue-600 text-white py-4 px-6 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold" id="page-title">Tema - Curso de Inglés</h1>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="../index.html" class="hover:underline">← Volver al inicio</a></li>
-                </ul>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Header Sticky -->
+    <header class="sticky top-0 z-50 bg-brand-DEFAULT text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                <div>
+                    <h1 class="text-lg font-bold leading-tight">Tema 7: Present Continuous</h1>
+                    <p class="text-xs text-blue-200">Curso A2</p>
+                </div>
+            </div>
+            <nav class="flex gap-4 text-sm font-medium">
+                <a href="topic-6.html" class="flex items-center space-x-2 hover:bg-white/10 px-3 py-2 rounded transition">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span class="hidden sm:inline">Anterior</span>
+                </a>
+                <a href="../index.html" class="flex items-center space-x-2 hover:bg-white/10 px-3 py-2 rounded transition">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="hidden sm:inline">Inicio</span>
+                </a>
             </nav>
+        </div>
+        <!-- Progress Bar (20% completado) -->
+        <div class="h-1 bg-blue-800 w-full">
+            <div class="h-full bg-yellow-400 w-[20%]" title="Progreso del curso"></div>
         </div>
     </header>
 
-    <main class="container mx-auto my-8 px-4">
-        <article class="bg-white p-8 rounded-lg shadow-md max-w-5xl mx-auto">
-            <section class="mb-8">
-                <h2 class="text-3xl font-bold mb-4" id="content-title">Tema en Desarrollo</h2>
-                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
-                    <p class="font-semibold">🚧 Contenido en desarrollo</p>
-                    <p>Este tema está siendo desarrollado. Pronto estará disponible con contenido completo, ejemplos, ejercicios y exámenes interactivos.</p>
+    <!-- Main Content -->
+    <main class="container mx-auto my-8 px-4 max-w-5xl">
+        
+        <!-- Hero Section -->
+        <article class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-8">
+            <div class="relative h-64 md:h-80">
+                <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1200&h=600&fit=crop" alt="Personas corriendo en movimiento" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent flex items-end">
+                    <div class="p-8 text-white w-full">
+                        <span class="bg-rose-500 text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wide mb-2 inline-block">Actions Now</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-2">Happening Right Now!</h2>
+                        <p class="text-lg text-gray-300">Cómo describir lo que está pasando en este preciso momento.</p>
+                    </div>
                 </div>
-            </section>
+            </div>
 
-            <section class="flex justify-between mt-12 pt-6 border-t-2 border-gray-200">
-                <a href="../index.html" class="btn-primary">Volver al temario</a>
-            </section>
+            <!-- Content Body -->
+            <div class="p-6 md:p-10 space-y-12">
+
+                <!-- Section: Intro Comparison -->
+                <section class="grid md:grid-cols-2 gap-8">
+                    <div class="prose max-w-none">
+                        <h3 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                            <i class="fa-solid fa-stopwatch text-brand"></i> ¿Cuándo se usa?
+                        </h3>
+                        <p class="text-lg leading-relaxed">
+                            Usamos el <strong>Present Continuous</strong> para acciones que están ocurriendo <strong>ahora mismo</strong> o alrededor de este momento.
+                        </p>
+                        <p>
+                            La clave es el final <strong>-ING</strong> (que equivale a "-ando" o "-iendo" en español).
+                        </p>
+                    </div>
+                    
+                    <!-- Comparison Card -->
+                    <div class="bg-slate-50 p-6 rounded-lg border border-slate-200">
+                        <h4 class="font-bold text-center mb-4">Diferencia Clave</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between bg-white p-3 rounded border-l-4 border-gray-400 shadow-sm opacity-60">
+                                <div>
+                                    <p class="font-bold text-gray-500">I eat pizza.</p>
+                                    <p class="text-xs">Present Simple (Rutina)</p>
+                                </div>
+                                <i class="fa-regular fa-calendar text-gray-400 text-xl"></i>
+                            </div>
+                            <div class="flex items-center justify-between bg-white p-3 rounded border-l-4 border-grammar-ing shadow-md transform scale-105">
+                                <div>
+                                    <p class="font-bold text-slate-800">I <span class="text-grammar-helper">am</span> eat<span class="text-grammar-ing">ing</span> pizza.</p>
+                                    <p class="text-xs text-rose-600 font-bold">Present Continuous (¡Ahora!)</p>
+                                </div>
+                                <i class="fa-solid fa-pizza-slice text-orange-500 text-xl animate-pulse"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="border-slate-200">
+
+                <!-- Section: The Formula -->
+                <section>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-brand pl-4">
+                        La Fórmula Mágica
+                    </h3>
+                    
+                    <div class="bg-indigo-50 p-8 rounded-xl border border-indigo-100 text-center">
+                        <p class="mb-6 text-indigo-800 font-medium">Necesitas 3 ingredientes obligatorios:</p>
+                        
+                        <div class="flex flex-wrap justify-center items-center gap-2 md:gap-4 text-lg md:text-2xl font-bold">
+                            <!-- Ingredient 1 -->
+                            <div class="bg-white px-4 py-3 rounded-lg shadow text-gray-700">
+                                Sujeto
+                                <span class="block text-xs font-normal text-gray-500 mt-1">(She)</span>
+                            </div>
+                            
+                            <i class="fa-solid fa-plus text-gray-400"></i>
+                            
+                            <!-- Ingredient 2 -->
+                            <div class="bg-grammar-helper text-white px-4 py-3 rounded-lg shadow">
+                                To Be
+                                <span class="block text-xs font-normal text-indigo-200 mt-1">(is)</span>
+                            </div>
+                            
+                            <i class="fa-solid fa-plus text-gray-400"></i>
+                            
+                            <!-- Ingredient 3 -->
+                            <div class="bg-white px-4 py-3 rounded-lg shadow text-gray-700">
+                                Verbo + <span class="text-grammar-ing">ING</span>
+                                <span class="block text-xs font-normal text-gray-500 mt-1">(working)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 text-sm text-indigo-600">
+                            <i class="fa-solid fa-circle-exclamation mr-1"></i> ¡Nunca olvides el verbo TO BE! No digas "She working". Di "She <strong>is</strong> working".
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Spelling Rules (Visual Cards) -->
+                <section>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-spell-check text-green-600"></i> Reglas de Ortografía
+                    </h3>
+                    <p class="mb-6 text-gray-600">A veces el verbo cambia un poco antes de agregar ING.</p>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Rule 1: Normal -->
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                            <div class="text-green-600 font-bold mb-2">1. La mayoría</div>
+                            <p class="text-sm text-gray-500 mb-3">Solo agrega -ing.</p>
+                            <ul class="space-y-2 font-mono">
+                                <li>Work → Working</li>
+                                <li>Play → Playing</li>
+                                <li>Eat → Eating</li>
+                            </ul>
+                        </div>
+
+                        <!-- Rule 2: Silent E -->
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm relative overflow-hidden">
+                            <div class="absolute -right-4 -top-4 bg-yellow-100 rounded-full w-16 h-16"></div>
+                            <div class="text-yellow-600 font-bold mb-2 relative z-10">2. Termina en 'E'</div>
+                            <p class="text-sm text-gray-500 mb-3 relative z-10">Elimina la 'e' y agrega -ing.</p>
+                            <ul class="space-y-2 font-mono relative z-10">
+                                <li>Danc<span class="text-red-400 line-through">e</span> → Dancing</li>
+                                <li>Mak<span class="text-red-400 line-through">e</span> → Making</li>
+                                <li>Writ<span class="text-red-400 line-through">e</span> → Writing</li>
+                            </ul>
+                        </div>
+
+                        <!-- Rule 3: CVC -->
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                            <div class="text-rose-600 font-bold mb-2">3. Sándwich (CVC)</div>
+                            <p class="text-sm text-gray-500 mb-3">Si es corto y termina en Consonante-Vocal-Consonante, duplica la última letra.</p>
+                            <ul class="space-y-2 font-mono">
+                                <li>Run → Ru<span class="text-rose-600 font-bold">nn</span>ing</li>
+                                <li>Swim → Swi<span class="text-rose-600 font-bold">mm</span>ing</li>
+                                <li>Sit → Si<span class="text-rose-600 font-bold">tt</span>ing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Visual Practice (What are they doing?) -->
+                <section class="bg-slate-100 p-6 md:p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-eye text-brand"></i> Look! What are they doing?
+                    </h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Card 1 -->
+                        <div class="action-card bg-white p-4 rounded-xl shadow flex gap-4 items-center">
+                            <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=150&h=150&fit=crop" class="w-24 h-24 rounded-lg object-cover" alt="Playing Sports">
+                            <div>
+                                <p class="text-gray-500 text-xs font-bold uppercase tracking-wider mb-1">They / Play</p>
+                                <p class="text-xl font-bold text-slate-800">They <span class="text-grammar-helper">are</span> play<span class="text-grammar-ing">ing</span> soccer.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="action-card bg-white p-4 rounded-xl shadow flex gap-4 items-center">
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=150&h=150&fit=crop" class="w-24 h-24 rounded-lg object-cover" alt="Gym">
+                            <div>
+                                <p class="text-gray-500 text-xs font-bold uppercase tracking-wider mb-1">He / Exercise</p>
+                                <p class="text-xl font-bold text-slate-800">He <span class="text-grammar-helper">is</span> exercis<span class="text-grammar-ing">ing</span>.</p>
+                            </div>
+                        </div>
+
+                         <!-- Card 3 -->
+                         <div class="action-card bg-white p-4 rounded-xl shadow flex gap-4 items-center">
+                            <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=150&h=150&fit=crop" class="w-24 h-24 rounded-lg object-cover" alt="Morning Coffee">
+                            <div>
+                                <p class="text-gray-500 text-xs font-bold uppercase tracking-wider mb-1">She / Drink</p>
+                                <p class="text-xl font-bold text-slate-800">She <span class="text-grammar-helper">is</span> drink<span class="text-grammar-ing">ing</span> coffee.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="action-card bg-white p-4 rounded-xl shadow flex gap-4 items-center">
+                            <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=150&h=150&fit=crop" class="w-24 h-24 rounded-lg object-cover" alt="Planning">
+                            <div>
+                                <p class="text-gray-500 text-xs font-bold uppercase tracking-wider mb-1">I / Plan</p>
+                                <p class="text-xl font-bold text-slate-800">I <span class="text-grammar-helper">am</span> pla<span class="text-grammar-ing">nn</span>ing my day.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: External Resources (BBC) - NEW ADDITION -->
+                <section class="bg-gray-900 text-white p-8 rounded-xl shadow-lg relative overflow-hidden mt-8 mb-8">
+                    <div class="absolute top-0 right-0 opacity-10 transform translate-x-10 -translate-y-10">
+                        <i class="fa-brands fa-bbc text-9xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 z-10 relative flex items-center gap-2">
+                        <i class="fa-solid fa-book-bookmark text-yellow-400"></i> Recursos Recomendados
+                    </h3>
+                    <p class="mb-6 text-gray-300 z-10 relative max-w-2xl">
+                        Profundiza en el Present Continuous con estos recursos oficiales. Escuchar explicaciones nativas te ayudará con la entonación.
+                    </p>
+                    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 z-10 relative">
+                        <a href="https://www.bbc.co.uk/learningenglish/course/lower-intermediate/unit-3/session-2" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-solid fa-graduation-cap text-yellow-400 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">BBC 6 Minute Grammar</span>
+                                <span class="text-xs text-gray-400">Explicación del Present Continuous</span>
+                            </div>
+                        </a>
+                        <a href="https://learnenglish.britishcouncil.org/grammar/a1-a2-grammar/present-continuous" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-solid fa-pen-fancy text-green-400 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">British Council</span>
+                                <span class="text-xs text-gray-400">Guía Gramatical y Ejercicios</span>
+                            </div>
+                        </a>
+                        <a href="https://www.cambridgeenglish.org/learning-english/activities-for-learners/?skill=grammar&level=basic" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-solid fa-gamepad text-blue-400 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">Cambridge Activities</span>
+                                <span class="text-xs text-gray-400">Juegos de gramática básica</span>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Section: Interactive Exercises -->
+                <section id="exercises-section" class="scroll-mt-24">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                            <i class="fa-solid fa-pencil text-brand"></i> Quiz en Movimiento
+                        </h3>
+                        <span class="text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full">4 Preguntas</span>
+                    </div>
+
+                    <form id="quiz-form" class="space-y-6">
+                        <!-- Q1 -->
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                            <p class="font-semibold text-lg mb-4">1. Look! It ________ raining.</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q1" value="option1" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">are</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q1" value="option2" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">is</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q1" value="option3" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">am</span>
+                                </label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option1">
+                            <p class="font-semibold text-lg mb-4">2. They are ________ TV right now.</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q2" value="option1" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">watching</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q2" value="option2" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">watch</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q2" value="option3" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">watches</span>
+                                </label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                         <!-- Q3 -->
+                         <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option3">
+                            <p class="font-semibold text-lg mb-4">3. Escribe el -ing de "Dance":</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q3" value="option1" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">Danceing</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q3" value="option2" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">Danncing</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q3" value="option3" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">Dancing</span>
+                                </label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                         <!-- Q4 -->
+                         <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                            <p class="font-semibold text-lg mb-4">4. ¿Cuál es incorrecta?</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q4" value="option1" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">I am running.</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q4" value="option2" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">She sleeping.</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q4" value="option3" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">We are studying.</span>
+                                </label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <div class="flex justify-end">
+                            <button type="button" onclick="evaluateQuiz()" class="bg-brand-DEFAULT hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-lg shadow-md transition transform hover:scale-105">
+                                <i class="fa-solid fa-check-circle mr-2"></i> Verificar
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Result Modal -->
+                    <div id="result-message" class="hidden mt-6 p-4 bg-gray-800 text-white rounded-lg text-center animate-pulse"></div>
+                </section>
+                
+                <!-- Next Lesson CTA -->
+                <section class="mt-12 pt-8 border-t-2 border-dashed border-gray-300 flex justify-center">
+                    <a href="topic-8.html" class="inline-flex items-center bg-slate-800 hover:bg-slate-900 text-white font-bold py-4 px-10 rounded-full shadow-lg transition transform hover:-translate-y-1">
+                        Siguiente: Preguntas y Respuestas Cortas <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </section>
+
+            </div>
         </article>
     </main>
 
-    <footer class="bg-gray-800 text-white py-6 mt-12">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2026 Curso de Inglés en 30 Días. Todos los derechos reservados.</p>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-10 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2026 Curso de Inglés Open Source. GitHub Pages Ready.</p>
         </div>
     </footer>
 
+    <!-- Script de Lógica -->
     <script>
-        // Auto-populate title from URL
-        const topicMap = {
-            3: 'Present Simple',
-            4: 'Vocabulario Básico',
-            5: 'Pronombres Personales',
-            6: 'Verbo TO BE',
-            7: 'Present Continuous',
-            8: 'There is / There are',
-            9: 'Pasado Simple',
-            10: 'Comparativos y Superlativos',
-            11: 'Futuro con Will y Going to',
-            12: 'Condicional Simple',
-            13: 'Passive Voice',
-            14: 'Reported Speech',
-            15: 'Phrasal Verbs',
-            16: 'Modal Perfect',
-            17: 'Advanced Grammar Review',
-            18: 'Speaking Tips'
-        };
-        
-        const filename = window.location.pathname.split('/').pop();
-        const topicNum = parseInt(filename.replace('topic-', '').replace('.html', ''));
-        
-        if (topicMap[topicNum]) {
-            document.getElementById('page-title').textContent = `Tema ${topicNum}: ${topicMap[topicNum]}`;
-            document.getElementById('content-title').textContent = topicMap[topicNum];
-            document.title = `Tema ${topicNum}: ${topicMap[topicNum]} - Curso de Inglés`;
+        function evaluateQuiz() {
+            const questions = document.querySelectorAll('.question-card');
+            let score = 0;
+            let total = questions.length;
+
+            questions.forEach((card, index) => {
+                const correctAnswer = card.getAttribute('data-correct');
+                const selectedOption = card.querySelector('input[type="radio"]:checked');
+                const feedbackDiv = card.querySelector('.feedback');
+                
+                feedbackDiv.className = 'feedback mt-3 text-sm p-2 rounded hidden';
+                card.classList.remove('border-green-500', 'border-red-500', 'border-2');
+
+                if (selectedOption) {
+                    if (selectedOption.value === correctAnswer) {
+                        score++;
+                        feedbackDiv.textContent = "¡Correcto! 😎";
+                        feedbackDiv.classList.remove('hidden');
+                        feedbackDiv.classList.add('bg-green-100', 'text-green-800');
+                        card.classList.add('border-green-500', 'border-2');
+                    } else {
+                        feedbackDiv.textContent = "Incorrecto.";
+                        feedbackDiv.classList.remove('hidden');
+                        feedbackDiv.classList.add('bg-red-100', 'text-red-800');
+                        card.classList.add('border-red-500', 'border-2');
+                    }
+                } else {
+                    feedbackDiv.textContent = "Selecciona una opción.";
+                    feedbackDiv.classList.remove('hidden');
+                    feedbackDiv.classList.add('bg-yellow-100', 'text-yellow-800');
+                }
+            });
+
+            const resultMsg = document.getElementById('result-message');
+            resultMsg.classList.remove('hidden', 'animate-pulse');
+            
+            if (score === total) {
+                resultMsg.className = "mt-6 p-4 bg-green-600 text-white rounded-lg text-center shadow-lg transition";
+                resultMsg.innerHTML = `<i class="fa-solid fa-star text-yellow-300 mr-2"></i> ¡Excelente! Estás progresando muy bien.`;
+            } else {
+                resultMsg.className = "mt-6 p-4 bg-blue-600 text-white rounded-lg text-center shadow-lg";
+                resultMsg.innerHTML = `Resultado: ${score}/${total}. ¡No olvides el verbo TO BE!`;
+            }
         }
     </script>
 </body>

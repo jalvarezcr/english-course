@@ -1,77 +1,439 @@
 <!DOCTYPE html>
-<html lang="es-MX">
+<html lang="es-MX" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temas 3-18 - Curso de Inglés</title>
+    <title>Tema 11: Futuro (Will vs Going to) - English Course A1-B2</title>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../styles.css">
+    
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#4da6ff',
+                            DEFAULT: '#0066cc',
+                            dark: '#004d99',
+                        },
+                        future: {
+                            will: '#8b5cf6',      // Violet (Magic/Spontaneous)
+                            goingto: '#0ea5e9',   // Sky Blue (Planned/Clear)
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .correct-answer { background-color: #d1fae5; border-color: #10b981; color: #065f46; }
+        .wrong-answer { background-color: #fee2e2; border-color: #ef4444; color: #991b1b; }
+        .future-card:hover { transform: translateY(-5px); transition: transform 0.3s; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <header class="bg-blue-600 text-white py-4 px-6 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold" id="page-title">Tema - Curso de Inglés</h1>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="../index.html" class="hover:underline">← Volver al inicio</a></li>
-                </ul>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Header Sticky -->
+    <header class="sticky top-0 z-50 bg-brand-DEFAULT text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                <div>
+                    <h1 class="text-lg font-bold leading-tight">Tema 11: Futuro</h1>
+                    <p class="text-xs text-blue-200">Curso B1</p>
+                </div>
+            </div>
+            <nav class="flex gap-4 text-sm font-medium">
+                <a href="topic-10.html" class="flex items-center space-x-2 hover:bg-white/10 px-3 py-2 rounded transition">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span class="hidden sm:inline">Anterior</span>
+                </a>
+                <a href="../index.html" class="flex items-center space-x-2 hover:bg-white/10 px-3 py-2 rounded transition">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="hidden sm:inline">Inicio</span>
+                </a>
             </nav>
+        </div>
+        <!-- Progress Bar (36% completado) -->
+        <div class="h-1 bg-blue-800 w-full">
+            <div class="h-full bg-yellow-400 w-[36%]" title="Progreso del curso"></div>
         </div>
     </header>
 
-    <main class="container mx-auto my-8 px-4">
-        <article class="bg-white p-8 rounded-lg shadow-md max-w-5xl mx-auto">
-            <section class="mb-8">
-                <h2 class="text-3xl font-bold mb-4" id="content-title">Tema en Desarrollo</h2>
-                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
-                    <p class="font-semibold">🚧 Contenido en desarrollo</p>
-                    <p>Este tema está siendo desarrollado. Pronto estará disponible con contenido completo, ejemplos, ejercicios y exámenes interactivos.</p>
+    <!-- Main Content -->
+    <main class="container mx-auto my-8 px-4 max-w-5xl">
+        
+        <!-- Hero Section -->
+        <article class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-8">
+            <div class="relative h-64 md:h-80">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=600&fit=crop" alt="Ciudad futurista o brújula" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent flex items-end">
+                    <div class="p-8 text-white w-full">
+                        <span class="bg-purple-500 text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wide mb-2 inline-block">Future Forms</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-2">Destino vs. Planes</h2>
+                        <p class="text-lg text-gray-300">Aprende la diferencia sutil entre "Lo haré" y "Voy a hacerlo".</p>
+                    </div>
                 </div>
-            </section>
+            </div>
 
-            <section class="flex justify-between mt-12 pt-6 border-t-2 border-gray-200">
-                <a href="../index.html" class="btn-primary">Volver al temario</a>
-            </section>
+            <!-- Content Body -->
+            <div class="p-6 md:p-10 space-y-12">
+
+                <!-- Section: Intro -->
+                <section class="grid md:grid-cols-3 gap-8">
+                    <div class="md:col-span-2 prose max-w-none">
+                        <h3 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                            <i class="fa-solid fa-timeline text-brand"></i> No hay un solo futuro
+                        </h3>
+                        <p class="text-lg leading-relaxed">
+                            En español usamos "Voy a..." y el futuro simple ("Haré...") casi indistintamente. En inglés, la elección cambia el significado.
+                        </p>
+                        <p>
+                            ¿Es una decisión que tomaste <strong>ahora mismo</strong>? ¿O es algo que ya tenías <strong>planeado</strong> en tu agenda? Esa es la clave.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-100 p-6 rounded-lg border border-gray-200 flex flex-col justify-center text-center">
+                        <h4 class="font-bold text-gray-800 mb-2">Contracciones Clave</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="bg-white px-3 py-2 rounded shadow-sm">
+                                I will <i class="fa-solid fa-arrow-right mx-1 text-gray-400"></i> <strong>I'll</strong>
+                            </div>
+                            <div class="bg-white px-3 py-2 rounded shadow-sm">
+                                She will <i class="fa-solid fa-arrow-right mx-1 text-gray-400"></i> <strong>She'll</strong>
+                            </div>
+                            <div class="bg-white px-3 py-2 rounded shadow-sm">
+                                Will not <i class="fa-solid fa-arrow-right mx-1 text-gray-400"></i> <strong>Won't</strong>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="border-slate-200">
+
+                <!-- Section: The Visual Battle (Will vs Going to) -->
+                <section>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">
+                        La Batalla del Futuro
+                    </h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Team WILL -->
+                        <div class="future-card bg-white border-t-8 border-future-will rounded-xl p-6 shadow-sm relative overflow-hidden">
+                            <div class="absolute right-0 top-0 p-4 opacity-5">
+                                <i class="fa-solid fa-wand-magic-sparkles text-9xl"></i>
+                            </div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="bg-future-will text-white w-10 h-10 rounded-full flex items-center justify-center text-xl"><i class="fa-solid fa-bolt"></i></span>
+                                <h4 class="text-2xl font-bold text-future-will">WILL</h4>
+                            </div>
+                            <p class="text-gray-600 mb-4 font-medium">El Espontáneo & Soñador</p>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex gap-2">
+                                    <i class="fa-solid fa-check text-future-will mt-1"></i>
+                                    <span><strong>Decisión Inmediata:</strong> El teléfono suena. "I'll answer it!" (Lo contesto yo).</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <i class="fa-solid fa-check text-future-will mt-1"></i>
+                                    <span><strong>Predicción General:</strong> "Cars will fly in 2050" (Sin evidencia, solo creencia).</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <i class="fa-solid fa-check text-future-will mt-1"></i>
+                                    <span><strong>Promesas:</strong> "I will love you forever."</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Team GOING TO -->
+                        <div class="future-card bg-white border-t-8 border-future-goingto rounded-xl p-6 shadow-sm relative overflow-hidden">
+                            <div class="absolute right-0 top-0 p-4 opacity-5">
+                                <i class="fa-solid fa-calendar-check text-9xl"></i>
+                            </div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="bg-future-goingto text-white w-10 h-10 rounded-full flex items-center justify-center text-xl"><i class="fa-solid fa-list-check"></i></span>
+                                <h4 class="text-2xl font-bold text-future-goingto">GOING TO</h4>
+                            </div>
+                            <p class="text-gray-600 mb-4 font-medium">El Planificado & Observador</p>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex gap-2">
+                                    <i class="fa-solid fa-check text-future-goingto mt-1"></i>
+                                    <span><strong>Planes Previos:</strong> "I'm going to buy a car next month." (Ya lo decidí antes).</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <i class="fa-solid fa-check text-future-goingto mt-1"></i>
+                                    <span><strong>Evidencia Visual:</strong> "Look at those clouds! It's going to rain." (Lo veo venir).</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Scenario Examples -->
+                <section class="mt-8">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-masks-theater text-brand"></i> Escenarios de Ejemplo
+                    </h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Scenario 1 -->
+                        <div class="bg-slate-100 p-4 rounded-lg flex gap-4 items-start">
+                            <div class="bg-white p-2 rounded shadow text-center min-w-[60px]">
+                                <i class="fa-solid fa-shirt text-2xl text-future-will mb-1"></i>
+                                <span class="text-xs font-bold block text-future-will">Shop</span>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-gray-500 uppercase mb-1">En la tienda (Ahora)</p>
+                                <p class="text-lg font-bold">"I like this shirt. <span class="text-future-will">I'll</span> take it!"</p>
+                                <p class="text-xs text-gray-500">Decisión al momento de verla.</p>
+                            </div>
+                        </div>
+
+                        <!-- Scenario 2 -->
+                        <div class="bg-slate-100 p-4 rounded-lg flex gap-4 items-start">
+                            <div class="bg-white p-2 rounded shadow text-center min-w-[60px]">
+                                <i class="fa-solid fa-plane text-2xl text-future-goingto mb-1"></i>
+                                <span class="text-xs font-bold block text-future-goingto">Travel</span>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-gray-500 uppercase mb-1">En casa (Plan)</p>
+                                <p class="text-lg font-bold">"We <span class="text-future-goingto">are going to</span> visit Paris in July."</p>
+                                <p class="text-xs text-gray-500">Ya tenemos los boletos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Structure Warning -->
+                <section class="bg-yellow-50 p-6 rounded-xl border border-yellow-200 mt-8">
+                    <h3 class="text-lg font-bold text-yellow-800 flex items-center gap-2 mb-2">
+                        <i class="fa-solid fa-triangle-exclamation"></i> ¡Cuidado con el verbo TO BE!
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-3">
+                        El error #1 con <strong>Going to</strong> es olvidar el verbo "to be" antes.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="bg-white px-4 py-2 rounded border-l-4 border-red-500 shadow-sm text-sm">
+                            <i class="fa-solid fa-xmark text-red-500 mr-2"></i> I going to eat.
+                        </div>
+                        <div class="bg-white px-4 py-2 rounded border-l-4 border-green-500 shadow-sm text-sm font-bold">
+                            <i class="fa-solid fa-check text-green-500 mr-2"></i> I <span class="text-blue-600">am</span> going to eat.
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: External Resources -->
+                <section class="bg-gray-900 text-white p-8 rounded-xl shadow-lg relative overflow-hidden mt-8 mb-8">
+                    <div class="absolute top-0 right-0 opacity-10 transform translate-x-10 -translate-y-10">
+                        <i class="fa-brands fa-bbc text-9xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 z-10 relative flex items-center gap-2">
+                        <i class="fa-solid fa-book-bookmark text-yellow-400"></i> Recursos Recomendados
+                    </h3>
+                    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 z-10 relative">
+                        <a href="https://www.bbc.co.uk/learningenglish/course/lower-intermediate/unit-14/session-2" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-solid fa-graduation-cap text-yellow-400 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">BBC Grammar</span>
+                                <span class="text-xs text-gray-400">Future Forms Explained</span>
+                            </div>
+                        </a>
+                        <a href="https://learnenglish.britishcouncil.org/grammar/a1-a2-grammar/future-forms-will-be-going-to-present-continuous" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-solid fa-pen-fancy text-green-400 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">British Council</span>
+                                <span class="text-xs text-gray-400">Guía completa de futuros</span>
+                            </div>
+                        </a>
+                         <a href="https://www.youtube.com/watch?v=HTeS6X_fL3o" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-brands fa-youtube text-red-500 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">Video Comparativo</span>
+                                <span class="text-xs text-gray-400">Will vs Going to visual</span>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Section: Interactive Exercises -->
+                <section id="exercises-section" class="scroll-mt-24">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                            <i class="fa-solid fa-pencil text-brand"></i> Quiz del Futuro
+                        </h3>
+                        <span class="text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full">4 Preguntas</span>
+                    </div>
+
+                    <form id="quiz-form" class="space-y-6">
+                        <!-- Q1 -->
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option1">
+                            <p class="font-semibold text-lg mb-4">1. Look at those dark clouds! It ________ rain.</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q1" value="option1" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">is going to</span> <span class="text-xs text-gray-400 ml-2">(Evidencia)</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q1" value="option2" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">will</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q1" value="option3" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">going to</span>
+                                </label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                            <p class="font-semibold text-lg mb-4">2. "I forgot my wallet." - "Don't worry, I ________ pay."</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q2" value="option1" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">am going to</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q2" value="option2" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">will</span> <span class="text-xs text-gray-400 ml-2">(Espontáneo)</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q2" value="option3" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">will going to</span>
+                                </label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                         <!-- Q3 -->
+                         <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option1">
+                            <p class="font-semibold text-lg mb-4">3. We ________ married next year. (Plan)</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q3" value="option1" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">are going to get</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q3" value="option2" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">will getting</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q3" value="option3" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">gets</span>
+                                </label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                         <!-- Q4 -->
+                         <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option3">
+                            <p class="font-semibold text-lg mb-4">4. I promise I ________ tell anyone.</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q4" value="option1" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">am not going to</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q4" value="option2" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">don't will</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q4" value="option3" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">won't</span> <span class="text-xs text-gray-400 ml-2">(Promesa)</span>
+                                </label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <div class="flex justify-end">
+                            <button type="button" onclick="evaluateQuiz()" class="bg-brand-DEFAULT hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-lg shadow-md transition transform hover:scale-105">
+                                <i class="fa-solid fa-check-circle mr-2"></i> Verificar
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Result Modal -->
+                    <div id="result-message" class="hidden mt-6 p-4 bg-gray-800 text-white rounded-lg text-center animate-pulse"></div>
+                </section>
+                
+                <!-- Next Lesson CTA -->
+                <section class="mt-12 pt-8 border-t-2 border-dashed border-gray-300 flex justify-center">
+                    <a href="topic-12.html" class="inline-flex items-center bg-slate-800 hover:bg-slate-900 text-white font-bold py-4 px-10 rounded-full shadow-lg transition transform hover:-translate-y-1">
+                        Siguiente: Condicional Simple <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </section>
+
+            </div>
         </article>
     </main>
 
-    <footer class="bg-gray-800 text-white py-6 mt-12">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2026 Curso de Inglés en 30 Días. Todos los derechos reservados.</p>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-10 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2026 Curso de Inglés Open Source. GitHub Pages Ready.</p>
         </div>
     </footer>
 
+    <!-- Script de Lógica -->
     <script>
-        // Auto-populate title from URL
-        const topicMap = {
-            3: 'Present Simple',
-            4: 'Vocabulario Básico',
-            5: 'Pronombres Personales',
-            6: 'Verbo TO BE',
-            7: 'Present Continuous',
-            8: 'There is / There are',
-            9: 'Pasado Simple',
-            10: 'Comparativos y Superlativos',
-            11: 'Futuro con Will y Going to',
-            12: 'Condicional Simple',
-            13: 'Passive Voice',
-            14: 'Reported Speech',
-            15: 'Phrasal Verbs',
-            16: 'Modal Perfect',
-            17: 'Advanced Grammar Review',
-            18: 'Speaking Tips'
-        };
-        
-        const filename = window.location.pathname.split('/').pop();
-        const topicNum = parseInt(filename.replace('topic-', '').replace('.html', ''));
-        
-        if (topicMap[topicNum]) {
-            document.getElementById('page-title').textContent = `Tema ${topicNum}: ${topicMap[topicNum]}`;
-            document.getElementById('content-title').textContent = topicMap[topicNum];
-            document.title = `Tema ${topicNum}: ${topicMap[topicNum]} - Curso de Inglés`;
+        function evaluateQuiz() {
+            const questions = document.querySelectorAll('.question-card');
+            let score = 0;
+            let total = questions.length;
+
+            questions.forEach((card, index) => {
+                const correctAnswer = card.getAttribute('data-correct');
+                const selectedOption = card.querySelector('input[type="radio"]:checked');
+                const feedbackDiv = card.querySelector('.feedback');
+                
+                feedbackDiv.className = 'feedback mt-3 text-sm p-2 rounded hidden';
+                card.classList.remove('border-green-500', 'border-red-500', 'border-2');
+
+                if (selectedOption) {
+                    if (selectedOption.value === correctAnswer) {
+                        score++;
+                        feedbackDiv.textContent = "¡Correcto! 🔮";
+                        feedbackDiv.classList.remove('hidden');
+                        feedbackDiv.classList.add('bg-green-100', 'text-green-800');
+                        card.classList.add('border-green-500', 'border-2');
+                    } else {
+                        feedbackDiv.textContent = "Incorrecto.";
+                        feedbackDiv.classList.remove('hidden');
+                        feedbackDiv.classList.add('bg-red-100', 'text-red-800');
+                        card.classList.add('border-red-500', 'border-2');
+                    }
+                } else {
+                    feedbackDiv.textContent = "Selecciona una opción.";
+                    feedbackDiv.classList.remove('hidden');
+                    feedbackDiv.classList.add('bg-yellow-100', 'text-yellow-800');
+                }
+            });
+
+            const resultMsg = document.getElementById('result-message');
+            resultMsg.classList.remove('hidden', 'animate-pulse');
+            
+            if (score === total) {
+                resultMsg.className = "mt-6 p-4 bg-green-600 text-white rounded-lg text-center shadow-lg transition";
+                resultMsg.innerHTML = `<i class="fa-solid fa-crystal-ball text-purple-300 mr-2"></i> ¡Excelente! Tu futuro se ve brillante.`;
+            } else {
+                resultMsg.className = "mt-6 p-4 bg-blue-600 text-white rounded-lg text-center shadow-lg";
+                resultMsg.innerHTML = `Resultado: ${score}/${total}. Recuerda: Will es espontáneo, Going to es planificado.`;
+            }
         }
     </script>
 </body>

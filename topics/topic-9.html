@@ -1,77 +1,452 @@
 <!DOCTYPE html>
-<html lang="es-MX">
+<html lang="es-MX" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temas 3-18 - Curso de Inglés</title>
+    <title>Tema 9: Pasado Simple - English Course A1-B2</title>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../styles.css">
+    
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#4da6ff',
+                            DEFAULT: '#0066cc',
+                            dark: '#004d99',
+                        },
+                        grammar: {
+                            regular: '#10b981',   // Green for Regular (-ed)
+                            irregular: '#f59e0b', // Amber for Irregular
+                            auxiliary: '#ef4444'  // Red for DID
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .correct-answer { background-color: #d1fae5; border-color: #10b981; color: #065f46; }
+        .wrong-answer { background-color: #fee2e2; border-color: #ef4444; color: #991b1b; }
+        .verb-card:hover { transform: translateY(-3px); transition: transform 0.2s; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <header class="bg-blue-600 text-white py-4 px-6 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold" id="page-title">Tema - Curso de Inglés</h1>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="../index.html" class="hover:underline">← Volver al inicio</a></li>
-                </ul>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Header Sticky -->
+    <header class="sticky top-0 z-50 bg-brand-DEFAULT text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                <div>
+                    <h1 class="text-lg font-bold leading-tight">Tema 9: Pasado Simple</h1>
+                    <p class="text-xs text-blue-200">Curso A2</p>
+                </div>
+            </div>
+            <nav class="flex gap-4 text-sm font-medium">
+                <a href="topic-8.html" class="flex items-center space-x-2 hover:bg-white/10 px-3 py-2 rounded transition">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span class="hidden sm:inline">Anterior</span>
+                </a>
+                <a href="../index.html" class="flex items-center space-x-2 hover:bg-white/10 px-3 py-2 rounded transition">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="hidden sm:inline">Inicio</span>
+                </a>
             </nav>
+        </div>
+        <!-- Progress Bar (28% completado) -->
+        <div class="h-1 bg-blue-800 w-full">
+            <div class="h-full bg-yellow-400 w-[28%]" title="Progreso del curso"></div>
         </div>
     </header>
 
-    <main class="container mx-auto my-8 px-4">
-        <article class="bg-white p-8 rounded-lg shadow-md max-w-5xl mx-auto">
-            <section class="mb-8">
-                <h2 class="text-3xl font-bold mb-4" id="content-title">Tema en Desarrollo</h2>
-                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
-                    <p class="font-semibold">🚧 Contenido en desarrollo</p>
-                    <p>Este tema está siendo desarrollado. Pronto estará disponible con contenido completo, ejemplos, ejercicios y exámenes interactivos.</p>
+    <!-- Main Content -->
+    <main class="container mx-auto my-8 px-4 max-w-5xl">
+        
+        <!-- Hero Section -->
+        <article class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-8">
+            <div class="relative h-64 md:h-80">
+                <img src="https://images.unsplash.com/photo-1461360370896-922624d12aa1?w=1200&h=600&fit=crop" alt="Cámara antigua y fotos viejas" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent flex items-end">
+                    <div class="p-8 text-white w-full">
+                        <span class="bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wide mb-2 inline-block">The Past</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-2">Historias del Ayer</h2>
+                        <p class="text-lg text-gray-300">Aprende a contar lo que hiciste ayer, el año pasado o hace 5 minutos.</p>
+                    </div>
                 </div>
-            </section>
+            </div>
 
-            <section class="flex justify-between mt-12 pt-6 border-t-2 border-gray-200">
-                <a href="../index.html" class="btn-primary">Volver al temario</a>
-            </section>
+            <!-- Content Body -->
+            <div class="p-6 md:p-10 space-y-12">
+
+                <!-- Section: Intro -->
+                <section class="grid md:grid-cols-3 gap-8">
+                    <div class="md:col-span-2 prose max-w-none">
+                        <h3 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                            <i class="fa-solid fa-clock-rotate-left text-brand"></i> Acción Terminada
+                        </h3>
+                        <p class="text-lg leading-relaxed">
+                            El <strong>Pasado Simple</strong> se usa para acciones que ya terminaron. No tienen conexión con el presente. Es como cerrar un libro.
+                        </p>
+                        <p>
+                            En inglés, tenemos dos tipos de verbos en pasado: los que siguen las reglas (Regulares) y los rebeldes (Irregulares).
+                        </p>
+                    </div>
+                    
+                    <div class="bg-amber-50 p-6 rounded-lg border border-amber-100 flex flex-col justify-center text-center">
+                        <h4 class="font-bold text-amber-900 mb-2">Palabras Clave</h4>
+                        <ul class="text-sm text-amber-800 space-y-2">
+                            <li class="bg-white px-2 py-1 rounded shadow-sm"><strong>Yesterday</strong> (Ayer)</li>
+                            <li class="bg-white px-2 py-1 rounded shadow-sm"><strong>Last</strong> week (La semana pasada)</li>
+                            <li class="bg-white px-2 py-1 rounded shadow-sm">2 days <strong>ago</strong> (Hace 2 días)</li>
+                            <li class="bg-white px-2 py-1 rounded shadow-sm">In 1999</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr class="border-slate-200">
+
+                <!-- Section: Regular Verbs (-ED) -->
+                <section>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-grammar-regular pl-4">
+                        Verbos Regulares (+ED)
+                    </h3>
+                    <p class="mb-4 text-gray-600">La mayoría de los verbos son "buenos ciudadanos" y solo necesitan <strong>-ed</strong> al final.</p>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Rule 1 -->
+                        <div class="verb-card bg-white p-5 rounded-xl border border-green-100 shadow-sm">
+                            <div class="text-green-600 font-bold mb-2 text-lg">Regla General</div>
+                            <p class="text-xs text-gray-500 mb-3">Agrega -ed</p>
+                            <div class="space-y-1 font-mono text-slate-700">
+                                <p>Work → Work<span class="text-green-600 font-bold">ed</span></p>
+                                <p>Play → Play<span class="text-green-600 font-bold">ed</span></p>
+                                <p>Visit → Visit<span class="text-green-600 font-bold">ed</span></p>
+                            </div>
+                        </div>
+
+                        <!-- Rule 2 -->
+                        <div class="verb-card bg-white p-5 rounded-xl border border-green-100 shadow-sm">
+                            <div class="text-green-600 font-bold mb-2 text-lg">Termina en 'E'</div>
+                            <p class="text-xs text-gray-500 mb-3">Solo agrega -d</p>
+                            <div class="space-y-1 font-mono text-slate-700">
+                                <p>Live → Live<span class="text-green-600 font-bold">d</span></p>
+                                <p>Dance → Dance<span class="text-green-600 font-bold">d</span></p>
+                                <p>Love → Love<span class="text-green-600 font-bold">d</span></p>
+                            </div>
+                        </div>
+
+                        <!-- Rule 3 -->
+                        <div class="verb-card bg-white p-5 rounded-xl border border-green-100 shadow-sm">
+                            <div class="text-green-600 font-bold mb-2 text-lg">Termina en Consonante + Y</div>
+                            <p class="text-xs text-gray-500 mb-3">Cambia Y por I + ed</p>
+                            <div class="space-y-1 font-mono text-slate-700">
+                                <p>Study → Stud<span class="text-green-600 font-bold">ied</span></p>
+                                <p>Cry → Cr<span class="text-green-600 font-bold">ied</span></p>
+                                <p>Try → Tr<span class="text-green-600 font-bold">ied</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Irregular Verbs (Visual Wanted Posters) -->
+                <section class="bg-slate-100 p-8 rounded-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 opacity-5 transform rotate-12">
+                        <i class="fa-solid fa-handcuffs text-9xl"></i>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2 flex items-center gap-2 relative z-10">
+                        <i class="fa-solid fa-mask text-grammar-irregular"></i> Verbos Irregulares
+                    </h3>
+                    <p class="text-gray-600 mb-6 relative z-10">Estos verbos no siguen reglas. ¡Tienes que memorizarlos!</p>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 relative z-10">
+                        <!-- Card 1 -->
+                        <div class="bg-white p-4 rounded-lg shadow border-2 border-dashed border-grammar-irregular text-center transform rotate-1 hover:rotate-0 transition">
+                            <p class="text-xs text-gray-500 uppercase tracking-widest font-bold">Wanted</p>
+                            <p class="text-xl font-bold mt-1">GO</p>
+                            <i class="fa-solid fa-arrow-down text-gray-300 my-2"></i>
+                            <p class="text-2xl font-black text-grammar-irregular">WENT</p>
+                            <p class="text-xs text-gray-400 mt-2">Ir -> Fui</p>
+                        </div>
+                         <!-- Card 2 -->
+                         <div class="bg-white p-4 rounded-lg shadow border-2 border-dashed border-grammar-irregular text-center transform -rotate-1 hover:rotate-0 transition">
+                            <p class="text-xs text-gray-500 uppercase tracking-widest font-bold">Wanted</p>
+                            <p class="text-xl font-bold mt-1">HAVE</p>
+                            <i class="fa-solid fa-arrow-down text-gray-300 my-2"></i>
+                            <p class="text-2xl font-black text-grammar-irregular">HAD</p>
+                            <p class="text-xs text-gray-400 mt-2">Tener -> Tuve</p>
+                        </div>
+                         <!-- Card 3 -->
+                         <div class="bg-white p-4 rounded-lg shadow border-2 border-dashed border-grammar-irregular text-center transform rotate-2 hover:rotate-0 transition">
+                            <p class="text-xs text-gray-500 uppercase tracking-widest font-bold">Wanted</p>
+                            <p class="text-xl font-bold mt-1">EAT</p>
+                            <i class="fa-solid fa-arrow-down text-gray-300 my-2"></i>
+                            <p class="text-2xl font-black text-grammar-irregular">ATE</p>
+                            <p class="text-xs text-gray-400 mt-2">Comer -> Comí</p>
+                        </div>
+                         <!-- Card 4 -->
+                         <div class="bg-white p-4 rounded-lg shadow border-2 border-dashed border-grammar-irregular text-center transform -rotate-2 hover:rotate-0 transition">
+                            <p class="text-xs text-gray-500 uppercase tracking-widest font-bold">Wanted</p>
+                            <p class="text-xl font-bold mt-1">BE</p>
+                            <i class="fa-solid fa-arrow-down text-gray-300 my-2"></i>
+                            <p class="text-lg font-black text-grammar-irregular">WAS / WERE</p>
+                            <p class="text-xs text-gray-400 mt-2">Ser -> Fui/Era</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Auxiliary DID (The Time Machine) -->
+                <section>
+                    <div class="bg-grammar-auxiliary/10 border border-grammar-auxiliary rounded-xl p-8 mt-8">
+                        <div class="flex flex-col md:flex-row items-center gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-20 h-20 bg-grammar-auxiliary text-white rounded-full flex items-center justify-center text-3xl font-bold shadow-lg">
+                                    DID
+                                </div>
+                            </div>
+                            <div class="flex-grow">
+                                <h3 class="text-2xl font-bold text-grammar-auxiliary mb-2">El Ladrón del Pasado</h3>
+                                <p class="text-lg mb-4">
+                                    Cuando usamos <strong>DID</strong> (en preguntas) o <strong>DIDN'T</strong> (en negativos), este auxiliar "roba" el pasado del verbo principal.
+                                </p>
+                                <div class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-grammar-auxiliary space-y-3">
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-gray-500">Afirmativo:</span>
+                                        <span class="font-mono font-bold">I <span class="text-green-600">worked</span> yesterday.</span>
+                                    </div>
+                                    <div class="flex items-center justify-between border-t pt-2">
+                                        <span class="text-gray-500">Negativo:</span>
+                                        <span class="font-mono font-bold">I <span class="text-red-500">didn't</span> <span class="text-blue-600">work</span> yesterday.</span>
+                                    </div>
+                                    <div class="flex items-center justify-between border-t pt-2">
+                                        <span class="text-gray-500">Pregunta:</span>
+                                        <span class="font-mono font-bold"><span class="text-red-500">Did</span> you <span class="text-blue-600">work</span> yesterday?</span>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-gray-500 mt-2 text-right">Nota cómo "work" pierde la -ed cuando aparece "did".</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: External Resources (BBC) -->
+                <section class="bg-gray-900 text-white p-8 rounded-xl shadow-lg relative overflow-hidden mt-8 mb-8">
+                    <div class="absolute top-0 right-0 opacity-10 transform translate-x-10 -translate-y-10">
+                        <i class="fa-brands fa-bbc text-9xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 z-10 relative flex items-center gap-2">
+                        <i class="fa-solid fa-book-bookmark text-yellow-400"></i> Recursos Recomendados
+                    </h3>
+                    <p class="mb-6 text-gray-300 z-10 relative max-w-2xl">
+                        Refuerza tu aprendizaje con estos recursos oficiales. La práctica auditiva es esencial para los verbos irregulares.
+                    </p>
+                    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 z-10 relative">
+                        <a href="https://www.bbc.co.uk/learningenglish/course/lower-intermediate/unit-4/session-2" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-solid fa-graduation-cap text-yellow-400 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">BBC 6 Minute Grammar</span>
+                                <span class="text-xs text-gray-400">Past Simple Regular/Irregular</span>
+                            </div>
+                        </a>
+                        <a href="https://learnenglish.britishcouncil.org/grammar/a1-a2-grammar/past-simple" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-solid fa-pen-fancy text-green-400 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">British Council</span>
+                                <span class="text-xs text-gray-400">Guía completa y ejercicios</span>
+                            </div>
+                        </a>
+                         <a href="https://www.youtube.com/watch?v=0Wb3iC2DaX0" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-brands fa-youtube text-red-500 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">Canción de Verbos</span>
+                                <span class="text-xs text-gray-400">Para memorizar irregulares</span>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Section: Interactive Exercises -->
+                <section id="exercises-section" class="scroll-mt-24">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                            <i class="fa-solid fa-pencil text-brand"></i> Quiz del Pasado
+                        </h3>
+                        <span class="text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full">4 Preguntas</span>
+                    </div>
+
+                    <form id="quiz-form" class="space-y-6">
+                        <!-- Q1 -->
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                            <p class="font-semibold text-lg mb-4">1. I ________ soccer yesterday.</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q1" value="option1" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">play</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q1" value="option2" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">played</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q1" value="option3" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">playied</span>
+                                </label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option3">
+                            <p class="font-semibold text-lg mb-4">2. She ________ to the cinema last night.</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q2" value="option1" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">go</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q2" value="option2" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">goed</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q2" value="option3" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">went</span>
+                                </label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                         <!-- Q3 -->
+                         <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                            <p class="font-semibold text-lg mb-4">3. ________ you like the pizza?</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q3" value="option1" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">Do</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q3" value="option2" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">Did</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q3" value="option3" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">Does</span>
+                                </label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                         <!-- Q4 -->
+                         <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option1">
+                            <p class="font-semibold text-lg mb-4">4. I didn't ________ my homework.</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q4" value="option1" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">finish</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q4" value="option2" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">finished</span>
+                                </label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q4" value="option3" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">finishing</span>
+                                </label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <div class="flex justify-end">
+                            <button type="button" onclick="evaluateQuiz()" class="bg-brand-DEFAULT hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-lg shadow-md transition transform hover:scale-105">
+                                <i class="fa-solid fa-check-circle mr-2"></i> Verificar
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Result Modal -->
+                    <div id="result-message" class="hidden mt-6 p-4 bg-gray-800 text-white rounded-lg text-center animate-pulse"></div>
+                </section>
+                
+                <!-- Next Lesson CTA -->
+                <section class="mt-12 pt-8 border-t-2 border-dashed border-gray-300 flex justify-center">
+                    <a href="topic-10.html" class="inline-flex items-center bg-slate-800 hover:bg-slate-900 text-white font-bold py-4 px-10 rounded-full shadow-lg transition transform hover:-translate-y-1">
+                        Siguiente: Comparativos y Superlativos <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </section>
+
+            </div>
         </article>
     </main>
 
-    <footer class="bg-gray-800 text-white py-6 mt-12">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2026 Curso de Inglés en 30 Días. Todos los derechos reservados.</p>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-10 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2026 Curso de Inglés Open Source. GitHub Pages Ready.</p>
         </div>
     </footer>
 
+    <!-- Script de Lógica -->
     <script>
-        // Auto-populate title from URL
-        const topicMap = {
-            3: 'Present Simple',
-            4: 'Vocabulario Básico',
-            5: 'Pronombres Personales',
-            6: 'Verbo TO BE',
-            7: 'Present Continuous',
-            8: 'There is / There are',
-            9: 'Pasado Simple',
-            10: 'Comparativos y Superlativos',
-            11: 'Futuro con Will y Going to',
-            12: 'Condicional Simple',
-            13: 'Passive Voice',
-            14: 'Reported Speech',
-            15: 'Phrasal Verbs',
-            16: 'Modal Perfect',
-            17: 'Advanced Grammar Review',
-            18: 'Speaking Tips'
-        };
-        
-        const filename = window.location.pathname.split('/').pop();
-        const topicNum = parseInt(filename.replace('topic-', '').replace('.html', ''));
-        
-        if (topicMap[topicNum]) {
-            document.getElementById('page-title').textContent = `Tema ${topicNum}: ${topicMap[topicNum]}`;
-            document.getElementById('content-title').textContent = topicMap[topicNum];
-            document.title = `Tema ${topicNum}: ${topicMap[topicNum]} - Curso de Inglés`;
+        function evaluateQuiz() {
+            const questions = document.querySelectorAll('.question-card');
+            let score = 0;
+            let total = questions.length;
+
+            questions.forEach((card, index) => {
+                const correctAnswer = card.getAttribute('data-correct');
+                const selectedOption = card.querySelector('input[type="radio"]:checked');
+                const feedbackDiv = card.querySelector('.feedback');
+                
+                feedbackDiv.className = 'feedback mt-3 text-sm p-2 rounded hidden';
+                card.classList.remove('border-green-500', 'border-red-500', 'border-2');
+
+                if (selectedOption) {
+                    if (selectedOption.value === correctAnswer) {
+                        score++;
+                        feedbackDiv.textContent = "¡Correcto! 😎";
+                        feedbackDiv.classList.remove('hidden');
+                        feedbackDiv.classList.add('bg-green-100', 'text-green-800');
+                        card.classList.add('border-green-500', 'border-2');
+                    } else {
+                        feedbackDiv.textContent = "Incorrecto.";
+                        feedbackDiv.classList.remove('hidden');
+                        feedbackDiv.classList.add('bg-red-100', 'text-red-800');
+                        card.classList.add('border-red-500', 'border-2');
+                    }
+                } else {
+                    feedbackDiv.textContent = "Selecciona una opción.";
+                    feedbackDiv.classList.remove('hidden');
+                    feedbackDiv.classList.add('bg-yellow-100', 'text-yellow-800');
+                }
+            });
+
+            const resultMsg = document.getElementById('result-message');
+            resultMsg.classList.remove('hidden', 'animate-pulse');
+            
+            if (score === total) {
+                resultMsg.className = "mt-6 p-4 bg-green-600 text-white rounded-lg text-center shadow-lg transition";
+                resultMsg.innerHTML = `<i class="fa-solid fa-star text-yellow-300 mr-2"></i> ¡Perfecto! Dominas el pasado.`;
+            } else {
+                resultMsg.className = "mt-6 p-4 bg-blue-600 text-white rounded-lg text-center shadow-lg";
+                resultMsg.innerHTML = `Resultado: ${score}/${total}. Revisa los verbos irregulares.`;
+            }
         }
     </script>
 </body>
