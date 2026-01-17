@@ -1,78 +1,696 @@
 <!DOCTYPE html>
-<html lang="es-MX">
+<html lang="es-MX" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temas 3-18 - Curso de Inglés</title>
+    <title>Tema 4: Vocabulario Básico - English Course A1-B2</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../styles.css">
+
+
+    <!-- Custom Config for Tailwind colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#4da6ff',
+                            DEFAULT: '#0066cc',
+                            dark: '#004d99',
+                        },
+                        // Colores específicos para vocabulario
+                        family: '#f43f5e',   // Rose
+                        numbers: '#8b5cf6',  // Violet
+                        days: '#f59e0b'      // Amber
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .correct-answer {
+            background-color: #d1fae5;
+            border-color: #10b981;
+            color: #065f46;
+        }
+
+        .wrong-answer {
+            background-color: #fee2e2;
+            border-color: #ef4444;
+            color: #991b1b;
+        }
+
+        /* Efecto Hover para tarjetas de vocabulario */
+        .vocab-card:hover {
+            transform: scale(1.02);
+            transition: transform 0.2s ease;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Líneas para el árbol genealógico simple */
+        .tree-line {
+            border-left: 2px solid #cbd5e1;
+            height: 20px;
+            width: 2px;
+            margin: 0 auto;
+        }
+
+        .tree-connector {
+            border-top: 2px solid #cbd5e1;
+            width: 100%;
+            height: 10px;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <header class="bg-blue-600 text-white py-4 px-6 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold" id="page-title">Tema - Curso de Inglés</h1>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="../index.html" class="hover:underline">← Volver al inicio</a></li>
-                </ul>
+
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Header Sticky -->
+    <header class="sticky top-0 z-50 bg-brand-DEFAULT text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                <div>
+                    <h1 class="text-lg font-bold leading-tight">Tema 4: Vocabulario</h1>
+                    <p class="text-xs text-blue-200">Curso A1 -> B2</p>
+                </div>
+            </div>
+            <nav class="flex gap-4 text-sm font-medium">
+                <a href="topic-3.html"
+                    class="flex items-center space-x-2 hover:bg-white/10 px-3 py-2 rounded transition">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span class="hidden sm:inline">Anterior</span>
+                </a>
+                <a href="../index.html"
+                    class="flex items-center space-x-2 hover:bg-white/10 px-3 py-2 rounded transition">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="hidden sm:inline">Inicio</span>
+                </a>
             </nav>
+        </div>
+        <!-- Progress Bar (12% completado) -->
+        <div class="h-1 bg-blue-800 w-full">
+            <div class="h-full bg-yellow-400 w-[12%]" title="Progreso del curso"></div>
         </div>
     </header>
 
-    <main class="container mx-auto my-8 px-4">
-        <article class="bg-white p-8 rounded-lg shadow-md max-w-5xl mx-auto">
-            <section class="mb-8">
-                <h2 class="text-3xl font-bold mb-4" id="content-title">Tema en Desarrollo</h2>
-                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
-                    <p class="font-semibold">🚧 Contenido en desarrollo</p>
-                    <p>Este tema está siendo desarrollado. Pronto estará disponible con contenido completo, ejemplos, ejercicios y exámenes interactivos.</p>
-                </div>
-            </section>
+    <!-- Main Content -->
+    <main class="container mx-auto my-8 px-4 max-w-5xl">
 
-            <section class="flex justify-between mt-12 pt-6 border-t-2 border-gray-200">
-                <a href="../index.html" class="btn-primary">Volver al temario</a>
-            </section>
+        <!-- Hero Section -->
+        <article class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-8">
+            <div class="relative h-64 md:h-80">
+                <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1200&h=600&fit=crop"
+                    alt="Grupo de amigos diversos y coloridos" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent flex items-end">
+                    <div class="p-8 text-white w-full">
+                        <span
+                            class="bg-pink-500 text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wide mb-2 inline-block">Words
+                            & Concepts</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-2">Tu Caja de Herramientas</h2>
+                        <p class="text-lg text-gray-300">Familia, Colores, Números y Tiempo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Body -->
+            <div class="p-6 md:p-10 space-y-12">
+
+                <!-- Section: Intro -->
+                <section class="grid md:grid-cols-3 gap-8">
+                    <div class="md:col-span-2 prose max-w-none">
+                        <h3 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                            <i class="fa-solid fa-box-open text-brand"></i> Introducción
+                        </h3>
+                        <p class="text-lg leading-relaxed">
+                            La gramática es el esqueleto, pero el <strong>vocabulario</strong> es la carne. En esta
+                            lección expandiremos tu diccionario mental con las palabras más usadas. No intentes
+                            memorizar todo en un segundo; usa las asociaciones visuales que hemos preparado.
+                        </p>
+                    </div>
+                    <div class="bg-pink-50 p-6 rounded-lg border border-pink-100 flex flex-col justify-center">
+                        <h4 class="font-bold text-pink-900 mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-triangle-exclamation"></i> Alerta de Falso Amigo
+                        </h4>
+                        <div class="bg-white p-3 rounded shadow-sm text-sm">
+                            <p class="mb-2"><strong>Parents</strong> <span class="text-red-500 font-bold">≠</span>
+                                Parientes</p>
+                            <ul class="space-y-1">
+                                <li><i class="fa-solid fa-check text-green-500"></i> Parents = <strong>Padres</strong>
+                                    (Papá y Mamá)</li>
+                                <li><i class="fa-solid fa-check text-green-500"></i> Relatives =
+                                    <strong>Parientes</strong> (Familia en general)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="border-slate-200">
+
+                <!-- Section 1: The Family -->
+                <section>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-family pl-4">
+                        La Familia (The Family)
+                    </h3>
+
+                    <!-- Family Visual Tree Layout -->
+                    <div class="bg-white border border-gray-200 rounded-xl p-8 shadow-sm text-center overflow-x-auto">
+
+                        <!-- Grandparents -->
+                        <div class="flex justify-center gap-8 md:gap-24 mb-4">
+                            <div class="flex flex-col items-center">
+                                <img src="https://images.unsplash.com/photo-1605126164543-7e9ea393f8a1?w=100&h=100&fit=crop"
+                                    class="w-16 h-16 rounded-full border-2 border-gray-300 mb-2 object-cover">
+                                <span class="font-bold text-sm">Grandfather</span>
+                                <span class="text-xs text-gray-500">Abuelo</span>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="https://images.unsplash.com/photo-1663429122432-c2769373768f?w=100&h=100&fit=crop"
+                                    class="w-16 h-16 rounded-full border-2 border-gray-300 mb-2 object-cover">
+                                <span class="font-bold text-sm">Grandmother</span>
+                                <span class="text-xs text-gray-500">Abuela</span>
+                            </div>
+                        </div>
+
+                        <!-- Connector Lines -->
+                        <div class="w-1/2 mx-auto border-t-2 border-gray-300 h-4 relative">
+                            <div class="absolute left-1/2 -top-[2px] h-4 w-[2px] bg-gray-300"></div>
+                        </div>
+
+                        <!-- Parents -->
+                        <div class="flex justify-center gap-8 md:gap-24 mb-4">
+                            <div class="flex flex-col items-center">
+                                <img src="https://images.unsplash.com/photo-1605812830455-2fadc55bc4ba?w=100&h=100&fit=crop"
+                                    class="w-16 h-16 rounded-full border-2 border-blue-300 mb-2 object-cover">
+                                <span class="font-bold text-sm text-blue-700">Father (Dad)</span>
+                                <span class="text-xs text-gray-500">Papá</span>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="https://images.unsplash.com/photo-1667132713689-dfe53c325445?w=100&h=100&fit=crop"
+                                    class="w-16 h-16 rounded-full border-2 border-pink-300 mb-2 object-cover">
+                                <span class="font-bold text-sm text-pink-700">Mother (Mom)</span>
+                                <span class="text-xs text-gray-500">Mamá</span>
+                            </div>
+                        </div>
+
+                        <!-- Connector Lines -->
+                        <div class="w-2/3 mx-auto border-t-2 border-gray-300 h-4 relative">
+                            <div class="absolute left-1/2 -top-[2px] h-4 w-[2px] bg-gray-300"></div>
+                            <div class="absolute left-0 -top-[2px] h-4 w-[2px] bg-gray-300"></div>
+                            <div class="absolute right-0 -top-[2px] h-4 w-[2px] bg-gray-300"></div>
+                        </div>
+
+                        <!-- Children -->
+                        <div class="flex justify-center gap-4 md:gap-16">
+                            <div class="flex flex-col items-center">
+                                <img src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=100&h=100&fit=crop"
+                                    class="w-14 h-14 rounded-full border-2 border-green-300 mb-2 object-cover">
+                                <span class="font-bold text-sm">Brother</span>
+                                <span class="text-xs text-gray-500">Hermano</span>
+                            </div>
+                            <div
+                                class="flex flex-col items-center bg-yellow-100 p-2 rounded-lg border border-yellow-300">
+                                <span class="text-xl">👋</span>
+                                <span class="font-bold text-sm">Me</span>
+                                <span class="text-xs text-gray-500">Yo</span>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="https://images.unsplash.com/photo-1596870230751-ebdfce98ec42?w=100&h=100&fit=crop"
+                                    class="w-14 h-14 rounded-full border-2 border-purple-300 mb-2 object-cover">
+                                <span class="font-bold text-sm">Sister</span>
+                                <span class="text-xs text-gray-500">Hermana</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-sm">
+                        <div class="bg-gray-100 p-2 rounded"><strong>Uncle:</strong> Tío</div>
+                        <div class="bg-gray-100 p-2 rounded"><strong>Aunt:</strong> Tía</div>
+                        <div class="bg-gray-100 p-2 rounded"><strong>Cousin:</strong> Primo/a</div>
+                        <div class="bg-gray-100 p-2 rounded"><strong>Wife/Husband:</strong> Esposa/o</div>
+                    </div>
+                </section>
+
+                <!-- Section 2: Colors -->
+                <section>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-numbers pl-4">
+                        Los Colores (Colors)
+                    </h3>
+                    <p class="mb-4 text-gray-600">Recuerda: En inglés, los adjetivos no tienen plural. Son "Red cars",
+                        no "Reds cars".</p>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                        <div
+                            class="vocab-card bg-white p-2 rounded-lg shadow border border-gray-100 text-center cursor-default">
+                            <div class="w-full h-20 bg-red-600 rounded mb-2"></div>
+                            <span class="font-bold block">Red</span>
+                            <span class="text-xs text-gray-500">Rojo</span>
+                        </div>
+                        <div
+                            class="vocab-card bg-white p-2 rounded-lg shadow border border-gray-100 text-center cursor-default">
+                            <div class="w-full h-20 bg-blue-600 rounded mb-2"></div>
+                            <span class="font-bold block">Blue</span>
+                            <span class="text-xs text-gray-500">Azul</span>
+                        </div>
+                        <div
+                            class="vocab-card bg-white p-2 rounded-lg shadow border border-gray-100 text-center cursor-default">
+                            <div class="w-full h-20 bg-yellow-400 rounded mb-2"></div>
+                            <span class="font-bold block">Yellow</span>
+                            <span class="text-xs text-gray-500">Amarillo</span>
+                        </div>
+                        <div
+                            class="vocab-card bg-white p-2 rounded-lg shadow border border-gray-100 text-center cursor-default">
+                            <div class="w-full h-20 bg-green-600 rounded mb-2"></div>
+                            <span class="font-bold block">Green</span>
+                            <span class="text-xs text-gray-500">Verde</span>
+                        </div>
+                        <div
+                            class="vocab-card bg-white p-2 rounded-lg shadow border border-gray-100 text-center cursor-default">
+                            <div class="w-full h-20 bg-black rounded mb-2"></div>
+                            <span class="font-bold block">Black</span>
+                            <span class="text-xs text-gray-500">Negro</span>
+                        </div>
+                        <div
+                            class="vocab-card bg-white p-2 rounded-lg shadow border border-gray-100 text-center cursor-default">
+                            <div class="w-full h-20 bg-white border border-gray-200 rounded mb-2"></div>
+                            <span class="font-bold block">White</span>
+                            <span class="text-xs text-gray-500">Blanco</span>
+                        </div>
+                        <div
+                            class="vocab-card bg-white p-2 rounded-lg shadow border border-gray-100 text-center cursor-default">
+                            <div class="w-full h-20 bg-orange-500 rounded mb-2"></div>
+                            <span class="font-bold block">Orange</span>
+                            <span class="text-xs text-gray-500">Naranja</span>
+                        </div>
+                        <div
+                            class="vocab-card bg-white p-2 rounded-lg shadow border border-gray-100 text-center cursor-default">
+                            <div class="w-full h-20 bg-purple-600 rounded mb-2"></div>
+                            <span class="font-bold block">Purple</span>
+                            <span class="text-xs text-gray-500">Morado</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 3: Numbers -->
+                <section>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-days pl-4">
+                        Los Números (Numbers)
+                    </h3>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Number Groups Grid -->
+                        <!-- Units Card -->
+                        <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                            <h4 class="font-bold text-gray-700 mb-3 border-b pb-2">Del 1 al 10</h4>
+                            <div class="grid grid-cols-2 gap-2 text-sm">
+                                <div>1 - <strong>One</strong></div>
+                                <div>2 - <strong>Two</strong></div>
+                                <div>3 - <strong>Three</strong> <span class="text-xs text-gray-400">(TH /θ/)</span>
+                                </div>
+                                <div>4 - <strong>Four</strong></div>
+                                <div>5 - <strong>Five</strong></div>
+                                <div>6 - <strong>Six</strong></div>
+                                <div>7 - <strong>Seven</strong></div>
+                                <div>8 - <strong>Eight</strong> <span class="text-xs text-gray-400">(Eit)</span></div>
+                                <div>9 - <strong>Nine</strong></div>
+                                <div>10 - <strong>Ten</strong></div>
+                            </div>
+                        </div>
+
+                        <!-- Tens Card -->
+                        <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                            <h4 class="font-bold text-gray-700 mb-3 border-b pb-2">Decenas (Tens)</h4>
+                            <p class="text-sm text-gray-600 mb-2">Se usan para 10, 20, 30... y para números como 21 se
+                                usa guion: <em>twenty-one</em>.</p>
+                            <div class="grid grid-cols-2 gap-2 text-sm">
+                                <div>10 - <strong>Ten</strong></div>
+                                <div>20 - <strong>Twenty</strong></div>
+                                <div>30 - <strong>Thirty</strong></div>
+                                <div>40 - <strong>Forty</strong></div>
+                                <div>50 - <strong>Fifty</strong></div>
+                                <div>60 - <strong>Sixty</strong></div>
+                                <div>70 - <strong>Seventy</strong></div>
+                                <div>80 - <strong>Eighty</strong></div>
+                                <div>90 - <strong>Ninety</strong></div>
+                            </div>
+                            <p class="text-xs text-gray-400 mt-1">Ej.: 21 = <em>twenty-one</em>; 34 =
+                                <em>thirty-four</em></p>
+                        </div>
+
+                        <!-- Tricky Ones -->
+                        <div class="bg-indigo-50 p-6 rounded-xl border border-indigo-200">
+                            <h4 class="font-bold text-indigo-700 mb-3 border-b border-indigo-200 pb-2">El Problema de
+                                "TEEN" vs "TY"</h4>
+                            <p class="text-xs text-gray-600 mb-3">La sílaba fuerte cambia. En 13-19 la fuerza está al
+                                final (TEEN). En 30-90 está al inicio (TY).</p>
+
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center bg-white p-2 rounded shadow-sm">
+                                    <span>13 - Thir<strong>TEEN</strong></span>
+                                    <span class="text-gray-400 mx-2">vs</span>
+                                    <span>30 - <strong>THIR</strong>ty</span>
+                                </div>
+                                <div class="flex justify-between items-center bg-white p-2 rounded shadow-sm">
+                                    <span>14 - Four<strong>TEEN</strong></span>
+                                    <span class="text-gray-400 mx-2">vs</span>
+                                    <span>40 - <strong>FOR</strong>ty <span class="text-xs text-red-500">(Sin
+                                            U)</span></span>
+                                </div>
+                                <div class="flex justify-between items-center bg-white p-2 rounded shadow-sm">
+                                    <span>15 - Fif<strong>TEEN</strong></span>
+                                    <span class="text-gray-400 mx-2">vs</span>
+                                    <span>50 - <strong>FIF</strong>ty</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hundreds Card -->
+                        <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                            <h4 class="font-bold text-gray-700 mb-3 border-b pb-2">Centenas (Hundreds)</h4>
+                            <p class="text-sm text-gray-600 mb-2">100 = <em>one hundred</em>. Para 307 se dice <em>three
+                                    hundred and seven</em> (UK) o <em>three hundred seven</em> (US).</p>
+                            <div class="grid grid-cols-2 gap-2 text-sm">
+                                <div>100 - <strong>One hundred</strong></div>
+                                <div>200 - <strong>Two hundred</strong></div>
+                                <div>300 - <strong>Three hundred</strong></div>
+                                <div>400 - <strong>Four hundred</strong></div>
+                                <div>500 - <strong>Five hundred</strong></div>
+                                <div>600 - <strong>Six hundred</strong></div>
+                                <div>700 - <strong>Seven hundred</strong></div>
+                                <div>800 - <strong>Eight hundred</strong></div>
+                                <div>900 - <strong>Nine hundred</strong></div>
+                            </div>
+                            <p class="text-xs text-gray-400 mt-1">Ej.: 420 = <em>four hundred twenty</em> (US) /
+                                <em>four hundred and twenty</em> (UK).</p>
+                        </div>
+
+                        <!-- Thousands Card -->
+                        <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                            <h4 class="font-bold text-gray-700 mb-3 border-b pb-2">Millares (Thousands)</h4>
+                            <p class="text-sm text-gray-600 mb-2">1,000 = <em>one thousand</em>. Se combinan con
+                                centenas y decenas: 1,500 = <em>one thousand five hundred</em>; 2,345 = <em>two thousand
+                                    three hundred forty-five</em>.</p>
+                            <div class="grid grid-cols-2 gap-2 text-sm">
+                                <div>1,000 - <strong>One thousand</strong></div>
+                                <div>2,000 - <strong>Two thousand</strong></div>
+                                <div>5,000 - <strong>Five thousand</strong></div>
+                                <div>10,000 - <strong>Ten thousand</strong></div>
+                            </div>
+                            <p class="text-xs text-gray-400 mt-1">Ej.: 4,321 = <em>four thousand three hundred
+                                    twenty-one</em></p>
+                        </div>
+
+                        <!-- Millions Card -->
+                        <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                            <h4 class="font-bold text-gray-700 mb-3 border-b pb-2">Millones (Millions)</h4>
+                            <p class="text-sm text-gray-600 mb-2">1,000,000 = <em>one million</em>. Ej.: 2,345,000 =
+                                <em>two million three hundred forty-five thousand</em>.</p>
+                            <div class="grid grid-cols-2 gap-2 text-sm">
+                                <div>1,000,000 - <strong>One million</strong></div>
+                                <div>2,000,000 - <strong>Two million</strong></div>
+                                <div>10,000,000 - <strong>Ten million</strong></div>
+                            </div>
+                            <p class="text-xs text-gray-400 mt-1">Ej.: 1,234,567 = <em>one million two hundred
+                                    thirty-four thousand five hundred sixty-seven</em></p>
+                        </div>
+
+                    </div>
+                    <!-- Notes -->
+                    <div class="text-xs text-gray-500 mt-3">
+                        <p><strong>Nota:</strong> En inglés se utilizan comas (,) para separar miles y puntos (.)
+                            para decimales; en español a menudo se usa al revés. Además, la forma de decir números
+                            puede variar entre inglés británico y americano (uso de 'and').</p>
+                    </div>
+                </section>
+
+                <!-- Section 4: Video and Essentials -->
+                <section class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                            <i class="fa-brands fa-youtube text-red-600"></i> Repaso de Pronunciación
+                        </h3>
+                        <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg bg-black">
+                            <iframe class="absolute top-0 left-0 w-full h-full"
+                                src="https://www.youtube.com/embed/tVlcKp3bWH8" title="Basic English Vocabulary"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-50 p-6 rounded-xl border border-amber-200">
+                        <h3 class="text-xl font-bold text-amber-800 mb-4 flex items-center gap-2">
+                            <i class="fa-regular fa-calendar-days"></i> Días de la Semana
+                        </h3>
+                        <ul class="space-y-1">
+                            <li class="flex justify-between border-b border-amber-100 py-1"><span>Monday</span> <span
+                                    class="text-gray-500">Lunes</span></li>
+                            <li class="flex justify-between border-b border-amber-100 py-1"><span>Tuesday</span> <span
+                                    class="text-gray-500">Martes</span></li>
+                            <li class="flex justify-between border-b border-amber-100 py-1"><span>Wednesday</span> <span
+                                    class="text-gray-500">Miércoles</span></li>
+                            <li class="flex justify-between border-b border-amber-100 py-1"><span>Thursday</span> <span
+                                    class="text-gray-500">Jueves</span></li>
+                            <li class="flex justify-between border-b border-amber-100 py-1"><span>Friday</span> <span
+                                    class="text-gray-500">Viernes</span></li>
+                            <li class="flex justify-between border-b border-amber-100 py-1"><span
+                                    class="font-bold text-amber-700">Saturday</span> <span
+                                    class="text-gray-500">Sábado</span></li>
+                            <li class="flex justify-between py-1"><span class="font-bold text-amber-700">Sunday</span>
+                                <span class="text-gray-500">Domingo</span></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Section: Interactive Exercises -->
+                <section id="exercises-section" class="scroll-mt-24">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                            <i class="fa-solid fa-pencil text-brand"></i> Práctica Rápida
+                        </h3>
+                        <span class="text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full">5 Preguntas</span>
+                    </div>
+
+                    <form id="quiz-form" class="space-y-6">
+                        <!-- Q1 -->
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200"
+                            data-correct="option2">
+                            <p class="font-semibold text-lg mb-4">1. El hermano de mi madre es mi...</p>
+                            <div class="space-y-2">
+                                <label
+                                    class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q1" value="option1" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">Cousin</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q1" value="option2" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">Uncle</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q1" value="option3" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">Grandfather</span>
+                                </label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200"
+                            data-correct="option3">
+                            <p class="font-semibold text-lg mb-4">2. ¿Qué significa "Parents"?</p>
+                            <div class="space-y-2">
+                                <label
+                                    class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q2" value="option1" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">Parientes</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q2" value="option2" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">Abuelos</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q2" value="option3" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">Padres (Mamá y Papá)</span>
+                                </label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <!-- Q3 -->
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200"
+                            data-correct="option1">
+                            <p class="font-semibold text-lg mb-4">3. ¿Cómo se escribe el número 40?</p>
+                            <div class="space-y-2">
+                                <label
+                                    class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q3" value="option1" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">Forty</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q3" value="option2" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">Fourty</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q3" value="option3" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">Fortie</span>
+                                </label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <!-- Q4 -->
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200"
+                            data-correct="option2">
+                            <p class="font-semibold text-lg mb-4">4. ¿Qué color es "Yellow"?</p>
+                            <div class="space-y-2">
+                                <label
+                                    class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q4" value="option1" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">Azul</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q4" value="option2" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">Amarillo</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q4" value="option3" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">Rojo</span>
+                                </label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <!-- Q5 -->
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200"
+                            data-correct="option1">
+                            <p class="font-semibold text-lg mb-4">5. Después de Monday viene...</p>
+                            <div class="space-y-2">
+                                <label
+                                    class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q5" value="option1" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">Tuesday</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q5" value="option2" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">Wednesday</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition">
+                                    <input type="radio" name="q5" value="option3" class="w-4 h-4 text-brand">
+                                    <span class="ml-3">Thursday</span>
+                                </label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <div class="flex justify-end">
+                            <button type="button" onclick="evaluateQuiz()"
+                                class="bg-brand-DEFAULT hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-lg shadow-md transition transform hover:scale-105">
+                                <i class="fa-solid fa-check-circle mr-2"></i> Verificar
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Result Modal -->
+                    <div id="result-message"
+                        class="hidden mt-6 p-4 bg-gray-800 text-white rounded-lg text-center animate-pulse"></div>
+                </section>
+
+                <!-- Next Lesson CTA -->
+                <section class="mt-12 pt-8 border-t-2 border-dashed border-gray-300 flex justify-center">
+                    <a href="topic-5.html"
+                        class="inline-flex items-center bg-slate-800 hover:bg-slate-900 text-white font-bold py-4 px-10 rounded-full shadow-lg transition transform hover:-translate-y-1">
+                        Siguiente: Pronombres Personales <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </section>
+
+            </div>
         </article>
     </main>
 
-    <footer class="bg-gray-800 text-white py-6 mt-12">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2026 Curso de Inglés en 30 Días. Todos los derechos reservados.</p>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-10 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2026 Curso de Inglés Open Source. GitHub Pages Ready.</p>
         </div>
     </footer>
 
+    <!-- Script de Lógica -->
     <script>
-        // Auto-populate title from URL
-        const topicMap = {
-            3: 'Present Simple',
-            4: 'Vocabulario Básico',
-            5: 'Pronombres Personales',
-            6: 'Verbo TO BE',
-            7: 'Present Continuous',
-            8: 'There is / There are',
-            9: 'Pasado Simple',
-            10: 'Comparativos y Superlativos',
-            11: 'Futuro con Will y Going to',
-            12: 'Condicional Simple',
-            13: 'Passive Voice',
-            14: 'Reported Speech',
-            15: 'Phrasal Verbs',
-            16: 'Modal Perfect',
-            17: 'Advanced Grammar Review',
-            18: 'Speaking Tips'
-        };
-        
-        const filename = window.location.pathname.split('/').pop();
-        const topicNum = parseInt(filename.replace('topic-', '').replace('.html', ''));
-        
-        if (topicMap[topicNum]) {
-            document.getElementById('page-title').textContent = `Tema ${topicNum}: ${topicMap[topicNum]}`;
-            document.getElementById('content-title').textContent = topicMap[topicNum];
-            document.title = `Tema ${topicNum}: ${topicMap[topicNum]} - Curso de Inglés`;
+        function evaluateQuiz() {
+            const questions = document.querySelectorAll('.question-card');
+            let score = 0;
+            let total = questions.length;
+
+            questions.forEach((card, index) => {
+                const correctAnswer = card.getAttribute('data-correct');
+                const selectedOption = card.querySelector('input[type="radio"]:checked');
+                const feedbackDiv = card.querySelector('.feedback');
+
+                feedbackDiv.className = 'feedback mt-3 text-sm p-2 rounded hidden';
+                card.classList.remove('border-green-500', 'border-red-500', 'border-2');
+
+                if (selectedOption) {
+                    if (selectedOption.value === correctAnswer) {
+                        score++;
+                        feedbackDiv.textContent = "¡Correcto! 😎";
+                        feedbackDiv.classList.remove('hidden');
+                        feedbackDiv.classList.add('bg-green-100', 'text-green-800');
+                        card.classList.add('border-green-500', 'border-2');
+                    } else {
+                        feedbackDiv.textContent = "Incorrecto.";
+                        feedbackDiv.classList.remove('hidden');
+                        feedbackDiv.classList.add('bg-red-100', 'text-red-800');
+                        card.classList.add('border-red-500', 'border-2');
+                    }
+                } else {
+                    feedbackDiv.textContent = "Selecciona una opción.";
+                    feedbackDiv.classList.remove('hidden');
+                    feedbackDiv.classList.add('bg-yellow-100', 'text-yellow-800');
+                }
+            });
+
+            const resultMsg = document.getElementById('result-message');
+            resultMsg.classList.remove('hidden', 'animate-pulse');
+
+            if (score === total) {
+                resultMsg.className = "mt-6 p-4 bg-green-600 text-white rounded-lg text-center shadow-lg transition";
+                resultMsg.innerHTML = `<i class="fa-solid fa-star text-yellow-300 mr-2"></i> ¡Excelente! Tienes un vocabulario sólido.`;
+            } else if (score >= 3) {
+                resultMsg.className = "mt-6 p-4 bg-blue-600 text-white rounded-lg text-center shadow-lg transition";
+                resultMsg.innerHTML = `Bien hecho: ${score}/${total}. Revisa los errores y continúa.`;
+            } else {
+                resultMsg.className = "mt-6 p-4 bg-gray-600 text-white rounded-lg text-center shadow-lg";
+                resultMsg.innerHTML = `Resultado: ${score}/${total}. Te sugiero repasar los números y la familia.`;
+            }
         }
     </script>
 </body>
+
 </html>
