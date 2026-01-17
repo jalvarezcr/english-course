@@ -1,109 +1,115 @@
 [
   {
     "id": 1,
-    "title": "Introducción al Inglés",
+    "title": "1. Introducción al Inglés",
     "level": "A1",
     "description": "Saludos, presentaciones y frases básicas para iniciar conversaciones."
   },
   {
     "id": 2,
-    "title": "Gramática Básica",
+    "title": "2. Gramática Básica",
     "level": "A1",
     "description": "Fundamentos de gramática: sustantivos, verbos y adjetivos."
   },
   {
     "id": 3,
-    "title": "Present Simple",
+    "title": "3. Present Simple",
     "level": "A1",
     "description": "Aprende a usar el presente simple para rutinas y hechos."
   },
   {
     "id": 4,
-    "title": "Vocabulario Básico",
+    "title": "4. Vocabulario Básico",
     "level": "A1",
     "description": "Familia, colores, números y palabras cotidianas esenciales."
   },
   {
     "id": 5,
-    "title": "Pronombres Personales",
+    "title": "5. Pronombres Personales",
     "level": "A1",
     "description": "I, you, he, she, it, we, they y su uso correcto."
   },
   {
     "id": 6,
-    "title": "Verbo TO BE, TO DO & TO HAVE",
+    "title": "6. Verbo TO BE",
     "level": "A1",
     "description": "Conjugación y usos del verbo más importante del inglés."
   },
   {
     "id": 7,
-    "title": "Present Continuous",
+    "title": "7. Present Continuous",
     "level": "A2",
     "description": "Acciones en progreso usando be + -ing."
   },
   {
     "id": 8,
-    "title": "There is / There are",
+    "title": "8. There is / There are",
     "level": "A2",
     "description": "Expresar existencia y cantidades con there is/are."
   },
   {
     "id": 9,
-    "title": "Pasado Simple",
+    "title": "9. Pasado Simple",
     "level": "A2",
     "description": "Verbos regulares e irregulares en pasado."
   },
   {
     "id": 10,
-    "title": "Comparativos y Superlativos",
+    "title": "10. Comparativos y Superlativos",
     "level": "A2",
     "description": "Comparar personas, lugares y cosas."
   },
   {
     "id": 11,
-    "title": "Futuro con Will y Going to",
+    "title": "11. Futuro con Will y Going to",
     "level": "B1",
     "description": "Expresar planes, predicciones y decisiones futuras."
   },
   {
     "id": 12,
-    "title": "Condicional Simple",
+    "title": "12. Condicional Simple",
     "level": "B1",
     "description": "First conditional y sus usos en situaciones reales."
   },
   {
     "id": 13,
-    "title": "Passive Voice",
+    "title": "13. Passive Voice",
     "level": "B1",
     "description": "La voz pasiva en presente y pasado."
   },
   {
     "id": 14,
-    "title": "Reported Speech",
+    "title": "14. Reported Speech",
     "level": "B1",
     "description": "Discurso indirecto y cambios de tiempo verbal."
   },
   {
     "id": 15,
-    "title": "Phrasal Verbs",
+    "title": "15. Presente Perfecto",
+    "level": "B2",
+    "description": "Uso del presente perfecto para acciones pasadas con relevancia en el presente."
+  },
+  {
+    "id": 16,
+    "title": "16. Phrasal Verbs",
     "level": "B2",
     "description": "Verbos con preposiciones y su significado."
   },
   {
-    "id": 16,
-    "title": "Modal Perfect",
+    "id": 17,
+    "title": "17. Modal Perfect",
     "level": "B2",
     "description": "Could have, should have, must have para hipótesis pasadas."
   },
   {
-    "id": 17,
-    "title": "Advanced Grammar Review",
+    "id": 18,
+    "title": "18. Advanced Grammar Review",
     "level": "B2",
     "description": "Repaso general de estructuras avanzadas."
   },
   {
-    "id": 18,
-    "title": "Speaking Tips",
+    "id": 19,
+    "title": "19. Speaking Tips",
     "level": "B2",
     "description": "Consejos prácticos para mejorar tu fluidez oral."
   }
