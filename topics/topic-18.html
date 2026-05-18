@@ -1,77 +1,625 @@
 <!DOCTYPE html>
-<html lang="es-MX">
+<html lang="es-MX" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temas 3-18 - Curso de Inglés</title>
+    <title>Tema 18: Conectores y Tips de Conversación - English Course A1-B2</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../styles.css">
+
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { light: '#4da6ff', DEFAULT: '#0066cc', dark: '#004d99' }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .correct-answer { background-color: #d1fae5; border-color: #10b981; color: #065f46; }
+        .wrong-answer { background-color: #fee2e2; border-color: #ef4444; color: #991b1b; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <header class="bg-blue-600 text-white py-4 px-6 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold" id="page-title">Tema - Curso de Inglés</h1>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="../index.html" class="hover:underline">← Volver al inicio</a></li>
-                </ul>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Header Sticky -->
+    <header class="sticky top-0 z-50 bg-brand-DEFAULT text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                <div>
+                    <h1 class="text-lg font-bold leading-tight">Tema 18: Conectores y Conversación</h1>
+                    <p class="text-xs text-blue-200">Curso B2 — Final</p>
+                </div>
+            </div>
+            <nav class="flex gap-4 text-sm font-medium">
+                <a href="topic-17.html" class="flex items-center space-x-2 hover:bg-white/10 px-3 py-2 rounded transition">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span class="hidden sm:inline">Anterior</span>
+                </a>
+                <a href="../index.html" class="flex items-center space-x-2 hover:bg-white/10 px-3 py-2 rounded transition">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="hidden sm:inline">Inicio</span>
+                </a>
             </nav>
+        </div>
+        <div class="h-1 bg-blue-800 w-full">
+            <div class="h-full bg-yellow-400 w-[100%]" title="Progreso del curso"></div>
         </div>
     </header>
 
-    <main class="container mx-auto my-8 px-4">
-        <article class="bg-white p-8 rounded-lg shadow-md max-w-5xl mx-auto">
-            <section class="mb-8">
-                <h2 class="text-3xl font-bold mb-4" id="content-title">Tema en Desarrollo</h2>
-                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
-                    <p class="font-semibold">🚧 Contenido en desarrollo</p>
-                    <p>Este tema está siendo desarrollado. Pronto estará disponible con contenido completo, ejemplos, ejercicios y exámenes interactivos.</p>
-                </div>
-            </section>
+    <main class="container mx-auto my-8 px-4 max-w-5xl">
 
-            <section class="flex justify-between mt-12 pt-6 border-t-2 border-gray-200">
-                <a href="../index.html" class="btn-primary">Volver al temario</a>
-            </section>
+        <article class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-8">
+            <div class="relative h-64 md:h-80">
+                <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&h=600&fit=crop" alt="Conversación grupal" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent flex items-end">
+                    <div class="p-8 text-white w-full">
+                        <span class="bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded uppercase tracking-wide mb-2 inline-block">Final B2</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-2">Habla con Fluidez</h2>
+                        <p class="text-lg text-gray-300">Conectores, expresiones idiomáticas y consejos para sonar natural.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 md:p-10 space-y-12">
+
+                <!-- Section: Intro -->
+                <section class="grid md:grid-cols-3 gap-8">
+                    <div class="md:col-span-2 prose max-w-none">
+                        <h3 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                            <i class="fa-solid fa-link text-brand"></i> ¿Para qué sirven los conectores?
+                        </h3>
+                        <p class="text-lg leading-relaxed">
+                            Los <strong>conectores (linking words)</strong> son las palabras que unen ideas. Sin ellos, hablas como una lista; con ellos, hablas como un cuento.
+                        </p>
+                        <p>
+                            En esta lección final aprenderás los conectores más útiles, expresiones idiomáticas y tips para tener conversaciones reales con confianza.
+                        </p>
+                    </div>
+                    <div class="bg-yellow-50 p-6 rounded-lg border border-yellow-200 flex flex-col justify-center text-center">
+                        <i class="fa-solid fa-trophy text-yellow-500 text-4xl mb-2"></i>
+                        <h4 class="font-bold text-yellow-900 mb-2">¡Eres B2!</h4>
+                        <p class="text-sm text-yellow-800">Has completado 17 lecciones. Este es el último paso para sonar fluido y natural.</p>
+                    </div>
+                </section>
+
+                <hr class="border-slate-200">
+
+                <!-- Section: Conectores por función -->
+                <section>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2 border-l-4 border-brand pl-4">
+                        Conectores por Función
+                    </h3>
+                    <p class="text-gray-600 mb-6 pl-4">Cada función comunicativa tiene su grupo de palabras. Aprende uno por categoría:</p>
+
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-blue-50 border border-blue-200 rounded-xl p-5">
+                            <h4 class="font-bold text-blue-700 mb-3"><i class="fa-solid fa-plus"></i> Añadir información</h4>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>and</strong> — y</li>
+                                <li><strong>also / too</strong> — también</li>
+                                <li><strong>in addition</strong> — además (formal)</li>
+                                <li><strong>moreover / furthermore</strong> — además (muy formal)</li>
+                                <li><strong>besides</strong> — además, aparte de eso</li>
+                                <li><strong>as well as</strong> — así como</li>
+                            </ul>
+                            <p class="text-xs italic text-gray-500 mt-2">She is smart, <strong>and</strong> she works hard. <strong>Moreover</strong>, she is kind.</p>
+                        </div>
+
+                        <div class="bg-red-50 border border-red-200 rounded-xl p-5">
+                            <h4 class="font-bold text-red-700 mb-3"><i class="fa-solid fa-shuffle"></i> Contraste / Oposición</h4>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>but</strong> — pero</li>
+                                <li><strong>however</strong> — sin embargo</li>
+                                <li><strong>although / though</strong> — aunque</li>
+                                <li><strong>despite / in spite of</strong> — a pesar de</li>
+                                <li><strong>on the other hand</strong> — por otro lado</li>
+                                <li><strong>nevertheless</strong> — no obstante</li>
+                            </ul>
+                            <p class="text-xs italic text-gray-500 mt-2">It was raining, <strong>however</strong>, we went out. <strong>Despite</strong> the cold, we had fun.</p>
+                        </div>
+
+                        <div class="bg-green-50 border border-green-200 rounded-xl p-5">
+                            <h4 class="font-bold text-green-700 mb-3"><i class="fa-solid fa-arrow-right"></i> Causa</h4>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>because</strong> — porque</li>
+                                <li><strong>since</strong> — ya que</li>
+                                <li><strong>as</strong> — como</li>
+                                <li><strong>due to / because of</strong> — debido a</li>
+                                <li><strong>owing to</strong> — por causa de (formal)</li>
+                            </ul>
+                            <p class="text-xs italic text-gray-500 mt-2">I'm tired <strong>because</strong> I worked all day.<br>The match was cancelled <strong>due to</strong> rain.</p>
+                        </div>
+
+                        <div class="bg-purple-50 border border-purple-200 rounded-xl p-5">
+                            <h4 class="font-bold text-purple-700 mb-3"><i class="fa-solid fa-arrows-turn-right"></i> Consecuencia / Resultado</h4>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>so</strong> — así que</li>
+                                <li><strong>therefore</strong> — por lo tanto</li>
+                                <li><strong>thus</strong> — así (formal)</li>
+                                <li><strong>as a result</strong> — como resultado</li>
+                                <li><strong>consequently</strong> — en consecuencia</li>
+                                <li><strong>that's why</strong> — por eso</li>
+                            </ul>
+                            <p class="text-xs italic text-gray-500 mt-2">He didn't study, <strong>so</strong> he failed. <strong>As a result</strong>, he has to retake the exam.</p>
+                        </div>
+
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-5">
+                            <h4 class="font-bold text-yellow-700 mb-3"><i class="fa-solid fa-clock"></i> Tiempo y Secuencia</h4>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>first / firstly</strong> — primero</li>
+                                <li><strong>then / next / after that</strong> — luego</li>
+                                <li><strong>before / after</strong> — antes / después</li>
+                                <li><strong>finally / at last</strong> — finalmente</li>
+                                <li><strong>meanwhile</strong> — mientras tanto</li>
+                                <li><strong>eventually</strong> — eventualmente</li>
+                            </ul>
+                            <p class="text-xs italic text-gray-500 mt-2"><strong>First</strong>, mix the eggs. <strong>Then</strong>, add flour. <strong>Finally</strong>, bake for 30 min.</p>
+                        </div>
+
+                        <div class="bg-cyan-50 border border-cyan-200 rounded-xl p-5">
+                            <h4 class="font-bold text-cyan-700 mb-3"><i class="fa-solid fa-lightbulb"></i> Ejemplificar / Aclarar</h4>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>for example / for instance</strong> — por ejemplo</li>
+                                <li><strong>such as</strong> — tal como</li>
+                                <li><strong>that is / i.e.</strong> — es decir</li>
+                                <li><strong>in other words</strong> — en otras palabras</li>
+                                <li><strong>like</strong> — como (informal)</li>
+                            </ul>
+                            <p class="text-xs italic text-gray-500 mt-2">I like fruits, <strong>for example</strong>, apples and oranges.</p>
+                        </div>
+
+                        <div class="bg-pink-50 border border-pink-200 rounded-xl p-5">
+                            <h4 class="font-bold text-pink-700 mb-3"><i class="fa-solid fa-flag-checkered"></i> Concluir / Resumir</h4>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>in conclusion</strong> — en conclusión</li>
+                                <li><strong>to sum up</strong> — para resumir</li>
+                                <li><strong>in short / in brief</strong> — en resumen</li>
+                                <li><strong>all in all</strong> — en suma</li>
+                                <li><strong>overall</strong> — en general</li>
+                            </ul>
+                            <p class="text-xs italic text-gray-500 mt-2"><strong>In conclusion</strong>, learning English requires practice.</p>
+                        </div>
+
+                        <div class="bg-orange-50 border border-orange-200 rounded-xl p-5">
+                            <h4 class="font-bold text-orange-700 mb-3"><i class="fa-solid fa-arrows-left-right"></i> Comparar / Contrastar</h4>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>similarly</strong> — de forma similar</li>
+                                <li><strong>likewise</strong> — del mismo modo</li>
+                                <li><strong>in the same way</strong> — del mismo modo</li>
+                                <li><strong>unlike</strong> — a diferencia de</li>
+                                <li><strong>whereas / while</strong> — mientras que</li>
+                            </ul>
+                            <p class="text-xs italic text-gray-500 mt-2">Tom likes coffee, <strong>whereas</strong> Sara prefers tea.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Expresiones para conversación -->
+                <section class="bg-violet-50 p-6 md:p-8 rounded-2xl border border-violet-200">
+                    <h3 class="text-2xl font-bold text-violet-900 mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-comments"></i> Frases Salvavidas para Conversaciones
+                    </h3>
+                    <p class="text-violet-800 mb-6">Cuando no sabes qué decir, estas frases te dan tiempo y mantienen la conversación fluida.</p>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white p-5 rounded-xl shadow-sm">
+                            <h4 class="font-bold text-violet-700 mb-3"><i class="fa-solid fa-hourglass-half"></i> Para ganar tiempo</h4>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>Well...</strong> — Bueno...</li>
+                                <li><strong>Let me think.</strong> — Déjame pensar.</li>
+                                <li><strong>How can I put this?</strong> — ¿Cómo lo digo?</li>
+                                <li><strong>Actually...</strong> — En realidad...</li>
+                                <li><strong>You know what I mean?</strong> — ¿Me entiendes?</li>
+                                <li><strong>The thing is...</strong> — Lo que pasa es...</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl shadow-sm">
+                            <h4 class="font-bold text-violet-700 mb-3"><i class="fa-solid fa-question"></i> Para pedir aclaración</h4>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>Sorry, could you repeat that?</strong></li>
+                                <li><strong>Could you speak more slowly?</strong></li>
+                                <li><strong>What does ___ mean?</strong></li>
+                                <li><strong>How do you spell that?</strong></li>
+                                <li><strong>I didn't catch that.</strong></li>
+                                <li><strong>Do you mean ___?</strong></li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl shadow-sm">
+                            <h4 class="font-bold text-violet-700 mb-3"><i class="fa-solid fa-thumbs-up"></i> Para mostrar acuerdo</h4>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>Exactly!</strong> — ¡Exacto!</li>
+                                <li><strong>That's right.</strong> — Así es.</li>
+                                <li><strong>I agree (with you).</strong> — Estoy de acuerdo.</li>
+                                <li><strong>You're right.</strong> — Tienes razón.</li>
+                                <li><strong>Absolutely!</strong> — ¡Por supuesto!</li>
+                                <li><strong>I couldn't agree more.</strong> — No podría estar más de acuerdo.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl shadow-sm">
+                            <h4 class="font-bold text-violet-700 mb-3"><i class="fa-solid fa-thumbs-down"></i> Para mostrar desacuerdo</h4>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>I disagree.</strong> — No estoy de acuerdo.</li>
+                                <li><strong>I see your point, but...</strong> — Entiendo tu punto, pero...</li>
+                                <li><strong>I'm not sure about that.</strong></li>
+                                <li><strong>That's not how I see it.</strong></li>
+                                <li><strong>I beg to differ.</strong> — Discúlpame, pero no.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl shadow-sm">
+                            <h4 class="font-bold text-violet-700 mb-3"><i class="fa-solid fa-face-surprise"></i> Para mostrar interés</h4>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>Really?</strong> — ¿En serio?</li>
+                                <li><strong>That's interesting!</strong></li>
+                                <li><strong>Wow!</strong> / <strong>No way!</strong></li>
+                                <li><strong>You're kidding!</strong> — ¡No me digas!</li>
+                                <li><strong>Tell me more.</strong> — Cuéntame más.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl shadow-sm">
+                            <h4 class="font-bold text-violet-700 mb-3"><i class="fa-solid fa-circle-stop"></i> Para cambiar de tema</h4>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>By the way,...</strong> — Por cierto,...</li>
+                                <li><strong>Speaking of which,...</strong> — Hablando de...</li>
+                                <li><strong>Anyway,...</strong> — En fin,...</li>
+                                <li><strong>That reminds me...</strong> — Eso me recuerda...</li>
+                                <li><strong>On a different note...</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Expresiones idiomáticas comunes -->
+                <section>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2 border-l-4 border-brand pl-4">
+                        Top 15 Expresiones Idiomáticas (Idioms)
+                    </h3>
+                    <p class="text-gray-600 mb-6 pl-4">Frases hechas que se usan diariamente. <strong>No</strong> se traducen literalmente.</p>
+
+                    <div class="overflow-hidden rounded-xl border border-gray-200 shadow-md">
+                        <table class="w-full text-sm">
+                            <thead class="bg-slate-800 text-white">
+                                <tr>
+                                    <th class="p-3 text-left">Idiom</th>
+                                    <th class="p-3 text-left">Significado real</th>
+                                    <th class="p-3 text-left hidden md:table-cell">Ejemplo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100 bg-white">
+                                <tr><td class="p-2 font-bold">It's raining cats and dogs.</td><td class="p-2">Llueve a cántaros.</td><td class="p-2 italic hidden md:table-cell">Take an umbrella!</td></tr>
+                                <tr><td class="p-2 font-bold">Break a leg!</td><td class="p-2">¡Buena suerte!</td><td class="p-2 italic hidden md:table-cell">Antes de una presentación.</td></tr>
+                                <tr><td class="p-2 font-bold">Piece of cake</td><td class="p-2">Pan comido</td><td class="p-2 italic hidden md:table-cell">The exam was a piece of cake.</td></tr>
+                                <tr><td class="p-2 font-bold">Cost an arm and a leg</td><td class="p-2">Costar un ojo de la cara</td><td class="p-2 italic hidden md:table-cell">That car cost an arm and a leg!</td></tr>
+                                <tr><td class="p-2 font-bold">Hit the books</td><td class="p-2">Estudiar duro</td><td class="p-2 italic hidden md:table-cell">I need to hit the books.</td></tr>
+                                <tr><td class="p-2 font-bold">Once in a blue moon</td><td class="p-2">De vez en cuando (raro)</td><td class="p-2 italic hidden md:table-cell">I see him once in a blue moon.</td></tr>
+                                <tr><td class="p-2 font-bold">Under the weather</td><td class="p-2">Sentirse mal</td><td class="p-2 italic hidden md:table-cell">I'm a bit under the weather today.</td></tr>
+                                <tr><td class="p-2 font-bold">Spill the beans</td><td class="p-2">Revelar un secreto</td><td class="p-2 italic hidden md:table-cell">Come on, spill the beans!</td></tr>
+                                <tr><td class="p-2 font-bold">Hit the nail on the head</td><td class="p-2">Dar en el clavo</td><td class="p-2 italic hidden md:table-cell">You hit the nail on the head.</td></tr>
+                                <tr><td class="p-2 font-bold">Speak of the devil</td><td class="p-2">Hablando del rey de Roma</td><td class="p-2 italic hidden md:table-cell">Speak of the devil — there he is!</td></tr>
+                                <tr><td class="p-2 font-bold">Out of the blue</td><td class="p-2">De la nada</td><td class="p-2 italic hidden md:table-cell">She called me out of the blue.</td></tr>
+                                <tr><td class="p-2 font-bold">A piece of advice</td><td class="p-2">Un consejo</td><td class="p-2 italic hidden md:table-cell">Let me give you a piece of advice.</td></tr>
+                                <tr><td class="p-2 font-bold">No worries</td><td class="p-2">No te preocupes</td><td class="p-2 italic hidden md:table-cell">— Sorry I'm late. — No worries!</td></tr>
+                                <tr><td class="p-2 font-bold">No big deal</td><td class="p-2">No es la gran cosa</td><td class="p-2 italic hidden md:table-cell">Don't apologize, it's no big deal.</td></tr>
+                                <tr><td class="p-2 font-bold">Get the hang of it</td><td class="p-2">Agarrarle la onda</td><td class="p-2 italic hidden md:table-cell">After a week, I got the hang of it.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Section: Tips de pronunciación y fluidez -->
+                <section class="bg-emerald-50 p-6 md:p-8 rounded-2xl border border-emerald-200">
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-microphone"></i> 10 Tips para Sonar Natural
+                    </h3>
+
+                    <div class="grid md:grid-cols-2 gap-4 mt-4">
+                        <div class="bg-white p-4 rounded-xl shadow-sm">
+                            <p class="font-bold text-emerald-700 mb-1">1. Usa contracciones</p>
+                            <p class="text-sm text-gray-700">Di <strong>"I'm"</strong>, no "I am". <strong>"It's"</strong>, no "It is". Los nativos siempre contraen.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm">
+                            <p class="font-bold text-emerald-700 mb-1">2. "Gonna" y "Wanna"</p>
+                            <p class="text-sm text-gray-700">En conversación: "I'm <strong>gonna</strong> eat" (going to). "I <strong>wanna</strong> sleep" (want to).</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm">
+                            <p class="font-bold text-emerald-700 mb-1">3. Encadena palabras</p>
+                            <p class="text-sm text-gray-700">"Where_are_you?" se dice como una sola palabra. No separes cada palabra.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm">
+                            <p class="font-bold text-emerald-700 mb-1">4. Usa "kind of" / "sort of"</p>
+                            <p class="text-sm text-gray-700">"It's <strong>kind of</strong> cold." Suena más natural que "a little cold".</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm">
+                            <p class="font-bold text-emerald-700 mb-1">5. Empieza con "So..."</p>
+                            <p class="text-sm text-gray-700">"<strong>So</strong>, what do you do?" Es como el "bueno" del español.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm">
+                            <p class="font-bold text-emerald-700 mb-1">6. No traduzcas, piensa en inglés</p>
+                            <p class="text-sm text-gray-700">Traducir del español es lento. Memoriza frases completas, no palabras sueltas.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm">
+                            <p class="font-bold text-emerald-700 mb-1">7. Aprende del contexto</p>
+                            <p class="text-sm text-gray-700">Ve series sin subtítulos en español. Aprende cómo hablan personas reales.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm">
+                            <p class="font-bold text-emerald-700 mb-1">8. Habla con confianza</p>
+                            <p class="text-sm text-gray-700">Mejor decir algo imperfecto que callarse. Los errores son parte del aprendizaje.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm">
+                            <p class="font-bold text-emerald-700 mb-1">9. Repite lo que oyes</p>
+                            <p class="text-sm text-gray-700">Imita la entonación, ritmo y pausas de un nativo. Practica frente al espejo.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm">
+                            <p class="font-bold text-emerald-700 mb-1">10. Practica diario</p>
+                            <p class="text-sm text-gray-700">10 minutos al día es mejor que 2 horas el fin de semana. La consistencia es la clave.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Texto modelo final -->
+                <section class="bg-gradient-to-br from-yellow-50 to-amber-50 p-6 md:p-8 rounded-2xl border border-yellow-200">
+                    <h3 class="text-2xl font-bold text-amber-900 mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-book-open"></i> Texto Final: "My English Journey"
+                    </h3>
+                    <p class="text-amber-800 mb-6">Lee este texto. Identifica los conectores (azul) y las expresiones idiomáticas (verde).</p>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm text-gray-700 leading-relaxed space-y-3">
+                        <p><strong class="text-blue-700">First of all</strong>, I want to share my experience learning English. <strong class="text-blue-700">In the beginning</strong>, it felt like an impossible task — <strong class="text-green-700">it cost me an arm and a leg</strong> in courses and books. <strong class="text-blue-700">However</strong>, I didn't give up.</p>
+                        <p><strong class="text-blue-700">After</strong> months of practice, I started to <strong class="text-green-700">get the hang of it</strong>. <strong class="text-blue-700">For example</strong>, I could understand movies without subtitles. <strong class="text-blue-700">Moreover</strong>, I made friends from other countries.</p>
+                        <p><strong class="text-blue-700">Although</strong> it wasn't easy, the experience was worth it. <strong class="text-blue-700">In other words</strong>, learning English changed my life. <strong class="text-blue-700">So</strong>, if you're starting your journey now, here's <strong class="text-green-700">a piece of advice</strong>: don't be afraid to make mistakes!</p>
+                        <p><strong class="text-blue-700">In conclusion</strong>, learning a language is not <strong class="text-green-700">a piece of cake</strong>, but with patience and practice, anyone can do it. <strong class="text-blue-700">Finally</strong>, remember — every word you learn brings you closer to fluency. Good luck, and <strong class="text-green-700">break a leg</strong>!</p>
+                    </div>
+
+                    <div class="mt-4 grid grid-cols-2 gap-3 text-xs text-center">
+                        <div class="bg-blue-100 p-2 rounded"><strong class="text-blue-700">azul</strong> = conectores</div>
+                        <div class="bg-green-100 p-2 rounded"><strong class="text-green-700">verde</strong> = idioms</div>
+                    </div>
+                </section>
+
+                <!-- External Resources -->
+                <section class="bg-gray-900 text-white p-8 rounded-xl shadow-lg relative overflow-hidden mt-8 mb-8">
+                    <div class="absolute top-0 right-0 opacity-10 transform translate-x-10 -translate-y-10">
+                        <i class="fa-brands fa-bbc text-9xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 z-10 relative flex items-center gap-2">
+                        <i class="fa-solid fa-book-bookmark text-yellow-400"></i> Sigue Aprendiendo
+                    </h3>
+                    <p class="mb-6 text-gray-300 z-10 relative max-w-2xl">
+                        Has completado el curso. Aquí algunos recursos para continuar mejorando tu inglés:
+                    </p>
+                    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 z-10 relative">
+                        <a href="https://www.bbc.co.uk/learningenglish" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-solid fa-podcast text-yellow-400 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">BBC Learning English</span>
+                                <span class="text-xs text-gray-400">Podcasts, video, lecciones</span>
+                            </div>
+                        </a>
+                        <a href="https://learnenglish.britishcouncil.org/" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-solid fa-graduation-cap text-green-400 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">British Council</span>
+                                <span class="text-xs text-gray-400">Plataforma oficial UK</span>
+                            </div>
+                        </a>
+                        <a href="https://dictionary.cambridge.org/" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-solid fa-book text-blue-400 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">Cambridge Dictionary</span>
+                                <span class="text-xs text-gray-400">Audio nativo</span>
+                            </div>
+                        </a>
+                        <a href="https://www.ted.com/talks?language=en" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-solid fa-microphone-lines text-red-400 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">TED Talks</span>
+                                <span class="text-xs text-gray-400">Charlas con subtítulos</span>
+                            </div>
+                        </a>
+                        <a href="https://www.duolingo.com/" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-solid fa-mobile-screen text-emerald-400 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">Duolingo</span>
+                                <span class="text-xs text-gray-400">Práctica diaria gamificada</span>
+                            </div>
+                        </a>
+                        <a href="https://www.italki.com/" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-solid fa-people-arrows text-pink-400 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">iTalki</span>
+                                <span class="text-xs text-gray-400">Clases 1-on-1</span>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Quiz Final -->
+                <section id="exercises-section" class="scroll-mt-24">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                            <i class="fa-solid fa-pencil text-brand"></i> Quiz Final
+                        </h3>
+                        <span class="text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full">8 Preguntas</span>
+                    </div>
+
+                    <form id="quiz-form" class="space-y-6">
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                            <p class="font-semibold text-lg mb-4">1. It was raining, ___ we went out anyway.</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q1" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">therefore</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q1" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">however</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q1" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">because</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option1">
+                            <p class="font-semibold text-lg mb-4">2. I'm tired ___ I worked all day.</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q2" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">because</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q2" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">but</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q2" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">although</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option3">
+                            <p class="font-semibold text-lg mb-4">3. I like fruits, ___ apples and oranges.</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q3" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">however</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q3" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">therefore</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q3" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">for example</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                            <p class="font-semibold text-lg mb-4">4. He didn't study, ___ he failed the exam.</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q4" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">although</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q4" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">so</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q4" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">but</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option1">
+                            <p class="font-semibold text-lg mb-4">5. ¿Qué significa "It's a piece of cake"?</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q5" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">Es muy fácil.</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q5" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">Es un pedazo de pastel.</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q5" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">Es muy caro.</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option3">
+                            <p class="font-semibold text-lg mb-4">6. "Break a leg!" se dice cuando...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q6" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">alguien se cae</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q6" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">alguien está enojado</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q6" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">deseas buena suerte</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                            <p class="font-semibold text-lg mb-4">7. ___ the bad weather, we had a great time. (a pesar de)</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q7" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">Because of</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q7" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">Despite</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q7" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">Moreover</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option1">
+                            <p class="font-semibold text-lg mb-4">8. ___ , I want to thank everyone. (para concluir)</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q8" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">In conclusion</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q8" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">For example</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q8" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">However</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <div class="flex justify-end">
+                            <button type="button" onclick="evaluateQuiz()" class="bg-brand-DEFAULT hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-lg shadow-md transition transform hover:scale-105">
+                                <i class="fa-solid fa-check-circle mr-2"></i> Verificar
+                            </button>
+                        </div>
+                    </form>
+
+                    <div id="result-message" class="hidden mt-6 p-4 bg-gray-800 text-white rounded-lg text-center animate-pulse"></div>
+                </section>
+
+                <!-- Felicitación + Continuación -->
+                <section class="mt-12 pt-8 border-t-2 border-dashed border-gray-300">
+                    <div class="bg-gradient-to-r from-yellow-50 to-amber-100 p-8 rounded-2xl border border-yellow-300 text-center">
+                        <i class="fa-solid fa-trophy text-6xl text-yellow-500 mb-4"></i>
+                        <h3 class="text-3xl font-bold text-gray-800 mb-2">¡Nivel B2 Completado! 🎉</h3>
+                        <p class="text-gray-700 mb-2 max-w-2xl mx-auto">Has completado las <strong>18 lecciones del nivel A1-B2</strong>.</p>
+                        <p class="text-gray-600 mb-6 max-w-2xl mx-auto">¿Listo para el siguiente reto? El nivel <strong>C1-C2 (Advanced)</strong> te espera con 10 lecciones avanzadas.</p>
+                        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                            <a href="topic-19.html" class="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:-translate-y-1">
+                                <i class="fa-solid fa-rocket mr-2"></i> Continuar al Nivel C1
+                            </a>
+                            <a href="../index.html" class="inline-flex items-center bg-slate-600 hover:bg-slate-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition">
+                                <i class="fa-solid fa-house mr-2"></i> Volver al Inicio
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
         </article>
     </main>
 
-    <footer class="bg-gray-800 text-white py-6 mt-12">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2026 Curso de Inglés en 30 Días. Todos los derechos reservados.</p>
+    <footer class="bg-slate-900 text-slate-400 py-10 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2026 Curso de Inglés Open Source. GitHub Pages Ready.</p>
         </div>
     </footer>
 
     <script>
-        // Auto-populate title from URL
-        const topicMap = {
-            3: 'Present Simple',
-            4: 'Vocabulario Básico',
-            5: 'Pronombres Personales',
-            6: 'Verbo TO BE',
-            7: 'Present Continuous',
-            8: 'There is / There are',
-            9: 'Pasado Simple',
-            10: 'Comparativos y Superlativos',
-            11: 'Futuro con Will y Going to',
-            12: 'Condicional Simple',
-            13: 'Passive Voice',
-            14: 'Reported Speech',
-            15: 'Phrasal Verbs',
-            16: 'Modal Perfect',
-            17: 'Advanced Grammar Review',
-            18: 'Speaking Tips'
-        };
-        
-        const filename = window.location.pathname.split('/').pop();
-        const topicNum = parseInt(filename.replace('topic-', '').replace('.html', ''));
-        
-        if (topicMap[topicNum]) {
-            document.getElementById('page-title').textContent = `Tema ${topicNum}: ${topicMap[topicNum]}`;
-            document.getElementById('content-title').textContent = topicMap[topicNum];
-            document.title = `Tema ${topicNum}: ${topicMap[topicNum]} - Curso de Inglés`;
+        function evaluateQuiz() {
+            const questions = document.querySelectorAll('.question-card');
+            let score = 0;
+            let total = questions.length;
+            questions.forEach((card) => {
+                const correctAnswer = card.getAttribute('data-correct');
+                const selectedOption = card.querySelector('input[type="radio"]:checked');
+                const feedbackDiv = card.querySelector('.feedback');
+                feedbackDiv.className = 'feedback mt-3 text-sm p-2 rounded hidden';
+                card.classList.remove('border-green-500', 'border-red-500', 'border-2');
+                if (selectedOption) {
+                    if (selectedOption.value === correctAnswer) {
+                        score++;
+                        feedbackDiv.textContent = "¡Correcto! 🎊";
+                        feedbackDiv.classList.remove('hidden');
+                        feedbackDiv.classList.add('bg-green-100', 'text-green-800');
+                        card.classList.add('border-green-500', 'border-2');
+                    } else {
+                        feedbackDiv.textContent = "Incorrecto.";
+                        feedbackDiv.classList.remove('hidden');
+                        feedbackDiv.classList.add('bg-red-100', 'text-red-800');
+                        card.classList.add('border-red-500', 'border-2');
+                    }
+                } else {
+                    feedbackDiv.textContent = "Selecciona una opción.";
+                    feedbackDiv.classList.remove('hidden');
+                    feedbackDiv.classList.add('bg-yellow-100', 'text-yellow-800');
+                }
+            });
+            const resultMsg = document.getElementById('result-message');
+            resultMsg.classList.remove('hidden', 'animate-pulse');
+            if (score === total) {
+                resultMsg.className = "mt-6 p-4 bg-green-600 text-white rounded-lg text-center shadow-lg transition";
+                resultMsg.innerHTML = `<i class="fa-solid fa-trophy text-yellow-300 mr-2"></i> ¡PERFECTO! Has completado el curso. 🏆`;
+            } else if (score >= 5) {
+                resultMsg.className = "mt-6 p-4 bg-blue-600 text-white rounded-lg text-center shadow-lg transition";
+                resultMsg.innerHTML = `Excelente: ${score}/${total}. ¡Buen trabajo!`;
+            } else {
+                resultMsg.className = "mt-6 p-4 bg-gray-600 text-white rounded-lg text-center shadow-lg";
+                resultMsg.innerHTML = `Resultado: ${score}/${total}. Repasa los conectores.`;
+            }
         }
     </script>
 </body>

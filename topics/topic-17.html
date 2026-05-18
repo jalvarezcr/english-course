@@ -1,77 +1,534 @@
 <!DOCTYPE html>
-<html lang="es-MX">
+<html lang="es-MX" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temas 3-18 - Curso de Inglés</title>
+    <title>Tema 17: Phrasal Verbs - English Course A1-B2</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../styles.css">
+
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { light: '#4da6ff', DEFAULT: '#0066cc', dark: '#004d99' }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .correct-answer { background-color: #d1fae5; border-color: #10b981; color: #065f46; }
+        .wrong-answer { background-color: #fee2e2; border-color: #ef4444; color: #991b1b; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <header class="bg-blue-600 text-white py-4 px-6 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold" id="page-title">Tema - Curso de Inglés</h1>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="../index.html" class="hover:underline">← Volver al inicio</a></li>
-                </ul>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Header Sticky -->
+    <header class="sticky top-0 z-50 bg-brand-DEFAULT text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                <div>
+                    <h1 class="text-lg font-bold leading-tight">Tema 17: Phrasal Verbs</h1>
+                    <p class="text-xs text-blue-200">Curso B1-B2</p>
+                </div>
+            </div>
+            <nav class="flex gap-4 text-sm font-medium">
+                <a href="topic-16.html" class="flex items-center space-x-2 hover:bg-white/10 px-3 py-2 rounded transition">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span class="hidden sm:inline">Anterior</span>
+                </a>
+                <a href="../index.html" class="flex items-center space-x-2 hover:bg-white/10 px-3 py-2 rounded transition">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="hidden sm:inline">Inicio</span>
+                </a>
             </nav>
+        </div>
+        <div class="h-1 bg-blue-800 w-full">
+            <div class="h-full bg-yellow-400 w-[94%]" title="Progreso del curso"></div>
         </div>
     </header>
 
-    <main class="container mx-auto my-8 px-4">
-        <article class="bg-white p-8 rounded-lg shadow-md max-w-5xl mx-auto">
-            <section class="mb-8">
-                <h2 class="text-3xl font-bold mb-4" id="content-title">Tema en Desarrollo</h2>
-                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
-                    <p class="font-semibold">🚧 Contenido en desarrollo</p>
-                    <p>Este tema está siendo desarrollado. Pronto estará disponible con contenido completo, ejemplos, ejercicios y exámenes interactivos.</p>
-                </div>
-            </section>
+    <main class="container mx-auto my-8 px-4 max-w-5xl">
 
-            <section class="flex justify-between mt-12 pt-6 border-t-2 border-gray-200">
-                <a href="../index.html" class="btn-primary">Volver al temario</a>
-            </section>
+        <article class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-8">
+            <div class="relative h-64 md:h-80">
+                <img src="https://images.unsplash.com/photo-1492321936769-b49830bc1d1e?w=1200&h=600&fit=crop" alt="Conversación real" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent flex items-end">
+                    <div class="p-8 text-white w-full">
+                        <span class="bg-emerald-500 text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wide mb-2 inline-block">Real Speech</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-2">Verbo + Preposición = Nueva Magia</h2>
+                        <p class="text-lg text-gray-300">La clave para sonar como un nativo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 md:p-10 space-y-12">
+
+                <!-- Section: Intro -->
+                <section class="grid md:grid-cols-3 gap-8">
+                    <div class="md:col-span-2 prose max-w-none">
+                        <h3 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                            <i class="fa-solid fa-puzzle-piece text-brand"></i> ¿Qué son los Phrasal Verbs?
+                        </h3>
+                        <p class="text-lg leading-relaxed">
+                            Un <strong>phrasal verb</strong> es un verbo + preposición/adverbio que juntos forman un <strong>significado NUEVO</strong>, distinto del verbo original.
+                        </p>
+                        <p>
+                            Ejemplo: "look" = mirar, pero "<strong>look up</strong>" = buscar en el diccionario. ¡El "up" cambia todo!
+                        </p>
+                        <p>
+                            Los hablantes nativos los usan <strong>constantemente</strong>. Aprenderlos te lleva del nivel intermedio al avanzado.
+                        </p>
+                    </div>
+                    <div class="bg-emerald-50 p-6 rounded-lg border border-emerald-100 flex flex-col justify-center">
+                        <h4 class="font-bold text-emerald-900 mb-2 text-center">Datos rápidos</h4>
+                        <ul class="text-sm text-emerald-800 space-y-2 mt-2">
+                            <li><i class="fa-solid fa-circle-check text-green-500"></i> Existen <strong>5,000+</strong> phrasal verbs.</li>
+                            <li><i class="fa-solid fa-circle-check text-green-500"></i> Los esenciales son ~200.</li>
+                            <li><i class="fa-solid fa-circle-check text-green-500"></i> 5 por semana = dominas los básicos en 1 año.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr class="border-slate-200">
+
+                <!-- Section: Tipos -->
+                <section>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2 border-l-4 border-brand pl-4">
+                        Los 4 Tipos de Phrasal Verbs
+                    </h3>
+                    <p class="text-gray-600 mb-6 pl-4">No todos funcionan igual. Estos son los 4 tipos según cómo aceptan objeto:</p>
+
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+                            <p class="font-bold text-blue-700 mb-2">1. Intransitivos (sin objeto)</p>
+                            <p class="text-sm text-gray-600 mb-2">No necesitan objeto.</p>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>break down</strong> — averiarse: My car broke down.</li>
+                                <li><strong>get up</strong> — levantarse: I get up at 7.</li>
+                                <li><strong>show up</strong> — aparecer: He didn't show up.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+                            <p class="font-bold text-blue-700 mb-2">2. Separables (objeto se puede mover)</p>
+                            <p class="text-sm text-gray-600 mb-2">Puedes poner el objeto en medio.</p>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>turn on</strong> the TV / turn <strong>the TV on</strong></li>
+                                <li><strong>pick up</strong> the kids / pick <strong>the kids up</strong></li>
+                                <li>Con pronombre <strong>siempre en medio</strong>: Turn <strong>it</strong> on.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+                            <p class="font-bold text-blue-700 mb-2">3. Inseparables (objeto al final)</p>
+                            <p class="text-sm text-gray-600 mb-2">El objeto SIEMPRE va al final.</p>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>look after</strong> the baby</li>
+                                <li><strong>run into</strong> a friend</li>
+                                <li><strong>get over</strong> a breakup</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+                            <p class="font-bold text-blue-700 mb-2">4. De 3 partes (verb + adv + prep)</p>
+                            <p class="text-sm text-gray-600 mb-2">Siempre inseparables.</p>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>look forward to</strong> seeing you</li>
+                                <li><strong>put up with</strong> noise</li>
+                                <li><strong>get along with</strong> someone</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: TOP 30 -->
+                <section>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2 border-l-4 border-emerald-500 pl-4">
+                        Top 30 Phrasal Verbs Esenciales
+                    </h3>
+                    <p class="text-gray-600 mb-6 pl-4">Los más usados en conversaciones reales. Aprende uno por día.</p>
+
+                    <div class="overflow-hidden rounded-xl border border-emerald-200 shadow-md">
+                        <table class="w-full text-sm">
+                            <thead class="bg-emerald-600 text-white">
+                                <tr>
+                                    <th class="p-2 text-left">Phrasal Verb</th>
+                                    <th class="p-2 text-left">Significado</th>
+                                    <th class="p-2 text-left hidden md:table-cell">Ejemplo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-emerald-100 bg-white">
+                                <tr><td class="p-2 font-bold text-emerald-700">get up</td><td class="p-2">levantarse</td><td class="p-2 italic hidden md:table-cell">I get up at 7 AM.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">wake up</td><td class="p-2">despertar</td><td class="p-2 italic hidden md:table-cell">Wake up! It's late!</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">turn on / off</td><td class="p-2">encender / apagar</td><td class="p-2 italic hidden md:table-cell">Turn off the lights.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">pick up</td><td class="p-2">recoger</td><td class="p-2 italic hidden md:table-cell">I'll pick up the kids.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">put on</td><td class="p-2">ponerse (ropa)</td><td class="p-2 italic hidden md:table-cell">Put on your jacket.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">take off</td><td class="p-2">quitarse / despegar</td><td class="p-2 italic hidden md:table-cell">The plane takes off at 6.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">give up</td><td class="p-2">rendirse</td><td class="p-2 italic hidden md:table-cell">Don't give up!</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">find out</td><td class="p-2">descubrir</td><td class="p-2 italic hidden md:table-cell">I found out the truth.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">look for</td><td class="p-2">buscar</td><td class="p-2 italic hidden md:table-cell">I'm looking for my keys.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">look after</td><td class="p-2">cuidar</td><td class="p-2 italic hidden md:table-cell">She looks after her grandma.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">look up</td><td class="p-2">buscar (diccionario)</td><td class="p-2 italic hidden md:table-cell">Look up this word.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">look forward to</td><td class="p-2">esperar con ansias</td><td class="p-2 italic hidden md:table-cell">I look forward to seeing you.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">run out of</td><td class="p-2">quedarse sin</td><td class="p-2 italic hidden md:table-cell">We ran out of milk.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">get along with</td><td class="p-2">llevarse bien con</td><td class="p-2 italic hidden md:table-cell">I get along with my sister.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">come back</td><td class="p-2">regresar</td><td class="p-2 italic hidden md:table-cell">Come back soon!</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">go on</td><td class="p-2">continuar</td><td class="p-2 italic hidden md:table-cell">Go on with your story.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">break up</td><td class="p-2">romper relación</td><td class="p-2 italic hidden md:table-cell">They broke up last week.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">break down</td><td class="p-2">averiarse</td><td class="p-2 italic hidden md:table-cell">My car broke down.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">make up</td><td class="p-2">inventar / reconciliarse</td><td class="p-2 italic hidden md:table-cell">He made up a story.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">show up</td><td class="p-2">aparecer</td><td class="p-2 italic hidden md:table-cell">He never showed up.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">work out</td><td class="p-2">ejercicio / resolverse</td><td class="p-2 italic hidden md:table-cell">I work out every day.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">hang out</td><td class="p-2">pasar el rato</td><td class="p-2 italic hidden md:table-cell">Let's hang out tonight.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">put off</td><td class="p-2">posponer</td><td class="p-2 italic hidden md:table-cell">Don't put off the meeting.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">turn down</td><td class="p-2">bajar / rechazar</td><td class="p-2 italic hidden md:table-cell">Turn down the music.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">turn up</td><td class="p-2">subir / aparecer</td><td class="p-2 italic hidden md:table-cell">Turn up the TV.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">fill out / fill in</td><td class="p-2">llenar formulario</td><td class="p-2 italic hidden md:table-cell">Fill out this form.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">throw away</td><td class="p-2">tirar a la basura</td><td class="p-2 italic hidden md:table-cell">Throw away this trash.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">put up with</td><td class="p-2">aguantar / tolerar</td><td class="p-2 italic hidden md:table-cell">I can't put up with this.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">take care of</td><td class="p-2">cuidar de</td><td class="p-2 italic hidden md:table-cell">Take care of yourself.</td></tr>
+                                <tr><td class="p-2 font-bold text-emerald-700">get over</td><td class="p-2">superar</td><td class="p-2 italic hidden md:table-cell">I got over my cold.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Section: Por preposición -->
+                <section>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2 border-l-4 border-brand pl-4">
+                        Phrasal Verbs por Preposición
+                    </h3>
+                    <p class="text-gray-600 mb-6 pl-4">Cada preposición tiene un sentido general. Aprenderlas como grupos ayuda:</p>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-5">
+                            <h4 class="font-bold text-emerald-700 mb-3 flex items-center gap-2"><i class="fa-solid fa-arrow-up"></i> Con UP (intensificar, completar)</h4>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>get up</strong> — levantarse</li>
+                                <li><strong>wake up</strong> — despertar</li>
+                                <li><strong>grow up</strong> — crecer</li>
+                                <li><strong>give up</strong> — rendirse</li>
+                                <li><strong>cheer up</strong> — animarse</li>
+                                <li><strong>set up</strong> — configurar</li>
+                                <li><strong>break up</strong> — romper relación</li>
+                            </ul>
+                        </div>
+                        <div class="bg-red-50 border border-red-200 rounded-xl p-5">
+                            <h4 class="font-bold text-red-700 mb-3 flex items-center gap-2"><i class="fa-solid fa-arrow-down"></i> Con DOWN (reducir, fallar)</h4>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>break down</strong> — averiarse</li>
+                                <li><strong>calm down</strong> — calmarse</li>
+                                <li><strong>cut down</strong> — reducir</li>
+                                <li><strong>let down</strong> — decepcionar</li>
+                                <li><strong>slow down</strong> — desacelerar</li>
+                                <li><strong>turn down</strong> — rechazar / bajar</li>
+                                <li><strong>write down</strong> — anotar</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-50 border border-blue-200 rounded-xl p-5">
+                            <h4 class="font-bold text-blue-700 mb-3 flex items-center gap-2"><i class="fa-solid fa-power-off"></i> Con ON (activar, continuar)</h4>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>turn on</strong> — encender</li>
+                                <li><strong>put on</strong> — ponerse (ropa)</li>
+                                <li><strong>go on</strong> — continuar</li>
+                                <li><strong>hold on</strong> — esperar / aguantar</li>
+                                <li><strong>get on</strong> — subirse (bus)</li>
+                                <li><strong>count on</strong> — contar con</li>
+                            </ul>
+                        </div>
+                        <div class="bg-amber-50 border border-amber-200 rounded-xl p-5">
+                            <h4 class="font-bold text-amber-700 mb-3 flex items-center gap-2"><i class="fa-solid fa-xmark"></i> Con OFF (apagar, salir)</h4>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>turn off</strong> — apagar</li>
+                                <li><strong>take off</strong> — quitarse / despegar</li>
+                                <li><strong>get off</strong> — bajarse</li>
+                                <li><strong>put off</strong> — posponer</li>
+                                <li><strong>show off</strong> — presumir</li>
+                                <li><strong>call off</strong> — cancelar</li>
+                            </ul>
+                        </div>
+                        <div class="bg-purple-50 border border-purple-200 rounded-xl p-5">
+                            <h4 class="font-bold text-purple-700 mb-3 flex items-center gap-2"><i class="fa-solid fa-right-to-bracket"></i> Con OUT (extraer, descubrir)</h4>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>find out</strong> — descubrir</li>
+                                <li><strong>work out</strong> — ejercitar</li>
+                                <li><strong>run out</strong> — agotarse</li>
+                                <li><strong>check out</strong> — revisar / pagar</li>
+                                <li><strong>hang out</strong> — pasar el rato</li>
+                                <li><strong>figure out</strong> — averiguar</li>
+                            </ul>
+                        </div>
+                        <div class="bg-pink-50 border border-pink-200 rounded-xl p-5">
+                            <h4 class="font-bold text-pink-700 mb-3 flex items-center gap-2"><i class="fa-solid fa-arrow-right-to-bracket"></i> Con IN/INTO (entrar)</h4>
+                            <ul class="text-sm space-y-1">
+                                <li><strong>check in</strong> — registrarse</li>
+                                <li><strong>fill in/out</strong> — llenar formulario</li>
+                                <li><strong>get in</strong> — entrar (coche)</li>
+                                <li><strong>run into</strong> — encontrar por casualidad</li>
+                                <li><strong>break in</strong> — entrar por la fuerza</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Mini-Diálogos -->
+                <section class="bg-slate-100 p-6 md:p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-comments"></i> Mini-Diálogos con Phrasal Verbs
+                    </h3>
+
+                    <div class="grid md:grid-cols-2 gap-6 mt-4">
+                        <div class="bg-white p-5 rounded-xl shadow-sm">
+                            <p class="font-bold text-blue-700 mb-2">📱 En una llamada</p>
+                            <p class="text-sm">— Hi! What are you up to?<br>— Just <strong>hanging out</strong> with friends. We're going to <strong>pick up</strong> some pizza later.<br>— Sounds fun! I have to <strong>get up</strong> early tomorrow, so I'll <strong>turn in</strong> soon.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl shadow-sm">
+                            <p class="font-bold text-blue-700 mb-2">💼 En el trabajo</p>
+                            <p class="text-sm">— Did you <strong>fill out</strong> the form?<br>— Yes, but my computer <strong>broke down</strong>! I had to <strong>start over</strong>.<br>— Don't <strong>give up</strong>. Let's <strong>figure out</strong> a solution.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl shadow-sm">
+                            <p class="font-bold text-blue-700 mb-2">🏠 Rutina diaria</p>
+                            <p class="text-sm">I usually <strong>wake up</strong> at 7, <strong>put on</strong> my running shoes and <strong>go for</strong> a run. Then I <strong>get back</strong> home, <strong>take off</strong> my shoes, and <strong>look through</strong> my emails.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl shadow-sm">
+                            <p class="font-bold text-blue-700 mb-2">😢 Problemas</p>
+                            <p class="text-sm">My friend just <strong>broke up</strong> with her boyfriend. She's trying to <strong>get over</strong> it. I'll <strong>look after</strong> her this weekend and we'll <strong>cheer up</strong> together.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Errores comunes -->
+                <section class="bg-red-50 p-6 md:p-8 rounded-2xl border border-red-200">
+                    <h3 class="text-2xl font-bold text-red-900 mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-triangle-exclamation"></i> Errores Comunes
+                    </h3>
+
+                    <div class="grid md:grid-cols-2 gap-4 mt-4">
+                        <div class="bg-white p-4 rounded-xl shadow-sm">
+                            <p class="font-bold text-red-700 mb-2">1. NO traducir literal</p>
+                            <p class="text-sm text-gray-700">"Look for" no es "mirar para". Es "buscar". <strong>Memoriza el significado completo</strong>.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm">
+                            <p class="font-bold text-red-700 mb-2">2. Pronombre SIEMPRE en medio</p>
+                            <p class="text-sm text-gray-700"><span class="text-red-500 line-through">Turn on it</span> → <span class="text-green-600 font-bold">Turn it on ✓</span></p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm">
+                            <p class="font-bold text-red-700 mb-2">3. La preposición ES importante</p>
+                            <p class="text-sm text-gray-700">"Look up" ≠ "Look down" ≠ "Look at" ≠ "Look for". Cambia preposición = cambia todo.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm">
+                            <p class="font-bold text-red-700 mb-2">4. Demasiado informal</p>
+                            <p class="text-sm text-gray-700">Phrasal verbs son <strong>informales</strong>. En textos académicos: "find out" → "discover".</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- External Resources -->
+                <section class="bg-gray-900 text-white p-8 rounded-xl shadow-lg relative overflow-hidden mt-8 mb-8">
+                    <div class="absolute top-0 right-0 opacity-10 transform translate-x-10 -translate-y-10">
+                        <i class="fa-brands fa-bbc text-9xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 z-10 relative flex items-center gap-2">
+                        <i class="fa-solid fa-book-bookmark text-yellow-400"></i> Recursos Recomendados
+                    </h3>
+                    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 z-10 relative">
+                        <a href="https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/phrasal-verbs" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-solid fa-pen-fancy text-green-400 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">British Council</span>
+                                <span class="text-xs text-gray-400">Phrasal Verbs B1-B2</span>
+                            </div>
+                        </a>
+                        <a href="https://dictionary.cambridge.org/es/topics/language/phrasal-verbs/" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-solid fa-book text-blue-400 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">Cambridge Dictionary</span>
+                                <span class="text-xs text-gray-400">Phrasal Verbs Topic</span>
+                            </div>
+                        </a>
+                        <a href="https://www.englishclub.com/vocabulary/phrasal-verbs/" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-solid fa-graduation-cap text-pink-400 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">English Club</span>
+                                <span class="text-xs text-gray-400">Lista completa</span>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Quiz -->
+                <section id="exercises-section" class="scroll-mt-24">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                            <i class="fa-solid fa-pencil text-brand"></i> Quiz de Phrasal Verbs
+                        </h3>
+                        <span class="text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full">8 Preguntas</span>
+                    </div>
+
+                    <form id="quiz-form" class="space-y-6">
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                            <p class="font-semibold text-lg mb-4">1. Please ___ the lights when you leave. (apaga)</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q1" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">turn on</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q1" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">turn off</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q1" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">turn up</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option1">
+                            <p class="font-semibold text-lg mb-4">2. I'm ___ my keys. Have you seen them? (buscando)</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q2" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">looking for</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q2" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">looking after</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q2" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">looking up</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option3">
+                            <p class="font-semibold text-lg mb-4">3. The exam was hard, but I didn't ___. (rendirme)</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q3" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">break down</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q3" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">go on</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q3" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">give up</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option1">
+                            <p class="font-semibold text-lg mb-4">4. My alarm doesn't work. I can't ___ early. (despertarme)</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q4" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">wake up</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q4" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">put on</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q4" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">break up</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                            <p class="font-semibold text-lg mb-4">5. ¿Cuál es la frase correcta con pronombre?</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q5" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">Turn on it.</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q5" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">Turn it on.</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q5" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">It turn on.</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option3">
+                            <p class="font-semibold text-lg mb-4">6. I ___ my old friend at the supermarket. (encontré por casualidad)</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q6" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">looked after</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q6" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">got over</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q6" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">ran into</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                            <p class="font-semibold text-lg mb-4">7. I'm so excited! I ___ this trip. (espero con ansias)</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q7" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">put up with</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q7" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">look forward to</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q7" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">get along with</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option1">
+                            <p class="font-semibold text-lg mb-4">8. We ___ of milk. We need to buy more. (nos quedamos sin)</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q8" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">ran out</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q8" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">got over</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q8" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">made up</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <div class="flex justify-end">
+                            <button type="button" onclick="evaluateQuiz()" class="bg-brand-DEFAULT hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-lg shadow-md transition transform hover:scale-105">
+                                <i class="fa-solid fa-check-circle mr-2"></i> Verificar
+                            </button>
+                        </div>
+                    </form>
+
+                    <div id="result-message" class="hidden mt-6 p-4 bg-gray-800 text-white rounded-lg text-center animate-pulse"></div>
+                </section>
+
+                <!-- Next Lesson CTA -->
+                <section class="mt-12 pt-8 border-t-2 border-dashed border-gray-300 flex justify-center">
+                    <a href="topic-18.html" class="inline-flex items-center bg-slate-800 hover:bg-slate-900 text-white font-bold py-4 px-10 rounded-full shadow-lg transition transform hover:-translate-y-1">
+                        Siguiente: Conectores y Tips de Conversación <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </section>
+
+            </div>
         </article>
     </main>
 
-    <footer class="bg-gray-800 text-white py-6 mt-12">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2026 Curso de Inglés en 30 Días. Todos los derechos reservados.</p>
+    <footer class="bg-slate-900 text-slate-400 py-10 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2026 Curso de Inglés Open Source. GitHub Pages Ready.</p>
         </div>
     </footer>
 
     <script>
-        // Auto-populate title from URL
-        const topicMap = {
-            3: 'Present Simple',
-            4: 'Vocabulario Básico',
-            5: 'Pronombres Personales',
-            6: 'Verbo TO BE',
-            7: 'Present Continuous',
-            8: 'There is / There are',
-            9: 'Pasado Simple',
-            10: 'Comparativos y Superlativos',
-            11: 'Futuro con Will y Going to',
-            12: 'Condicional Simple',
-            13: 'Passive Voice',
-            14: 'Reported Speech',
-            15: 'Phrasal Verbs',
-            16: 'Modal Perfect',
-            17: 'Advanced Grammar Review',
-            18: 'Speaking Tips'
-        };
-        
-        const filename = window.location.pathname.split('/').pop();
-        const topicNum = parseInt(filename.replace('topic-', '').replace('.html', ''));
-        
-        if (topicMap[topicNum]) {
-            document.getElementById('page-title').textContent = `Tema ${topicNum}: ${topicMap[topicNum]}`;
-            document.getElementById('content-title').textContent = topicMap[topicNum];
-            document.title = `Tema ${topicNum}: ${topicMap[topicNum]} - Curso de Inglés`;
+        function evaluateQuiz() {
+            const questions = document.querySelectorAll('.question-card');
+            let score = 0;
+            let total = questions.length;
+            questions.forEach((card) => {
+                const correctAnswer = card.getAttribute('data-correct');
+                const selectedOption = card.querySelector('input[type="radio"]:checked');
+                const feedbackDiv = card.querySelector('.feedback');
+                feedbackDiv.className = 'feedback mt-3 text-sm p-2 rounded hidden';
+                card.classList.remove('border-green-500', 'border-red-500', 'border-2');
+                if (selectedOption) {
+                    if (selectedOption.value === correctAnswer) {
+                        score++;
+                        feedbackDiv.textContent = "¡Correcto! 🎉";
+                        feedbackDiv.classList.remove('hidden');
+                        feedbackDiv.classList.add('bg-green-100', 'text-green-800');
+                        card.classList.add('border-green-500', 'border-2');
+                    } else {
+                        feedbackDiv.textContent = "Incorrecto.";
+                        feedbackDiv.classList.remove('hidden');
+                        feedbackDiv.classList.add('bg-red-100', 'text-red-800');
+                        card.classList.add('border-red-500', 'border-2');
+                    }
+                } else {
+                    feedbackDiv.textContent = "Selecciona una opción.";
+                    feedbackDiv.classList.remove('hidden');
+                    feedbackDiv.classList.add('bg-yellow-100', 'text-yellow-800');
+                }
+            });
+            const resultMsg = document.getElementById('result-message');
+            resultMsg.classList.remove('hidden', 'animate-pulse');
+            if (score === total) {
+                resultMsg.className = "mt-6 p-4 bg-green-600 text-white rounded-lg text-center shadow-lg transition";
+                resultMsg.innerHTML = `<i class="fa-solid fa-star text-yellow-300 mr-2"></i> ¡Suenas como nativo!`;
+            } else if (score >= 5) {
+                resultMsg.className = "mt-6 p-4 bg-blue-600 text-white rounded-lg text-center shadow-lg transition";
+                resultMsg.innerHTML = `Bien hecho: ${score}/${total}. ¡Sigue practicando!`;
+            } else {
+                resultMsg.className = "mt-6 p-4 bg-gray-600 text-white rounded-lg text-center shadow-lg";
+                resultMsg.innerHTML = `Resultado: ${score}/${total}. Repasa los Top 30.`;
+            }
         }
     </script>
 </body>

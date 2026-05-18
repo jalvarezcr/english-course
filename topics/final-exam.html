@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es-MX" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Final A1-C2 - English Course</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles.css">
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] }, colors: { brand: { light: '#4da6ff', DEFAULT: '#0066cc', dark: '#004d99' } } } } }
+    </script>
+    <style>
+        .correct-answer { background-color: #d1fae5; border-color: #10b981; color: #065f46; }
+        .wrong-answer { background-color: #fee2e2; border-color: #ef4444; color: #991b1b; }
+        .level-pill { font-size: 0.65rem; padding: 2px 8px; border-radius: 9999px; font-weight: 700; }
+        .pill-a1 { background-color: #dcfce7; color: #166534; }
+        .pill-a2 { background-color: #dbeafe; color: #1e40af; }
+        .pill-b1 { background-color: #fef3c7; color: #92400e; }
+        .pill-b2 { background-color: #ffedd5; color: #9a3412; }
+        .pill-c1 { background-color: #f3e8ff; color: #6b21a8; }
+        .pill-c2 { background-color: #fef08a; color: #713f12; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <header class="sticky top-0 z-50 bg-gradient-to-r from-blue-600 via-purple-600 to-yellow-600 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-crown text-2xl"></i>
+                <div>
+                    <h1 class="text-lg font-bold leading-tight">Examen Final A1-C2</h1>
+                    <p class="text-xs text-yellow-100">Evalúa todo lo aprendido</p>
+                </div>
+            </div>
+            <nav class="flex gap-4 text-sm font-medium">
+                <a href="../index.html" class="flex items-center space-x-2 hover:bg-white/10 px-3 py-2 rounded transition">
+                    <i class="fa-solid fa-house"></i><span class="hidden sm:inline">Inicio</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto my-8 px-4 max-w-4xl">
+        <article class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-8">
+            <div class="relative h-48 md:h-64">
+                <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=1200&h=600&fit=crop" alt="Examen final" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent flex items-end">
+                    <div class="p-8 text-white w-full">
+                        <span class="bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded uppercase tracking-wide mb-2 inline-block">Final Test</span>
+                        <h2 class="text-2xl md:text-4xl font-bold mb-2">🏆 Examen Final del Curso</h2>
+                        <p class="text-sm md:text-base text-gray-200">30 preguntas que cubren los 28 temas, desde A1 hasta C2.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 md:p-10">
+
+                <!-- Instrucciones -->
+                <section class="bg-blue-50 border border-blue-200 p-6 rounded-xl mb-8">
+                    <h3 class="font-bold text-blue-900 mb-3 flex items-center gap-2"><i class="fa-solid fa-circle-info"></i> Instrucciones</h3>
+                    <ul class="text-sm space-y-1 text-blue-800">
+                        <li>• <strong>30 preguntas</strong> ordenadas de A1 a C2 (de fácil a difícil).</li>
+                        <li>• Cada pregunta vale <strong>1 punto</strong>. Necesitas <strong>21+ (70%)</strong> para certificarte.</li>
+                        <li>• No hay penalización: responde todas las preguntas.</li>
+                        <li>• Al final verás tu nivel estimado MCER.</li>
+                    </ul>
+                </section>
+
+                <!-- Quiz -->
+                <form id="quiz-form" class="space-y-5">
+
+                    <!-- A1 (5 preguntas) -->
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-a1">A1</span> 1. ¿Cómo respondes a "How are you?"?</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q1" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">My name is Joel.</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q1" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">I'm fine, thanks.</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q1" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">Goodbye.</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option1">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-a1">A1</span> 2. She ___ a teacher.</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q2" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">is</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q2" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">am</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q2" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">are</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option3">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-a1">A1</span> 3. I ___ 25 years old.</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q3" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">have</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q3" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">has</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q3" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">am</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-a1">A1</span> 4. ¿Cómo se dice "el carro rojo"?</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q4" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">The car red</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q4" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">The red car</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q4" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">A reds car</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option1">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-a1">A1</span> 5. The brother of my father is my ___.</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q5" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">uncle</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q5" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">cousin</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q5" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">nephew</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <!-- A2 (5 preguntas) -->
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-a2">A2</span> 6. Look! It ___ raining now.</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q6" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">rains</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q6" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">is raining</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q6" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">rain</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option3">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-a2">A2</span> 7. ___ any milk in the fridge?</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q7" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">There is</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q7" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">Are there</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q7" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">Is there</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-a2">A2</span> 8. Yesterday I ___ to the cinema.</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q8" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">goed</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q8" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">went</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q8" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">go</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option1">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-a2">A2</span> 9. Mount Everest is the ___ mountain in the world.</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q9" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">highest</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q9" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">higher</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q9" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">more high</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option3">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-a2">A2</span> 10. There aren't ___ cookies left.</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q10" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">some</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q10" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">a</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q10" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">any</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <!-- B1 (5 preguntas) -->
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option1">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-b1">B1</span> 11. Look at those clouds! It ___ rain.</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q11" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">is going to</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q11" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">will</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q11" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">going to</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-b1">B1</span> 12. If it rains tomorrow, we ___ at home.</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q12" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">stay</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q12" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">will stay</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q12" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">stayed</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option3">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-b1">B1</span> 13. This building ___ in 1850.</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q13" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">built</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q13" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">is built</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q13" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">was built</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option1">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-b1">B1</span> 14. Reported: She said she ___ tired.</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q14" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">was</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q14" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">is</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q14" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">will be</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-b1">B1</span> 15. You ___ smoke in the hospital. (¡Prohibido!)</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q15" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">don't have to</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q15" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">mustn't</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q15" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">should</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <!-- B2 (5 preguntas) -->
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option3">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-b2">B2</span> 16. I ___ in London for 5 years.</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q16" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">live</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q16" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">am living</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q16" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">have lived</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-b2">B2</span> 17. Please ___ the lights when you leave.</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q17" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">turn on</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q17" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">turn off</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q17" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">turn up</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option1">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-b2">B2</span> 18. ___ the rain, we still had a great time. (a pesar de)</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q18" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">Despite</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q18" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">Because of</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q18" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">Furthermore</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option3">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-b2">B2</span> 19. He ___ the bus by the time we arrived. (Past Perfect)</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q19" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">missed</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q19" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">has missed</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q19" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">had missed</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-b2">B2</span> 20. The report ___ by the team yesterday. (Past Passive)</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q20" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">is finished</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q20" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">was finished</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q20" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">had finishing</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <!-- C1 (7 preguntas) -->
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-c1">C1</span> 21. If I ___ rich, I would buy a yacht. (Second Cond.)</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q21" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">am</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q21" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">were</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q21" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">will be</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option3">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-c1">C1</span> 22. If she had studied, she ___ the exam. (Third Cond.)</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q22" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">passed</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q22" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">would pass</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q22" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">would have passed</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option1">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-c1">C1</span> 23. By 2030, I ___ here for 10 years.</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q23" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">will have been working</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q23" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">have worked</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q23" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">work</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-c1">C1</span> 24. I wish I ___ that. (arrepentimiento, sí lo dije)</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q24" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">didn't say</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q24" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">hadn't said</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q24" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">wouldn't say</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option3">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-c1">C1</span> 25. The woman ___ called you is here.</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q25" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">which</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q25" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">where</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q25" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">who</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option1">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-c1">C1</span> 26. He's not home. He ___ left already.</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q26" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">must have</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q26" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">should have</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q26" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">would have</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-c1">C1</span> 27. I ___ my hair ___ at the salon. (Causative)</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q27" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">had / cut by</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q27" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">had / cut</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q27" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">cut / had</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <!-- C2 (3 preguntas) -->
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-c2">C2</span> 28. ___ I seen such beauty. (Inversión)</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q28" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">Never I have</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q28" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">Never have</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q28" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">Never did</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option3">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-c2">C2</span> 29. ___ I known you were coming, I would have prepared dinner.</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q29" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">Were</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q29" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">Should</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q29" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">Had</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="question-card bg-white p-5 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                        <p class="font-semibold mb-3"><span class="level-pill pill-c2">C2</span> 30. ___ was Carlos ___ broke the window. (IT-cleft)</p>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q30" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">There / who</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q30" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">It / who</span></label>
+                            <label class="flex items-center p-2 rounded cursor-pointer hover:bg-blue-50"><input type="radio" name="q30" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">That / which</span></label>
+                        </div>
+                        <div class="feedback hidden mt-2 text-xs p-2 rounded"></div>
+                    </div>
+
+                    <div class="flex justify-center pt-6">
+                        <button type="button" onclick="evaluateExam()" class="bg-gradient-to-r from-yellow-600 to-purple-700 hover:from-yellow-700 hover:to-purple-800 text-white font-bold py-4 px-12 rounded-full shadow-lg transition transform hover:scale-105">
+                            <i class="fa-solid fa-crown mr-2"></i> Calcular mi Nivel
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Resultado -->
+                <div id="result-message" class="hidden mt-8 p-6 rounded-2xl text-center shadow-lg"></div>
+
+                <!-- Back to home -->
+                <section class="mt-12 pt-8 border-t-2 border-dashed border-gray-300 flex justify-center">
+                    <a href="../index.html" class="inline-flex items-center bg-slate-700 hover:bg-slate-800 text-white font-bold py-3 px-8 rounded-full shadow-md transition">
+                        <i class="fa-solid fa-house mr-2"></i> Volver al Temario
+                    </a>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-10 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2026 Curso de Inglés Open Source. GitHub Pages Ready.</p>
+        </div>
+    </footer>
+
+    <script>
+        function evaluateExam() {
+            const questions = document.querySelectorAll('.question-card');
+            let score = 0;
+            const total = questions.length;
+            const byLevel = { A1: { score: 0, total: 0 }, A2: { score: 0, total: 0 }, B1: { score: 0, total: 0 }, B2: { score: 0, total: 0 }, C1: { score: 0, total: 0 }, C2: { score: 0, total: 0 } };
+
+            questions.forEach((card) => {
+                const correctAnswer = card.getAttribute('data-correct');
+                const selectedOption = card.querySelector('input[type="radio"]:checked');
+                const feedbackDiv = card.querySelector('.feedback');
+                const levelPill = card.querySelector('.level-pill');
+                const level = levelPill ? levelPill.textContent.trim() : 'A1';
+
+                feedbackDiv.className = 'feedback mt-2 text-xs p-2 rounded hidden';
+                card.classList.remove('border-green-500', 'border-red-500', 'border-2');
+
+                byLevel[level].total++;
+
+                if (selectedOption) {
+                    if (selectedOption.value === correctAnswer) {
+                        score++;
+                        byLevel[level].score++;
+                        feedbackDiv.textContent = "✓ Correcto";
+                        feedbackDiv.classList.remove('hidden');
+                        feedbackDiv.classList.add('bg-green-100', 'text-green-800');
+                        card.classList.add('border-green-500', 'border-2');
+                    } else {
+                        feedbackDiv.textContent = "✗ Incorrecto";
+                        feedbackDiv.classList.remove('hidden');
+                        feedbackDiv.classList.add('bg-red-100', 'text-red-800');
+                        card.classList.add('border-red-500', 'border-2');
+                    }
+                } else {
+                    feedbackDiv.textContent = "⚠ Sin respuesta";
+                    feedbackDiv.classList.remove('hidden');
+                    feedbackDiv.classList.add('bg-yellow-100', 'text-yellow-800');
+                }
+            });
+
+            // Determinar nivel estimado
+            const percentage = Math.round((score / total) * 100);
+            let estimatedLevel = 'A1', message = '', color = '';
+
+            if (percentage >= 90) { estimatedLevel = 'C2'; color = 'from-yellow-500 to-purple-700'; message = '¡PERFECTO! Has alcanzado el nivel Mastery (C2). Estás listo para cualquier examen internacional.'; }
+            else if (percentage >= 80) { estimatedLevel = 'C1'; color = 'from-purple-600 to-blue-700'; message = '¡Excelente! Tu nivel es Advanced (C1). Puedes usar el inglés con flexibilidad y eficacia.'; }
+            else if (percentage >= 70) { estimatedLevel = 'B2'; color = 'from-orange-500 to-red-600'; message = '¡Muy bien! Tu nivel es Upper-Intermediate (B2). Puedes mantener conversaciones complejas.'; }
+            else if (percentage >= 55) { estimatedLevel = 'B1'; color = 'from-yellow-500 to-orange-600'; message = 'Buen trabajo. Tu nivel es Intermediate (B1). Puedes desenvolverte en situaciones cotidianas.'; }
+            else if (percentage >= 40) { estimatedLevel = 'A2'; color = 'from-blue-500 to-cyan-600'; message = 'Vas bien. Tu nivel es Elementary (A2). Sigue practicando para subir a B1.'; }
+            else { estimatedLevel = 'A1'; color = 'from-green-500 to-emerald-600'; message = 'Estás en nivel Beginner (A1). Te recomendamos repasar las primeras lecciones del curso.'; }
+
+            const resultMsg = document.getElementById('result-message');
+            resultMsg.className = `mt-8 p-6 rounded-2xl text-center shadow-lg bg-gradient-to-r ${color} text-white`;
+            resultMsg.innerHTML = `
+                <i class="fa-solid fa-crown text-5xl text-yellow-300 mb-3"></i>
+                <h2 class="text-4xl font-bold mb-2">${estimatedLevel}</h2>
+                <p class="text-xl mb-2">Puntuación: ${score} / ${total} (${percentage}%)</p>
+                <p class="text-sm opacity-90 mb-4 max-w-2xl mx-auto">${message}</p>
+                <div class="bg-white/20 rounded-lg p-4 max-w-md mx-auto text-left text-sm">
+                    <p class="font-bold mb-2 text-center">Desglose por nivel:</p>
+                    ${Object.entries(byLevel).map(([lvl, data]) => data.total > 0 ? `<p>${lvl}: ${data.score}/${data.total}</p>` : '').join('')}
+                </div>
+            `;
+            resultMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+</body>
+</html>

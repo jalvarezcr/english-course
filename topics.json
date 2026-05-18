@@ -3,114 +3,168 @@
     "id": 1,
     "title": "1. Introducción al Inglés",
     "level": "A1",
-    "description": "Saludos, presentaciones y frases básicas para iniciar conversaciones."
+    "description": "Saludos, presentaciones, pronombres, verbo TO BE y alfabeto."
   },
   {
     "id": 2,
     "title": "2. Gramática Básica",
     "level": "A1",
-    "description": "Fundamentos de gramática: sustantivos, verbos y adjetivos."
+    "description": "Sustantivos, verbos, adjetivos, artículos y estructura SVO."
   },
   {
     "id": 3,
     "title": "3. Present Simple",
     "level": "A1",
-    "description": "Aprende a usar el presente simple para rutinas y hechos."
+    "description": "Rutinas, adverbios de frecuencia y WH-questions."
   },
   {
     "id": 4,
     "title": "4. Vocabulario Básico",
     "level": "A1",
-    "description": "Familia, colores, números y palabras cotidianas esenciales."
+    "description": "Familia, colores, números, meses y estaciones."
   },
   {
     "id": 5,
     "title": "5. Pronombres Personales",
     "level": "A1",
-    "description": "I, you, he, she, it, we, they y su uso correcto."
+    "description": "Sujeto, objeto, posesivos, demostrativos y reflexivos."
   },
   {
     "id": 6,
     "title": "6. Verbo TO BE",
     "level": "A1",
-    "description": "Conjugación y usos del verbo más importante del inglés."
+    "description": "Los 7 usos del verbo TO BE + There is/There are."
   },
   {
     "id": 7,
     "title": "7. Present Continuous",
     "level": "A2",
-    "description": "Acciones en progreso usando be + -ing."
+    "description": "Acciones ahora, planes futuros y verbos estativos."
   },
   {
     "id": 8,
     "title": "8. There is / There are",
     "level": "A2",
-    "description": "Expresar existencia y cantidades con there is/are."
+    "description": "Existencia, cuantificadores y How much/many."
   },
   {
     "id": 9,
     "title": "9. Pasado Simple",
     "level": "A2",
-    "description": "Verbos regulares e irregulares en pasado."
+    "description": "Verbos regulares, irregulares, was/were y pronunciación -ed."
   },
   {
     "id": 10,
     "title": "10. Comparativos y Superlativos",
     "level": "A2",
-    "description": "Comparar personas, lugares y cosas."
+    "description": "More/-er, the most/-est, as...as y less/the least."
   },
   {
     "id": 11,
-    "title": "11. Futuro con Will y Going to",
+    "title": "11. Futuro (Will y Going to)",
     "level": "B1",
-    "description": "Expresar planes, predicciones y decisiones futuras."
+    "description": "Will, going to, present continuous para futuro y diferencias."
   },
   {
     "id": 12,
-    "title": "12. Condicional Simple",
+    "title": "12. First Conditional",
     "level": "B1",
-    "description": "First conditional y sus usos en situaciones reales."
+    "description": "Condicionales reales, unless, when, as soon as."
   },
   {
     "id": 13,
     "title": "13. Passive Voice",
     "level": "B1",
-    "description": "La voz pasiva en presente y pasado."
+    "description": "Voz pasiva en todos los tiempos y participios irregulares."
   },
   {
     "id": 14,
     "title": "14. Reported Speech",
     "level": "B1",
-    "description": "Discurso indirecto y cambios de tiempo verbal."
+    "description": "Discurso indirecto, preguntas y comandos reportados."
   },
   {
     "id": 15,
-    "title": "15. Presente Perfecto",
+    "title": "15. Present Perfect",
     "level": "B2",
-    "description": "Uso del presente perfecto para acciones pasadas con relevancia en el presente."
+    "description": "For/since, been/gone, just/already/yet y los 4 usos."
   },
   {
     "id": 16,
-    "title": "16. Phrasal Verbs",
-    "level": "B2",
-    "description": "Verbos con preposiciones y su significado."
+    "title": "16. Verbos Modales",
+    "level": "B1",
+    "description": "Can, must, should, may, might y sus negativos."
   },
   {
     "id": 17,
-    "title": "17. Modal Perfect",
+    "title": "17. Phrasal Verbs",
     "level": "B2",
-    "description": "Could have, should have, must have para hipótesis pasadas."
+    "description": "Top 30 phrasal verbs y agrupación por preposición."
   },
   {
     "id": 18,
-    "title": "18. Advanced Grammar Review",
+    "title": "18. Conectores y Conversación",
     "level": "B2",
-    "description": "Repaso general de estructuras avanzadas."
+    "description": "Linking words, idioms y tips para sonar natural."
   },
   {
     "id": 19,
-    "title": "19. Speaking Tips",
-    "level": "B2",
-    "description": "Consejos prácticos para mejorar tu fluidez oral."
+    "title": "19. Second Conditional",
+    "level": "C1",
+    "description": "Hipotético: If I were... I would... y consejos formales."
+  },
+  {
+    "id": 20,
+    "title": "20. Third & Mixed Conditionals",
+    "level": "C1",
+    "description": "Pasado imposible y mezcla de tiempos en condicionales."
+  },
+  {
+    "id": 21,
+    "title": "21. Perfect Continuous Tenses",
+    "level": "C1",
+    "description": "Present, past y future perfect continuous para duración."
+  },
+  {
+    "id": 22,
+    "title": "22. Future Tenses Advanced",
+    "level": "C1",
+    "description": "Future perfect, future continuous y las 6 formas del futuro."
+  },
+  {
+    "id": 23,
+    "title": "23. Wish / If only",
+    "level": "C1",
+    "description": "Deseos, arrepentimientos y quejas con wish + would."
+  },
+  {
+    "id": 24,
+    "title": "24. Relative Clauses",
+    "level": "C1",
+    "description": "Defining vs non-defining: who, which, whose, where."
+  },
+  {
+    "id": 25,
+    "title": "25. Gerunds vs Infinitives",
+    "level": "C1",
+    "description": "-ing vs to+verb, verbos que cambian de significado."
+  },
+  {
+    "id": 26,
+    "title": "26. Modal Perfects",
+    "level": "C1",
+    "description": "Must have, should have, might have, could have."
+  },
+  {
+    "id": 27,
+    "title": "27. Causative (Have/Get)",
+    "level": "C1",
+    "description": "Have/get something done + make/let/have/get someone do."
+  },
+  {
+    "id": 28,
+    "title": "28. Inversion & Cleft Sentences",
+    "level": "C2",
+    "description": "Never have I..., It-cleft, What-cleft. ¡Nivel C2 final!"
   }
 ]

@@ -1,77 +1,559 @@
 <!DOCTYPE html>
-<html lang="es-MX">
+<html lang="es-MX" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temas 3-18 - Curso de Inglés</title>
+    <title>Tema 16: Verbos Modales - English Course A1-B2</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../styles.css">
+
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { light: '#4da6ff', DEFAULT: '#0066cc', dark: '#004d99' },
+                        modal: {
+                            ability: '#3b82f6',    // Blue - can
+                            obligation: '#ef4444', // Red - must
+                            advice: '#10b981',     // Green - should
+                            possibility: '#a855f7' // Purple - might/may
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .correct-answer { background-color: #d1fae5; border-color: #10b981; color: #065f46; }
+        .wrong-answer { background-color: #fee2e2; border-color: #ef4444; color: #991b1b; }
+        .modal-card:hover { transform: translateY(-3px); transition: transform 0.2s; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <header class="bg-blue-600 text-white py-4 px-6 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold" id="page-title">Tema - Curso de Inglés</h1>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="../index.html" class="hover:underline">← Volver al inicio</a></li>
-                </ul>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Header Sticky -->
+    <header class="sticky top-0 z-50 bg-brand-DEFAULT text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                <div>
+                    <h1 class="text-lg font-bold leading-tight">Tema 16: Verbos Modales</h1>
+                    <p class="text-xs text-blue-200">Curso B1</p>
+                </div>
+            </div>
+            <nav class="flex gap-4 text-sm font-medium">
+                <a href="topic-15.html" class="flex items-center space-x-2 hover:bg-white/10 px-3 py-2 rounded transition">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span class="hidden sm:inline">Anterior</span>
+                </a>
+                <a href="../index.html" class="flex items-center space-x-2 hover:bg-white/10 px-3 py-2 rounded transition">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="hidden sm:inline">Inicio</span>
+                </a>
             </nav>
+        </div>
+        <div class="h-1 bg-blue-800 w-full">
+            <div class="h-full bg-yellow-400 w-[88%]" title="Progreso del curso"></div>
         </div>
     </header>
 
-    <main class="container mx-auto my-8 px-4">
-        <article class="bg-white p-8 rounded-lg shadow-md max-w-5xl mx-auto">
-            <section class="mb-8">
-                <h2 class="text-3xl font-bold mb-4" id="content-title">Tema en Desarrollo</h2>
-                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
-                    <p class="font-semibold">🚧 Contenido en desarrollo</p>
-                    <p>Este tema está siendo desarrollado. Pronto estará disponible con contenido completo, ejemplos, ejercicios y exámenes interactivos.</p>
-                </div>
-            </section>
+    <!-- Main Content -->
+    <main class="container mx-auto my-8 px-4 max-w-5xl">
 
-            <section class="flex justify-between mt-12 pt-6 border-t-2 border-gray-200">
-                <a href="../index.html" class="btn-primary">Volver al temario</a>
-            </section>
+        <!-- Hero Section -->
+        <article class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-8">
+            <div class="relative h-64 md:h-80">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=600&fit=crop" alt="Reglas y señalización" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent flex items-end">
+                    <div class="p-8 text-white w-full">
+                        <span class="bg-purple-500 text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wide mb-2 inline-block">Modal Verbs</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-2">Can, Must, Should...</h2>
+                        <p class="text-lg text-gray-300">Los superpoderes de los verbos: habilidad, obligación, consejo y posibilidad.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Body -->
+            <div class="p-6 md:p-10 space-y-12">
+
+                <!-- Section: Intro -->
+                <section class="grid md:grid-cols-3 gap-8">
+                    <div class="md:col-span-2 prose max-w-none">
+                        <h3 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                            <i class="fa-solid fa-bolt text-purple-600"></i> ¿Qué son los Modales?
+                        </h3>
+                        <p class="text-lg leading-relaxed">
+                            Los <strong>verbos modales</strong> son palabras especiales que cambian el significado del verbo principal. Te permiten expresar <strong>habilidad, obligación, permiso, consejo, posibilidad</strong>, y más.
+                        </p>
+                        <p>
+                            Lo mejor: son muy fáciles de usar porque <strong>no se conjugan</strong>. ¡La misma forma para todos los sujetos!
+                        </p>
+                    </div>
+                    <div class="bg-purple-50 p-6 rounded-lg border border-purple-100 flex flex-col justify-center">
+                        <h4 class="font-bold text-purple-900 mb-2 text-center">3 Reglas de Oro</h4>
+                        <ul class="text-sm text-purple-800 space-y-2 mt-2">
+                            <li><i class="fa-solid fa-check text-green-500"></i> NO llevan "to" después.</li>
+                            <li><i class="fa-solid fa-check text-green-500"></i> NO llevan "s" en tercera persona.</li>
+                            <li><i class="fa-solid fa-check text-green-500"></i> NO usan "do/does/did".</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr class="border-slate-200">
+
+                <!-- Section: Estructura -->
+                <section>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2 border-l-4 border-brand pl-4">
+                        Estructura General
+                    </h3>
+                    <p class="text-gray-600 mb-6 pl-4">Todos los modales siguen la misma estructura simple:</p>
+
+                    <div class="bg-indigo-50 p-8 rounded-xl border border-indigo-100 text-center">
+                        <div class="flex flex-wrap justify-center items-center gap-2 md:gap-4 text-lg md:text-2xl font-bold">
+                            <div class="bg-white px-4 py-3 rounded-lg shadow text-gray-700">Sujeto<span class="block text-xs font-normal text-gray-500 mt-1">(I, She, They)</span></div>
+                            <i class="fa-solid fa-plus text-gray-400"></i>
+                            <div class="bg-purple-500 text-white px-4 py-3 rounded-lg shadow">MODAL<span class="block text-xs font-normal text-purple-100 mt-1">(can, must, should)</span></div>
+                            <i class="fa-solid fa-plus text-gray-400"></i>
+                            <div class="bg-white px-4 py-3 rounded-lg shadow text-gray-700">VERBO<span class="block text-xs font-normal text-gray-500 mt-1">(infinitivo SIN to)</span></div>
+                        </div>
+                        <p class="mt-4 text-sm text-indigo-700">Ejemplo: <strong>She can speak</strong> French. (NO "She can to speaks French.")</p>
+                    </div>
+                </section>
+
+                <!-- Section: CAN/COULD -->
+                <section class="bg-blue-50 p-6 md:p-8 rounded-2xl border border-blue-200">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-bolt-lightning"></i> CAN / COULD — Habilidad y Permiso
+                    </h3>
+
+                    <div class="grid md:grid-cols-2 gap-6 mt-4">
+                        <div class="bg-white p-5 rounded-xl shadow-sm">
+                            <h4 class="font-bold text-blue-700 text-xl mb-2">CAN (Puedo, sé)</h4>
+                            <p class="text-sm text-gray-600 mb-3">Para <strong>habilidad presente</strong> y <strong>permiso informal</strong>.</p>
+                            <ul class="text-sm space-y-2">
+                                <li><strong>Habilidad:</strong> I <strong>can</strong> swim. <span class="text-gray-400 italic">→ Sé nadar.</span></li>
+                                <li><strong>Permiso:</strong> <strong>Can</strong> I leave early? <span class="text-gray-400 italic">→ ¿Puedo salir temprano?</span></li>
+                                <li><strong>Petición:</strong> <strong>Can</strong> you help me? <span class="text-gray-400 italic">→ ¿Me ayudas?</span></li>
+                                <li><strong>Posibilidad:</strong> It <strong>can</strong> rain in April.</li>
+                            </ul>
+                            <p class="text-xs text-red-500 mt-3 italic"><strong>Negativo:</strong> can't / cannot</p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-xl shadow-sm">
+                            <h4 class="font-bold text-blue-700 text-xl mb-2">COULD (Podía / Podría)</h4>
+                            <p class="text-sm text-gray-600 mb-3">Para <strong>habilidad pasada</strong> y <strong>peticiones formales</strong>.</p>
+                            <ul class="text-sm space-y-2">
+                                <li><strong>Pasado:</strong> When I was 5, I <strong>could</strong> ride a bike.</li>
+                                <li><strong>Petición formal:</strong> <strong>Could</strong> you open the door, please?</li>
+                                <li><strong>Posibilidad hipotética:</strong> This <strong>could</strong> be the answer.</li>
+                                <li><strong>Sugerencia:</strong> We <strong>could</strong> go to the cinema.</li>
+                            </ul>
+                            <p class="text-xs text-red-500 mt-3 italic"><strong>Negativo:</strong> couldn't / could not</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: MUST/HAVE TO -->
+                <section class="bg-red-50 p-6 md:p-8 rounded-2xl border border-red-200">
+                    <h3 class="text-2xl font-bold text-red-900 mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-triangle-exclamation"></i> MUST / HAVE TO — Obligación
+                    </h3>
+
+                    <div class="grid md:grid-cols-2 gap-6 mt-4">
+                        <div class="bg-white p-5 rounded-xl shadow-sm">
+                            <h4 class="font-bold text-red-700 text-xl mb-2">MUST (Debo - obligación interna)</h4>
+                            <p class="text-sm text-gray-600 mb-3">Obligación que <strong>tú mismo</strong> impones, o algo muy importante.</p>
+                            <ul class="text-sm space-y-2">
+                                <li>I <strong>must</strong> study tonight. (yo decido)</li>
+                                <li>You <strong>must</strong> see this movie!</li>
+                                <li>Drivers <strong>must</strong> wear seatbelts. (ley)</li>
+                            </ul>
+                            <p class="text-xs text-red-500 mt-3 italic"><strong>Negativo:</strong> mustn't = PROHIBIDO. <br>Ej: You mustn't smoke here.</p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-xl shadow-sm">
+                            <h4 class="font-bold text-red-700 text-xl mb-2">HAVE TO (Tengo que - obligación externa)</h4>
+                            <p class="text-sm text-gray-600 mb-3">Obligación impuesta <strong>desde afuera</strong> (jefe, ley, escuela).</p>
+                            <ul class="text-sm space-y-2">
+                                <li>I <strong>have to</strong> work on weekends.</li>
+                                <li>She <strong>has to</strong> wear a uniform.</li>
+                                <li>You <strong>have to</strong> pay tax.</li>
+                            </ul>
+                            <p class="text-xs text-red-500 mt-3 italic"><strong>Negativo:</strong> don't have to = NO es necesario. <br>Ej: You don't have to come.</p>
+                        </div>
+                    </div>
+
+                    <!-- Diferencia mustn't vs don't have to -->
+                    <div class="mt-6 bg-yellow-50 border-2 border-yellow-300 rounded-xl p-5">
+                        <h4 class="font-bold text-yellow-900 mb-2"><i class="fa-solid fa-lightbulb"></i> ¡CUIDADO! Diferencia crítica</h4>
+                        <div class="grid md:grid-cols-2 gap-3 text-sm">
+                            <div class="bg-white p-3 rounded">
+                                <p class="font-bold text-red-700">MUSTN'T = Prohibido</p>
+                                <p class="italic">You <strong>mustn't</strong> park here. <span class="text-gray-500">(Es ilegal.)</span></p>
+                            </div>
+                            <div class="bg-white p-3 rounded">
+                                <p class="font-bold text-green-700">DON'T HAVE TO = No es necesario</p>
+                                <p class="italic">You <strong>don't have to</strong> come. <span class="text-gray-500">(Puedes elegir.)</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: SHOULD/OUGHT TO -->
+                <section class="bg-emerald-50 p-6 md:p-8 rounded-2xl border border-emerald-200">
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-lightbulb"></i> SHOULD — Consejo y Recomendación
+                    </h3>
+                    <p class="text-emerald-800 mb-6">Para <strong>aconsejar, recomendar u opinar</strong>. "Deberías".</p>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white p-5 rounded-xl shadow-sm border-l-4 border-emerald-500">
+                            <h4 class="font-bold text-emerald-700 mb-3">✅ Afirmativo (Consejo)</h4>
+                            <ul class="text-sm space-y-2">
+                                <li>You <strong>should</strong> see a doctor.</li>
+                                <li>She <strong>should</strong> apologize.</li>
+                                <li>We <strong>should</strong> save money.</li>
+                                <li>You <strong>should</strong> try this restaurant.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl shadow-sm border-l-4 border-red-500">
+                            <h4 class="font-bold text-red-700 mb-3">❌ Negativo (No deberías)</h4>
+                            <ul class="text-sm space-y-2">
+                                <li>You <strong>shouldn't</strong> eat so much sugar.</li>
+                                <li>He <strong>shouldn't</strong> smoke.</li>
+                                <li>You <strong>shouldn't</strong> drive when tired.</li>
+                                <li>We <strong>shouldn't</strong> waste water.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 bg-white p-4 rounded-lg shadow-sm">
+                        <p class="font-bold mb-2"><i class="fa-solid fa-question text-emerald-700"></i> Para pedir consejo:</p>
+                        <ul class="text-sm space-y-1">
+                            <li>What <strong>should</strong> I do?</li>
+                            <li><strong>Should</strong> I call him?</li>
+                            <li>Where <strong>should</strong> we go for dinner?</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Section: MAY/MIGHT -->
+                <section class="bg-purple-50 p-6 md:p-8 rounded-2xl border border-purple-200">
+                    <h3 class="text-2xl font-bold text-purple-900 mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-dice"></i> MAY / MIGHT — Posibilidad
+                    </h3>
+                    <p class="text-purple-800 mb-6">Para hablar de algo <strong>posible pero no seguro</strong> ("quizá / tal vez").</p>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white p-5 rounded-xl shadow-sm">
+                            <h4 class="font-bold text-purple-700 text-xl mb-2">MAY (Más formal, 50% probabilidad)</h4>
+                            <ul class="text-sm space-y-2">
+                                <li>It <strong>may</strong> rain tomorrow.</li>
+                                <li>She <strong>may</strong> come to the party.</li>
+                                <li>I <strong>may</strong> visit you next week.</li>
+                            </ul>
+                            <p class="text-xs text-gray-500 mt-3"><strong>Bonus:</strong> MAY también pide permiso formal: <em>May I come in?</em></p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-xl shadow-sm">
+                            <h4 class="font-bold text-purple-700 text-xl mb-2">MIGHT (Menos seguro, 30%)</h4>
+                            <ul class="text-sm space-y-2">
+                                <li>It <strong>might</strong> rain (pero no estoy seguro).</li>
+                                <li>I <strong>might</strong> not come tomorrow.</li>
+                                <li>He <strong>might</strong> be late.</li>
+                            </ul>
+                            <p class="text-xs text-gray-500 mt-3">"Might" es más débil que "may" en cuanto a probabilidad.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Tabla resumen de todos -->
+                <section>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2 border-l-4 border-brand pl-4">
+                        Tabla Resumen de TODOS los Modales
+                    </h3>
+
+                    <div class="overflow-x-auto bg-white rounded-xl shadow-md mt-4">
+                        <table class="w-full text-sm">
+                            <thead class="bg-slate-800 text-white">
+                                <tr>
+                                    <th class="p-3 text-left">Modal</th>
+                                    <th class="p-3 text-left">Significa</th>
+                                    <th class="p-3 text-left">Uso</th>
+                                    <th class="p-3 text-left">Ejemplo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100">
+                                <tr class="hover:bg-blue-50"><td class="p-3 font-bold text-blue-700">CAN</td><td class="p-3">poder / saber</td><td class="p-3">Habilidad / permiso</td><td class="p-3 italic">I can swim.</td></tr>
+                                <tr class="hover:bg-blue-50"><td class="p-3 font-bold text-blue-700">COULD</td><td class="p-3">podía / podría</td><td class="p-3">Habilidad pasada / petición formal</td><td class="p-3 italic">Could you help?</td></tr>
+                                <tr class="hover:bg-red-50"><td class="p-3 font-bold text-red-700">MUST</td><td class="p-3">debo</td><td class="p-3">Obligación fuerte / certeza</td><td class="p-3 italic">You must stop.</td></tr>
+                                <tr class="hover:bg-red-50"><td class="p-3 font-bold text-red-700">HAVE TO</td><td class="p-3">tener que</td><td class="p-3">Obligación externa</td><td class="p-3 italic">I have to work.</td></tr>
+                                <tr class="hover:bg-emerald-50"><td class="p-3 font-bold text-emerald-700">SHOULD</td><td class="p-3">debería</td><td class="p-3">Consejo / recomendación</td><td class="p-3 italic">You should rest.</td></tr>
+                                <tr class="hover:bg-emerald-50"><td class="p-3 font-bold text-emerald-700">OUGHT TO</td><td class="p-3">debería (formal)</td><td class="p-3">Consejo (= should)</td><td class="p-3 italic">You ought to apologize.</td></tr>
+                                <tr class="hover:bg-purple-50"><td class="p-3 font-bold text-purple-700">MAY</td><td class="p-3">puede que</td><td class="p-3">Posibilidad / permiso formal</td><td class="p-3 italic">It may rain.</td></tr>
+                                <tr class="hover:bg-purple-50"><td class="p-3 font-bold text-purple-700">MIGHT</td><td class="p-3">quizá</td><td class="p-3">Posibilidad menor</td><td class="p-3 italic">He might come.</td></tr>
+                                <tr class="hover:bg-amber-50"><td class="p-3 font-bold text-amber-700">WILL</td><td class="p-3">- (futuro)</td><td class="p-3">Predicción / promesa</td><td class="p-3 italic">I will call you.</td></tr>
+                                <tr class="hover:bg-amber-50"><td class="p-3 font-bold text-amber-700">WOULD</td><td class="p-3">-ía</td><td class="p-3">Condicional / oferta formal</td><td class="p-3 italic">I would help if I could.</td></tr>
+                                <tr class="hover:bg-pink-50"><td class="p-3 font-bold text-pink-700">SHALL</td><td class="p-3">- (formal/UK)</td><td class="p-3">Sugerencia / futuro formal</td><td class="p-3 italic">Shall we dance?</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Section: Estructura Negativa y Pregunta -->
+                <section class="bg-slate-100 p-6 md:p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-shuffle"></i> Formas Negativas y Preguntas
+                    </h3>
+
+                    <div class="grid md:grid-cols-3 gap-4 mt-6">
+                        <div class="bg-white p-4 rounded-xl shadow-sm">
+                            <p class="font-bold text-green-700 mb-2">✅ AFIRMATIVO</p>
+                            <p class="text-sm">Sujeto + Modal + verbo</p>
+                            <p class="text-sm italic mt-1">She <strong>can</strong> dance.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm">
+                            <p class="font-bold text-red-700 mb-2">❌ NEGATIVO</p>
+                            <p class="text-sm">Sujeto + Modal + NOT + verbo</p>
+                            <p class="text-sm italic mt-1">She <strong>can't</strong> dance.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm">
+                            <p class="font-bold text-purple-700 mb-2">❓ PREGUNTA</p>
+                            <p class="text-sm">Modal + Sujeto + verbo?</p>
+                            <p class="text-sm italic mt-1"><strong>Can</strong> she dance?</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 bg-white p-4 rounded-lg shadow-sm">
+                        <p class="font-bold mb-2"><i class="fa-solid fa-compress text-purple-700"></i> Contracciones Negativas</p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
+                            <div class="bg-gray-50 p-2 rounded text-center">can not → <strong>can't</strong></div>
+                            <div class="bg-gray-50 p-2 rounded text-center">could not → <strong>couldn't</strong></div>
+                            <div class="bg-gray-50 p-2 rounded text-center">must not → <strong>mustn't</strong></div>
+                            <div class="bg-gray-50 p-2 rounded text-center">should not → <strong>shouldn't</strong></div>
+                            <div class="bg-gray-50 p-2 rounded text-center">will not → <strong>won't</strong></div>
+                            <div class="bg-gray-50 p-2 rounded text-center">would not → <strong>wouldn't</strong></div>
+                            <div class="bg-gray-50 p-2 rounded text-center">may not → <strong>may not</strong></div>
+                            <div class="bg-gray-50 p-2 rounded text-center">might not → <strong>mightn't</strong></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: External Resources -->
+                <section class="bg-gray-900 text-white p-8 rounded-xl shadow-lg relative overflow-hidden mt-8 mb-8">
+                    <div class="absolute top-0 right-0 opacity-10 transform translate-x-10 -translate-y-10">
+                        <i class="fa-brands fa-bbc text-9xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 z-10 relative flex items-center gap-2">
+                        <i class="fa-solid fa-book-bookmark text-yellow-400"></i> Recursos Recomendados
+                    </h3>
+                    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 z-10 relative">
+                        <a href="https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/modals-deductions-about-the-past" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-solid fa-pen-fancy text-green-400 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">British Council</span>
+                                <span class="text-xs text-gray-400">Modal Verbs Guide</span>
+                            </div>
+                        </a>
+                        <a href="https://dictionary.cambridge.org/es/gramatica/british-grammar/modality-other-modal-words-and-expressions" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-solid fa-book text-blue-400 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">Cambridge</span>
+                                <span class="text-xs text-gray-400">Modality reference</span>
+                            </div>
+                        </a>
+                        <a href="https://www.perfect-english-grammar.com/modal-verbs.html" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-lg transition border border-white/5">
+                            <i class="fa-solid fa-list-check text-orange-400 text-xl"></i>
+                            <div>
+                                <span class="font-bold block text-sm">Perfect English Grammar</span>
+                                <span class="text-xs text-gray-400">Exercises</span>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Section: Interactive Exercises -->
+                <section id="exercises-section" class="scroll-mt-24">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                            <i class="fa-solid fa-pencil text-brand"></i> Quiz de Modales
+                        </h3>
+                        <span class="text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full">8 Preguntas</span>
+                    </div>
+
+                    <form id="quiz-form" class="space-y-6">
+                        <!-- Q1 -->
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                            <p class="font-semibold text-lg mb-4">1. I _____ swim very well. (Sé nadar)</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q1" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">should</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q1" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">can</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q1" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">must</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option3">
+                            <p class="font-semibold text-lg mb-4">2. You _____ smoke in the hospital. (¡Prohibido!)</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q2" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">don't have to</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q2" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">shouldn't</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q2" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">mustn't</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <!-- Q3 -->
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option1">
+                            <p class="font-semibold text-lg mb-4">3. You _____ see a doctor. (Consejo)</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q3" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">should</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q3" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">can</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q3" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">might</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <!-- Q4 -->
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                            <p class="font-semibold text-lg mb-4">4. It _____ rain later, maybe. (Posibilidad incierta)</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q4" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">must</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q4" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">might</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q4" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">can</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <!-- Q5 -->
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option3">
+                            <p class="font-semibold text-lg mb-4">5. ¿Cuál es INCORRECTA?</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q5" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">She can dance.</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q5" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">He must study.</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q5" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">She cans to dance.</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <!-- Q6 -->
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option1">
+                            <p class="font-semibold text-lg mb-4">6. When I was 5, I _____ ride a bike. (Habilidad pasada)</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q6" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">could</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q6" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">can</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q6" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">should</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <!-- Q7 -->
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option2">
+                            <p class="font-semibold text-lg mb-4">7. You _____ go to work today, it's Sunday. (No es necesario)</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q7" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">mustn't</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q7" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">don't have to</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q7" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">shouldn't</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <!-- Q8 -->
+                        <div class="question-card bg-white p-6 rounded-lg shadow-sm border border-gray-200" data-correct="option3">
+                            <p class="font-semibold text-lg mb-4">8. _____ you help me, please? (Petición formal)</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q8" value="option1" class="w-4 h-4 text-brand"><span class="ml-3">Must</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q8" value="option2" class="w-4 h-4 text-brand"><span class="ml-3">Should</span></label>
+                                <label class="flex items-center p-3 rounded cursor-pointer hover:bg-blue-50 border border-transparent hover:border-blue-200 transition"><input type="radio" name="q8" value="option3" class="w-4 h-4 text-brand"><span class="ml-3">Could</span></label>
+                            </div>
+                            <div class="feedback hidden mt-3 text-sm p-2 rounded"></div>
+                        </div>
+
+                        <div class="flex justify-end">
+                            <button type="button" onclick="evaluateQuiz()" class="bg-brand-DEFAULT hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-lg shadow-md transition transform hover:scale-105">
+                                <i class="fa-solid fa-check-circle mr-2"></i> Verificar
+                            </button>
+                        </div>
+                    </form>
+
+                    <div id="result-message" class="hidden mt-6 p-4 bg-gray-800 text-white rounded-lg text-center animate-pulse"></div>
+                </section>
+
+                <!-- Next Lesson CTA -->
+                <section class="mt-12 pt-8 border-t-2 border-dashed border-gray-300 flex justify-center">
+                    <a href="topic-17.html" class="inline-flex items-center bg-slate-800 hover:bg-slate-900 text-white font-bold py-4 px-10 rounded-full shadow-lg transition transform hover:-translate-y-1">
+                        Siguiente: Phrasal Verbs <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </section>
+
+            </div>
         </article>
     </main>
 
-    <footer class="bg-gray-800 text-white py-6 mt-12">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2026 Curso de Inglés en 30 Días. Todos los derechos reservados.</p>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-10 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2026 Curso de Inglés Open Source. GitHub Pages Ready.</p>
         </div>
     </footer>
 
     <script>
-        // Auto-populate title from URL
-        const topicMap = {
-            3: 'Present Simple',
-            4: 'Vocabulario Básico',
-            5: 'Pronombres Personales',
-            6: 'Verbo TO BE',
-            7: 'Present Continuous',
-            8: 'There is / There are',
-            9: 'Pasado Simple',
-            10: 'Comparativos y Superlativos',
-            11: 'Futuro con Will y Going to',
-            12: 'Condicional Simple',
-            13: 'Passive Voice',
-            14: 'Reported Speech',
-            15: 'Phrasal Verbs',
-            16: 'Modal Perfect',
-            17: 'Advanced Grammar Review',
-            18: 'Speaking Tips'
-        };
-        
-        const filename = window.location.pathname.split('/').pop();
-        const topicNum = parseInt(filename.replace('topic-', '').replace('.html', ''));
-        
-        if (topicMap[topicNum]) {
-            document.getElementById('page-title').textContent = `Tema ${topicNum}: ${topicMap[topicNum]}`;
-            document.getElementById('content-title').textContent = topicMap[topicNum];
-            document.title = `Tema ${topicNum}: ${topicMap[topicNum]} - Curso de Inglés`;
+        function evaluateQuiz() {
+            const questions = document.querySelectorAll('.question-card');
+            let score = 0;
+            let total = questions.length;
+            questions.forEach((card) => {
+                const correctAnswer = card.getAttribute('data-correct');
+                const selectedOption = card.querySelector('input[type="radio"]:checked');
+                const feedbackDiv = card.querySelector('.feedback');
+                feedbackDiv.className = 'feedback mt-3 text-sm p-2 rounded hidden';
+                card.classList.remove('border-green-500', 'border-red-500', 'border-2');
+                if (selectedOption) {
+                    if (selectedOption.value === correctAnswer) {
+                        score++;
+                        feedbackDiv.textContent = "¡Correcto! 🎯";
+                        feedbackDiv.classList.remove('hidden');
+                        feedbackDiv.classList.add('bg-green-100', 'text-green-800');
+                        card.classList.add('border-green-500', 'border-2');
+                    } else {
+                        feedbackDiv.textContent = "Incorrecto.";
+                        feedbackDiv.classList.remove('hidden');
+                        feedbackDiv.classList.add('bg-red-100', 'text-red-800');
+                        card.classList.add('border-red-500', 'border-2');
+                    }
+                } else {
+                    feedbackDiv.textContent = "Selecciona una opción.";
+                    feedbackDiv.classList.remove('hidden');
+                    feedbackDiv.classList.add('bg-yellow-100', 'text-yellow-800');
+                }
+            });
+            const resultMsg = document.getElementById('result-message');
+            resultMsg.classList.remove('hidden', 'animate-pulse');
+            if (score === total) {
+                resultMsg.className = "mt-6 p-4 bg-green-600 text-white rounded-lg text-center shadow-lg transition";
+                resultMsg.innerHTML = `<i class="fa-solid fa-star text-yellow-300 mr-2"></i> ¡Perfecto! Dominas los modales.`;
+            } else if (score >= 5) {
+                resultMsg.className = "mt-6 p-4 bg-blue-600 text-white rounded-lg text-center shadow-lg transition";
+                resultMsg.innerHTML = `Bien hecho: ${score}/${total}. ¡Sigue practicando!`;
+            } else {
+                resultMsg.className = "mt-6 p-4 bg-gray-600 text-white rounded-lg text-center shadow-lg";
+                resultMsg.innerHTML = `Resultado: ${score}/${total}. Repasa los usos de cada modal.`;
+            }
         }
     </script>
 </body>

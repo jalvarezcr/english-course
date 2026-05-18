@@ -3,23 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de Inglés - Prepa Abierta</title>
+    <title>Curso de Inglés A1-C2 - Open Source</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .level-badge { display: inline-block; padding: 4px 10px; border-radius: 9999px; font-size: 10px; font-weight: 700; letter-spacing: 0.05em; }
+        .level-a1 { background-color: #dcfce7; color: #166534; }
+        .level-a2 { background-color: #dbeafe; color: #1e40af; }
+        .level-b1 { background-color: #fef3c7; color: #92400e; }
+        .level-b2 { background-color: #ffedd5; color: #9a3412; }
+        .level-c1 { background-color: #f3e8ff; color: #6b21a8; }
+        .level-c2 { background-color: linear-gradient(to right, #fef9c3, #f3e8ff); background-color: #fef08a; color: #713f12; }
+        .topic-card { background: white; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid #e5e7eb; transition: all 0.2s; }
+        .topic-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-color: #93c5fd; }
+        .btn-primary { background-color: #0066cc; color: white; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; transition: background-color 0.2s; }
+        .btn-primary:hover { background-color: #004d99; }
+        .level-section-header { padding: 12px 20px; border-radius: 8px; margin-bottom: 16px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
     <!-- Header -->
-    <header class="bg-blue-600 text-white py-4 px-6 shadow-md">
+    <header class="bg-gradient-to-r from-blue-600 via-purple-600 to-yellow-600 text-white py-4 px-6 shadow-md sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Aprende Inglés en 30 Días - Prepa Abierta</h1>
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                <h1 class="text-xl md:text-2xl font-bold">English Course A1 → C2</h1>
+            </div>
             <nav>
-                <ul class="flex space-x-4">
+                <ul class="flex space-x-4 text-sm">
                     <li><a href="#inicio" class="hover:underline">Inicio</a></li>
                     <li><a href="#temario" class="hover:underline">Temario</a></li>
-                    <li><a href="#contacto" class="hover:underline">Contacto</a></li>
+                    <li><a href="#niveles" class="hover:underline">Niveles</a></li>
                 </ul>
             </nav>
         </div>
@@ -29,20 +47,49 @@
     <main class="container mx-auto my-8 px-4">
         <!-- Hero Section -->
         <section id="inicio" class="mb-12 text-center">
-            <h2 class="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Domina el Inglés en 30 Días</h2>
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-purple-600 to-yellow-600 bg-clip-text text-transparent">Domina el Inglés del Nivel A1 al C2</h2>
             <p class="max-w-2xl mx-auto text-lg text-gray-700">
-                Curso gratuito desde nivel <strong>A1</strong> hasta <strong>B2</strong>. Ideal para hispanohablantes.
+                Curso completo y gratuito desde principiante absoluto hasta nivel <strong>Mastery (C2)</strong>. Diseñado para hispanohablantes.
             </p>
-            <p class="mt-4 text-gray-600">
-                📚 18 temas completos | 🎯 Ejercicios interactivos | 📝 Exámenes por tema | 🎥 Videos educativos
-            </p>
+            <div class="mt-6 flex flex-wrap justify-center gap-3 text-sm text-gray-700">
+                <span class="bg-white border border-gray-200 px-4 py-2 rounded-full shadow-sm">📚 <strong>28</strong> temas completos</span>
+                <span class="bg-white border border-gray-200 px-4 py-2 rounded-full shadow-sm">🎯 <strong>200+</strong> ejercicios interactivos</span>
+                <span class="bg-white border border-gray-200 px-4 py-2 rounded-full shadow-sm">📝 Quiz por tema</span>
+                <span class="bg-white border border-gray-200 px-4 py-2 rounded-full shadow-sm">🎥 Videos educativos</span>
+                <span class="bg-white border border-gray-200 px-4 py-2 rounded-full shadow-sm">📊 6 niveles MCER</span>
+            </div>
+        </section>
+
+        <!-- Niveles -->
+        <section id="niveles" class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-800">Tu camino por niveles MCER</h2>
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-2 max-w-4xl mx-auto">
+                <a href="#nivel-a1" class="bg-green-100 hover:bg-green-200 text-green-800 p-3 rounded-lg text-center transition"><strong>A1</strong><br><span class="text-xs">Beginner</span></a>
+                <a href="#nivel-a2" class="bg-blue-100 hover:bg-blue-200 text-blue-800 p-3 rounded-lg text-center transition"><strong>A2</strong><br><span class="text-xs">Elementary</span></a>
+                <a href="#nivel-b1" class="bg-yellow-100 hover:bg-yellow-200 text-yellow-800 p-3 rounded-lg text-center transition"><strong>B1</strong><br><span class="text-xs">Intermediate</span></a>
+                <a href="#nivel-b2" class="bg-orange-100 hover:bg-orange-200 text-orange-800 p-3 rounded-lg text-center transition"><strong>B2</strong><br><span class="text-xs">Upper-Int.</span></a>
+                <a href="#nivel-c1" class="bg-purple-100 hover:bg-purple-200 text-purple-800 p-3 rounded-lg text-center transition"><strong>C1</strong><br><span class="text-xs">Advanced</span></a>
+                <a href="#nivel-c2" class="bg-yellow-200 hover:bg-yellow-300 text-yellow-900 p-3 rounded-lg text-center transition"><strong>C2</strong><br><span class="text-xs">Mastery</span></a>
+            </div>
         </section>
 
         <!-- Curriculum -->
         <section id="temario" class="mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-center">Temario Completo</h2>
-            <div id="topics-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Topics will be loaded dynamically -->
+            <h2 class="text-3xl font-bold mb-8 text-center">Temario Completo</h2>
+            <div id="topics-container">
+                <!-- Topics will be loaded dynamically, grouped by level -->
+            </div>
+        </section>
+
+        <!-- Final exam CTA -->
+        <section class="mb-12">
+            <div class="bg-gradient-to-r from-yellow-100 via-amber-100 to-purple-100 p-8 rounded-2xl border-2 border-yellow-400 text-center max-w-3xl mx-auto">
+                <i class="fa-solid fa-trophy text-5xl text-yellow-600 mb-4"></i>
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">¿Listo para el Examen Final?</h3>
+                <p class="text-gray-600 mb-6">Pon a prueba todo lo aprendido con un examen integrador que combina los 28 temas del curso.</p>
+                <a href="topics/final-exam.html" class="inline-flex items-center bg-gradient-to-r from-yellow-600 to-purple-700 hover:from-yellow-700 hover:to-purple-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:-translate-y-1">
+                    <i class="fa-solid fa-crown mr-2"></i> Tomar el Examen Final
+                </a>
             </div>
         </section>
     </main>
